@@ -1,0 +1,10 @@
+{
+	"/": [
+		"src/routes/+page.ts"
+	],
+	"/attributions": [],
+	"/projects/dellserver": [],
+	"/projects/remotepc": [],
+	"/projects/transformers": [],
+	"/projects/[...slug]": []
+}
