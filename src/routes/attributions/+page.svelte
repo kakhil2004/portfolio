@@ -1,11 +1,13 @@
 
-
+<script>
+    import { base } from '$app/paths';
+</script>
 
 
 
 <div class="text-column">
     <h1>Attributions</h1>
-    <a href="/"><button>Click me to go back to the main portfolio page!</button></a><br>
+    <a href="{base}/"><button>Click me to go back to the main portfolio page!</button></a><br>
 
     <h3>Images</h3>
     <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Freepik - Flaticon</a><br>

@@ -8,7 +8,8 @@ export const nodes = [
 	() => import('./nodes/4'),
 	() => import('./nodes/5'),
 	() => import('./nodes/6'),
-	() => import('./nodes/7')
+	() => import('./nodes/7'),
+	() => import('./nodes/8')
 ];
 
 export const server_loads = [];
@@ -16,14 +17,17 @@ export const server_loads = [];
 export const dictionary = {
 		"/": [2],
 		"/attributions": [3],
-		"/projects/dellserver": [5],
-		"/projects/remotepc": [6],
-		"/projects/transformers": [7],
-		"/projects/[...slug]": [4]
+		"/projects": [4],
+		"/projects/dellserver": [6],
+		"/projects/remotepc": [7],
+		"/projects/transformers": [8],
+		"/projects/[...slug]": [5]
 	};
 
 export const hooks = {
 	handleError: (({ error }) => { console.error(error) }),
+
+	reroute: (() => {})
 };
 
 export { default as root } from '../root.svelte';

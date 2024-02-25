@@ -1,7 +1,7 @@
 <script context="module">
 	import { browser } from '$app/environment'
 	import Device from 'svelte-device-info'
-	
+	import { base } from '$app/paths';
 	let logo = "Akhil Kothapalli"
 	if (browser) {
 		if (Device.isMobile) {
@@ -15,10 +15,10 @@
 	<div class="topnav">
 		<h2 class="brand">{logo}</h2>
 		<div class="topnav-right">
-		  <a href="/#proj">Projects</a>
-		  <a href="/#skill">Skills</a>
-		  <a href="/#exp">Experience</a>
-		  <a href="/attributions"> Attributions</a>
+		  <a href="{base}/#proj">Projects</a>
+		  <a href="{base}/#skill">Skills</a>
+		  <a href="{base}/#exp">Experience</a>
+		  <a href="{base}/attributions"> Attributions</a>
 		</div>
 	  </div>
 </header>

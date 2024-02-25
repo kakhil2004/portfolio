@@ -2,7 +2,12 @@
 	"/": [
 		"src/routes/+page.ts"
 	],
-	"/attributions": [],
+	"/attributions": [
+		"src/routes/attributions/+page.ts"
+	],
+	"/projects": [
+		"src/routes/projects/+page.ts"
+	],
 	"/projects/dellserver": [],
 	"/projects/remotepc": [],
 	"/projects/transformers": [],
