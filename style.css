@@ -83,9 +83,11 @@ img {
 
 .box {
     flex: 0 0 calc(27% - 20px);
- 
+    
+    border: 3px solid #4A4A4A; 
+    border-radius: 10px ;
     padding: 20px;
-    font-size: 1.7vh;
+    font-size: 1.5vh;
     cursor: default;
 }
 
@@ -207,4 +209,37 @@ background-color: #0056b3; /* Darker background color on hover */
 
 .projImg {
     width: 40%;
+}
+
+
+.tiny-box-container {
+    display: flex;
+    margin: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-height: 80%;
+    padding: 30px;
+    overflow: auto;
+
+}
+
+.tiny-box {
+    flex: 0 0 calc(15% - 20px);
+    
+    border: 3px solid #4A4A4A; 
+    border-radius: 10px ;
+    padding: 20px;
+    font-size: 1.5vh;
+    cursor: default;
+}
+
+@media (max-width: 768px) {
+    .tiny-box {
+        flex-basis: calc(100% - 20px); /* Two elements per row for smaller screens */
+    }
+}
+
+.tiny-box:hover {
+    cursor: pointer;
 }
