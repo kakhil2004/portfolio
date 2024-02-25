@@ -22,13 +22,14 @@
 <style>
 .tiny-box-container {
     display: flex;
-    margin-bottom: 50px auto;
+    margin: 0px;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     max-height: 80%;
     padding: 30px;
     overflow: auto;
+
 }
 
 .tiny-box {

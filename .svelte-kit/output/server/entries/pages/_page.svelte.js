@@ -13,7 +13,7 @@ const BoxContainer = create_ssr_component(($$result, $$props, $$bindings, slots)
   })} </div>`;
 });
 const css = {
-  code: ".tiny-box-container.svelte-c6ewpd{display:flex;margin-bottom:50px auto;flex-wrap:wrap;justify-content:center;gap:10px;max-height:80%;padding:30px;overflow:auto}.tiny-box.svelte-c6ewpd{flex:0 0 calc(15% - 20px);border:3px solid #4A4A4A;border-radius:10px ;padding:20px;font-size:1.5vh;cursor:default}@media(max-width: 768px){.tiny-box.svelte-c6ewpd{flex-basis:calc(100% - 20px)}}.tiny-box.svelte-c6ewpd:hover{cursor:pointer}",
+  code: ".tiny-box-container.svelte-1pamtoh{display:flex;margin:0px;flex-wrap:wrap;justify-content:center;gap:10px;max-height:80%;padding:30px;overflow:auto}.tiny-box.svelte-1pamtoh{flex:0 0 calc(15% - 20px);border:3px solid #4A4A4A;border-radius:10px ;padding:20px;font-size:1.5vh;cursor:default}@media(max-width: 768px){.tiny-box.svelte-1pamtoh{flex-basis:calc(100% - 20px)}}.tiny-box.svelte-1pamtoh:hover{cursor:pointer}",
   map: null
 };
 const TinyContainer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -21,8 +21,8 @@ const TinyContainer = create_ssr_component(($$result, $$props, $$bindings, slots
   if ($$props.data === void 0 && $$bindings.data && data !== void 0)
     $$bindings.data(data);
   $$result.css.add(css);
-  return `<div class="tiny-box-container svelte-c6ewpd" style="margin-bottom:40px;">${each(data, (item) => {
-    return `<div onmouseover="${"this.style.backgroundColor = '" + escape(item["color"] ? item["color"] : "", true) + "'"}" onmouseout="this.style.backgroundColor =''" class="tiny-box svelte-c6ewpd"><h5 style="margin: 0px;">${escape(item["header"])}</h5> </div>`;
+  return `<div class="tiny-box-container svelte-1pamtoh" style="margin-bottom:40px;">${each(data, (item) => {
+    return `<div onmouseover="${"this.style.backgroundColor = '" + escape(item["color"] ? item["color"] : "", true) + "'"}" onmouseout="this.style.backgroundColor =''" class="tiny-box svelte-1pamtoh"><h5 style="margin: 0px;">${escape(item["header"])}</h5> </div>`;
   })} </div>`;
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {

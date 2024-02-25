@@ -5,11 +5,13 @@
 	"/attributions": [
 		"src/routes/attributions/+page.ts"
 	],
-	"/projects": [
-		"src/routes/projects/+page.ts"
+	"/projects/dellserver": [
+		"src/routes/projects/dellserver/+page.ts"
 	],
-	"/projects/dellserver": [],
-	"/projects/remotepc": [],
-	"/projects/transformers": [],
-	"/projects/[...slug]": []
+	"/projects/remotepc": [
+		"src/routes/projects/remotepc/+page.ts"
+	],
+	"/projects/transformers": [
+		"src/routes/projects/transformers/+page.ts"
+	]
 }
