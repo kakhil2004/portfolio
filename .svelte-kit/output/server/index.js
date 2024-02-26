@@ -1,4 +1,4 @@
-import { b as base, a as assets, o as override, r as reset } from "./chunks/paths.js";
+import { b as base, r as reset, a as assets } from "./chunks/paths.js";
 import { m as make_trackable, d as disable_search, n as normalize_path, a as add_data_suffix, r as resolve, b as decode_pathname, h as has_data_suffix, s as strip_data_suffix, c as decode_params, v as validate_layout_server_exports, e as validate_layout_exports, f as validate_page_server_exports, g as validate_page_exports, i as validate_server_exports } from "./chunks/exports.js";
 import * as devalue from "devalue";
 import { n as noop, s as safe_not_equal } from "./chunks/ssr.js";
@@ -6,7 +6,6 @@ import { p as public_env, s as safe_public_env, o as options, a as set_private_e
 import { parse, serialize } from "cookie";
 import * as set_cookie_parser from "set-cookie-parser";
 const DEV = false;
-const SVELTE_KIT_ASSETS = "/_svelte_kit_assets";
 const ENDPOINT_METHODS = ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD"];
 const PAGE_METHODS = ["GET", "POST", "HEAD"];
 function negotiate(accept, types) {
@@ -1338,14 +1337,6 @@ async function render_response({
   let base$1 = base;
   let assets$1 = assets;
   let base_expression = s(base);
-  if (!state.prerendering?.fallback) {
-    const segments = event.url.pathname.slice(base.length).split("/").slice(2);
-    base$1 = segments.map(() => "..").join("/") || ".";
-    base_expression = `new URL(${s(base$1)}, location).pathname.slice(0, -1)`;
-    if (!assets || assets[0] === "/" && assets !== SVELTE_KIT_ASSETS) {
-      assets$1 = base$1;
-    }
-  }
   if (page_config.ssr) {
     const props = {
       stores: {
@@ -1374,7 +1365,6 @@ async function render_response({
       form: form_value,
       state: {}
     };
-    override({ base: base$1, assets: assets$1 });
     {
       try {
         rendered = options2.root.render(props);

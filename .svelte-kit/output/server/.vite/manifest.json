@@ -53,7 +53,7 @@
       "_paths.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.Bsk3Hq-u.css"
+      "_app/immutable/assets/_layout.Kps9LtjI.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -61,7 +61,8 @@
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_ssr.js"
+      "_ssr.js",
+      "_paths.js"
     ],
     "css": [
       "_app/immutable/assets/_page.DMMRlyIk.css"
@@ -97,6 +98,19 @@
   "src/routes/projects/dellserver/+page.ts": {
     "file": "entries/pages/projects/dellserver/_page.ts.js",
     "src": "src/routes/projects/dellserver/+page.ts",
+    "isEntry": true
+  },
+  "src/routes/projects/oscar/+page.svelte": {
+    "file": "entries/pages/projects/oscar/_page.svelte.js",
+    "src": "src/routes/projects/oscar/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "src/routes/projects/oscar/+page.ts": {
+    "file": "entries/pages/projects/oscar/_page.ts.js",
+    "src": "src/routes/projects/oscar/+page.ts",
     "isEntry": true
   },
   "src/routes/projects/remotepc/+page.svelte": {

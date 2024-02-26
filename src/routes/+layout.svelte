@@ -1,9 +1,12 @@
 <script>
 	import Header from './Header.svelte';
-	import './style.css'
+	import { base } from '$app/paths';
 </script>
 
-
+<svelte:head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css">
+	<link rel="stylesheet" href="{base}/style.css" type="text/css">
+</svelte:head>
 
 <div id="page-container">
 	<Header /> 
@@ -14,7 +17,7 @@
 
 	<footer id="footer">
 		<div>
-			<p>©2023 Akhil, Powered by SvelteKit. More about this site</p>
+			<p>©2023 Akhil, Powered by SvelteKit. More about this site - 1.0.0</p>
 		</div>
 	</footer>
 </div>

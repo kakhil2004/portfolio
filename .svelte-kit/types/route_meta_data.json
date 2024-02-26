@@ -8,6 +8,9 @@
 	"/projects/dellserver": [
 		"src/routes/projects/dellserver/+page.ts"
 	],
+	"/projects/oscar": [
+		"src/routes/projects/oscar/+page.ts"
+	],
 	"/projects/remotepc": [
 		"src/routes/projects/remotepc/+page.ts"
 	],

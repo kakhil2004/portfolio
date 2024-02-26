@@ -1,22 +1,23 @@
 <script>
 	import BoxContainer from "$lib/BoxContainer.svelte";
 	import TinyContainer from "$lib/TinyContainer.svelte";
+	import { base } from '$app/paths';
 	let exp = [
 		{
 			"header" : "Teaching Assistant",
-			"smallHead" : "Certified Associates in the CADing software SOLIDWORKS",
-			"para" : "a second-year CS major from Georgia. I enjoy coding and have done all sorts of projects from game dev to web apps. Other than that, I love going to the gym and have recently picked up indoor rock climbing (not amazing at it). I'm excited to work with you and hopefully get you to enjoy this course as much as I did!",
+			"smallHead" : "Georiga Institute of Technology",
+			"para" : "I teach lectures every week to 30+ students, make weekly check-up quizzes for them on Canvas and spend 3 hours of 1-on-1 time every week. This led to me mastering this course",
 		},
 		{
 			"header" : "Undergraduate Researcher",
 			"smallHead" : "Active Safety for Autonomous and Semi-Autonomous Vehicles",
-			"para" : "a second-year CS major from Georgia. I enjoy coding and have done all sorts of projects from game dev to web apps. Other than that, I love going to the gym and have recently picked up indoor rock climbing (not amazing at it). I'm excited to work with you and hopefully get you to enjoy this course as much as I did!",
+			"para" : "I spend several hours every week working on a cool car that has LIDAR, vision, an NVidia Jetson Nano etc. and I need to make it fully autonmous so it can race in F1Tenth. Will add a page for this soon!",
 		
 		},
 		{
-			"header" : "Hi, I'm Akhil",
-			"smallHead" : "Certified Associates in the CADing software SOLIDWORKS",
-			"para" : "a second-year CS major from Georgia. I enjoy coding and have done all sorts of projects from game dev to web apps. Other than that, I love going to the gym and have recently picked up indoor rock climbing (not amazing at it). I'm excited to work with you and hopefully get you to enjoy this course as much as I did!",
+			"header" : "Electrical Mentor & Technician",
+			"smallHead" : "FRC Team 1683 - Techno Titans",
+			"para" : "I spent hours here tutoring students about electrical and programming for FRC and the real world (Microcontrollers & Shields). I was also the first person to be called if the robot ever needed repairs.",
 		
 		}
 		
@@ -38,14 +39,14 @@
 		{
 			"header" : "OSCAR Notification Bot",
 			"para" : "Bot that notifies you when a class seat opens on Georgia Tech's system. Almost instant response time. Way faster than courseicle.",
-			"redirect" : "/projects/remotepc",
+			"redirect" : base+"/projects/oscar",
 			"color" : "lightgreen"
 
 		},
 		{
 			"header" : "Transforming Bots Tycoon",
 			"para" : "A full in-game economy where players can build their base, become robots and protect their land. Made raycasting physics, user data storage solutions etc.",
-			"redirect" : "/projects/transformers",
+			"redirect" : base+"/projects/transformers",
 			"color" : "lightgreen"
 		}
 	]
@@ -99,32 +100,35 @@
 
 	<div class="page-container">
 		<h2 style="text-align: center;">Skills</h2>
-		<p style="text-align: center;">Hover over a box to see how recently I used the skill!</p>
+		<p style="text-align: center;">Hover over a box to see how recently I used the skill! Green - Recent, Yellow - A little while ago</p>
 		<h5 style="">Programming Languages & Database</h5>
 		<TinyContainer data={[
 			{"header" : "Python","color":"lightgreen"},
 			{"header" : "Javascript","color":"lightgreen"},
 			{"header" : "C/C++","color":"lightgreen"},
 			{"header" : "Java","color":"lightgreen"},
-			{"header" : "SQL (MySQL)","color":"yellow"},
+			{"header" : "SQL (MySQL)","color":"lightgreen"},
 			{"header" : "R","color":"yellow"},
 		
 			]}/>
 		<h5 style="">Frameworks</h5>
 		<TinyContainer data={[
-			{"header" : "React.js","color":"lightgreen", "onlyH2" : true},
-			{"header" : "Svelte","color":"lightgreen", "onlyH2" : true},
-			{"header" : "NumPY","color":"lightgreen", "onlyH2" : true},
-			{"header" : "OpenCV","color":"lightgreen", "onlyH2" : true},
-			{"header" : "ROS2","color":"lightgreen", "onlyH2" : true}
+			{"header" : "Svelte","color":"lightgreen"},
+			{"header" : "Flask","color":"lightgreen"},
+			{"header" : "React.js","color":"yellow"},
+			{"header" : "Open-CV","color":"yellow"},
+			{"header" : "Requests (APIs)","color":"yellow"},
+		
 			]}/>
 		<h5 style="">Tools</h5>
 		<TinyContainer data={[
-			{"header" : "React.js","color":"lightgreen", "onlyH2" : true},
-			{"header" : "Svelte","color":"lightgreen", "onlyH2" : true},
-			{"header" : "NumPY","color":"lightgreen", "onlyH2" : true},
-			{"header" : "OpenCV","color":"lightgreen", "onlyH2" : true},
-			{"header" : "ROS2","color":"lightgreen", "onlyH2" : true}
+			{"header" : "RStudio","color":"lightgreen"},
+			{"header" : "ROS","color":"lightgreen"},
+			{"header" : "Git","color":"lightgreen"},
+			{"header" : "Docker","color":"lightgreen"},
+			{"header" : "Andriod Studio","color":"yellow"},
+			{"header" : "Kubernetes","color":"yellow"},
+		
 			]}/>
 		
 		

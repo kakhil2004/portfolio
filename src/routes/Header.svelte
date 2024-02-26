@@ -4,6 +4,7 @@
 	import { base } from '$app/paths';
 	let logo = "Akhil Kothapalli"
 	if (browser) {
+		console.log("Help")
 		if (Device.isMobile) {
 			logo = "AK"
 		}

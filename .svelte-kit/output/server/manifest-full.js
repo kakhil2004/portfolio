@@ -7,10 +7,10 @@ function __memo(fn) {
 return {
 	appDir: "_app",
 	appPath: "simpleport2/_app",
-	assets: new Set([".DS_Store",".nojekyll","favicon.png","images/ak.png","images/github.png","images/gmail.png","images/linkedin.png","images/oscarbot.png","images/trans/t1.png","images/twitter.png","robots.txt"]),
-	mimeTypes: {".png":"image/png",".txt":"text/plain"},
+	assets: new Set([".DS_Store",".nojekyll","favicon.png","images/ak.png","images/github.png","images/gmail.png","images/linkedin.png","images/oscarbot.png","images/trans/t1.png","images/twitter.png","robots.txt","style.css"]),
+	mimeTypes: {".png":"image/png",".txt":"text/plain",".css":"text/css"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.DC_s58y1.js","app":"_app/immutable/entry/app.DEfR6ES8.js","imports":["_app/immutable/entry/start.DC_s58y1.js","_app/immutable/chunks/entry.h9NNbu3L.js","_app/immutable/chunks/scheduler.Ce_0Mfso.js","_app/immutable/chunks/paths.Bp1NgpMZ.js","_app/immutable/entry/app.DEfR6ES8.js","_app/immutable/chunks/scheduler.Ce_0Mfso.js","_app/immutable/chunks/index.3wbO5xVr.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.zVmHYRtU.js","app":"_app/immutable/entry/app.DGnLMLwH.js","imports":["_app/immutable/entry/start.zVmHYRtU.js","_app/immutable/chunks/entry.LBLKAapM.js","_app/immutable/chunks/scheduler.Bmg8oFKD.js","_app/immutable/chunks/paths.DpexAEND.js","_app/immutable/entry/app.DGnLMLwH.js","_app/immutable/chunks/scheduler.Bmg8oFKD.js","_app/immutable/chunks/index.C4tCPUuz.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
@@ -18,7 +18,8 @@ return {
 			__memo(() => import('./nodes/3.js')),
 			__memo(() => import('./nodes/4.js')),
 			__memo(() => import('./nodes/5.js')),
-			__memo(() => import('./nodes/6.js'))
+			__memo(() => import('./nodes/6.js')),
+			__memo(() => import('./nodes/7.js'))
 		],
 		routes: [
 			{
@@ -43,17 +44,24 @@ return {
 				endpoint: null
 			},
 			{
+				id: "/projects/oscar",
+				pattern: /^\/projects\/oscar\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 5 },
+				endpoint: null
+			},
+			{
 				id: "/projects/remotepc",
 				pattern: /^\/projects\/remotepc\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 5 },
+				page: { layouts: [0,], errors: [1,], leaf: 6 },
 				endpoint: null
 			},
 			{
 				id: "/projects/transformers",
 				pattern: /^\/projects\/transformers\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 6 },
+				page: { layouts: [0,], errors: [1,], leaf: 7 },
 				endpoint: null
 			}
 		],

@@ -1,4 +1,5 @@
 import { c as create_ssr_component, d as each, e as escape, v as validate_component } from "../../chunks/ssr.js";
+import { b as base } from "../../chunks/paths.js";
 const css$1 = {
   code: ".box-container.svelte-l0ffwe{display:flex;margin-bottom:50px auto;flex-wrap:wrap;justify-content:center;gap:10px;max-height:80%;padding:30px;overflow:auto}.box.svelte-l0ffwe{flex:0 0 calc(27% - 20px);border:3px solid #4A4A4A;border-radius:10px ;padding:20px;font-size:1.5vh;cursor:default}@media(max-width: 768px){.box.svelte-l0ffwe{flex-basis:calc(100% - 20px)}}.box.svelte-l0ffwe:hover{cursor:pointer}",
   map: null
@@ -29,18 +30,18 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let exp = [
     {
       "header": "Teaching Assistant",
-      "smallHead": "Certified Associates in the CADing software SOLIDWORKS",
-      "para": "a second-year CS major from Georgia. I enjoy coding and have done all sorts of projects from game dev to web apps. Other than that, I love going to the gym and have recently picked up indoor rock climbing (not amazing at it). I'm excited to work with you and hopefully get you to enjoy this course as much as I did!"
+      "smallHead": "Georiga Institute of Technology",
+      "para": "I teach lectures every week to 30+ students, make weekly check-up quizzes for them on Canvas and spend 3 hours of 1-on-1 time every week. This led to me mastering this course"
     },
     {
       "header": "Undergraduate Researcher",
       "smallHead": "Active Safety for Autonomous and Semi-Autonomous Vehicles",
-      "para": "a second-year CS major from Georgia. I enjoy coding and have done all sorts of projects from game dev to web apps. Other than that, I love going to the gym and have recently picked up indoor rock climbing (not amazing at it). I'm excited to work with you and hopefully get you to enjoy this course as much as I did!"
+      "para": "I spend several hours every week working on a cool car that has LIDAR, vision, an NVidia Jetson Nano etc. and I need to make it fully autonmous so it can race in F1Tenth. Will add a page for this soon!"
     },
     {
-      "header": "Hi, I'm Akhil",
-      "smallHead": "Certified Associates in the CADing software SOLIDWORKS",
-      "para": "a second-year CS major from Georgia. I enjoy coding and have done all sorts of projects from game dev to web apps. Other than that, I love going to the gym and have recently picked up indoor rock climbing (not amazing at it). I'm excited to work with you and hopefully get you to enjoy this course as much as I did!"
+      "header": "Electrical Mentor & Technician",
+      "smallHead": "FRC Team 1683 - Techno Titans",
+      "para": "I spent hours here tutoring students about electrical and programming for FRC and the real world (Microcontrollers & Shields). I was also the first person to be called if the robot ever needed repairs."
     }
   ];
   let proj = [
@@ -59,17 +60,17 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {
       "header": "OSCAR Notification Bot",
       "para": "Bot that notifies you when a class seat opens on Georgia Tech's system. Almost instant response time. Way faster than courseicle.",
-      "redirect": "/projects/remotepc",
+      "redirect": base + "/projects/oscar",
       "color": "lightgreen"
     },
     {
       "header": "Transforming Bots Tycoon",
       "para": "A full in-game economy where players can build their base, become robots and protect their land. Made raycasting physics, user data storage solutions etc.",
-      "redirect": "/projects/transformers",
+      "redirect": base + "/projects/transformers",
       "color": "lightgreen"
     }
   ];
-  return `${$$result.head += `<!-- HEAD_svelte-vyda69_START -->${$$result.title = `<title>AK | Home</title>`, ""}<meta name="description" content="Svelte demo app"><!-- HEAD_svelte-vyda69_END -->`, ""} <section><div class="page-container" data-svelte-h="svelte-1e8thq5"><div class="content-container"><div class="image-container"><img class="bio" src="images/ak.png" alt="akhil"></div> <div class="content" style="margin: auto;"><p style="margin-bottom: 0px; text-align: center;">Hi I&#39;m</p> <h2 style="margin-top: 0px; text-align: center;">Akhil Kothapalli</h2> <p style="text-align: center;">a second-year CS major from Georgia. I enjoy coding and have done all sorts of projects from game dev to web apps. Other than that, I love going to the gym and have recently picked up indoor rock climbing (not amazing at it). I&#39;m excited to work with you and hopefully get you to enjoy this course as much as I did!</p> <div style="text-align: center;"><a class="nostyle" target="_blank" href="https://docs.google.com/document/d/1cx9gJDNv9LRQL82QafHxEocb3PT7T4Hx5ZAaa0BO750/edit?usp=sharing"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Resume</h3></button></a> <a class="nostyle" target="_blank" id="openPopup"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">How to Navigate Site</h3></button></a> <br> <a class="nostyle" target="_blank" href="https://www.linkedin.com/in/akhk1/"><img class="icon" src="images/linkedin.png" alt="LN"></a> <a class="nostyle" href="mailto:akothapalli31@gatech.edu?subject=Akhil&body=Hi Akhil, I got your email from your website!"><img class="icon" src="images/gmail.png" alt="GM"></a> <a class="nostyle" target="_blank" href="https://github.com/kakhil2004"><img class="icon" src="images/github.png" alt="GH"></a> <a class="nostyle" target="_blank" href="https://twitter.com/kakhil2004tech"><img class="icon" src="images/twitter.png" alt="X"></a></div></div></div></div> <hr id="proj"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-1vtnekl">Projects</h2> ${validate_component(BoxContainer, "BoxContainer").$$render($$result, { data: proj }, {}, {})}</div> <hr id="skill"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-n7npol">Skills</h2> <p style="text-align: center;" data-svelte-h="svelte-z2j6yi">Hover over a box to see how recently I used the skill!</p> <h5 style="" data-svelte-h="svelte-1xt3awh">Programming Languages &amp; Database</h5> ${validate_component(TinyContainer, "TinyContainer").$$render(
+  return `${$$result.head += `<!-- HEAD_svelte-vyda69_START -->${$$result.title = `<title>AK | Home</title>`, ""}<meta name="description" content="Svelte demo app"><!-- HEAD_svelte-vyda69_END -->`, ""} <section><div class="page-container" data-svelte-h="svelte-1e8thq5"><div class="content-container"><div class="image-container"><img class="bio" src="images/ak.png" alt="akhil"></div> <div class="content" style="margin: auto;"><p style="margin-bottom: 0px; text-align: center;">Hi I&#39;m</p> <h2 style="margin-top: 0px; text-align: center;">Akhil Kothapalli</h2> <p style="text-align: center;">a second-year CS major from Georgia. I enjoy coding and have done all sorts of projects from game dev to web apps. Other than that, I love going to the gym and have recently picked up indoor rock climbing (not amazing at it). I&#39;m excited to work with you and hopefully get you to enjoy this course as much as I did!</p> <div style="text-align: center;"><a class="nostyle" target="_blank" href="https://docs.google.com/document/d/1cx9gJDNv9LRQL82QafHxEocb3PT7T4Hx5ZAaa0BO750/edit?usp=sharing"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Resume</h3></button></a> <a class="nostyle" target="_blank" id="openPopup"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">How to Navigate Site</h3></button></a> <br> <a class="nostyle" target="_blank" href="https://www.linkedin.com/in/akhk1/"><img class="icon" src="images/linkedin.png" alt="LN"></a> <a class="nostyle" href="mailto:akothapalli31@gatech.edu?subject=Akhil&body=Hi Akhil, I got your email from your website!"><img class="icon" src="images/gmail.png" alt="GM"></a> <a class="nostyle" target="_blank" href="https://github.com/kakhil2004"><img class="icon" src="images/github.png" alt="GH"></a> <a class="nostyle" target="_blank" href="https://twitter.com/kakhil2004tech"><img class="icon" src="images/twitter.png" alt="X"></a></div></div></div></div> <hr id="proj"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-1vtnekl">Projects</h2> ${validate_component(BoxContainer, "BoxContainer").$$render($$result, { data: proj }, {}, {})}</div> <hr id="skill"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-n7npol">Skills</h2> <p style="text-align: center;" data-svelte-h="svelte-1cqnyex">Hover over a box to see how recently I used the skill! Green - Recent, Yellow - A little while ago</p> <h5 style="" data-svelte-h="svelte-1xt3awh">Programming Languages &amp; Database</h5> ${validate_component(TinyContainer, "TinyContainer").$$render(
     $$result,
     {
       data: [
@@ -85,7 +86,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         { "header": "Java", "color": "lightgreen" },
         {
           "header": "SQL (MySQL)",
-          "color": "yellow"
+          "color": "lightgreen"
         },
         { "header": "R", "color": "yellow" }
       ]
@@ -97,29 +98,15 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {
       data: [
         {
-          "header": "React.js",
-          "color": "lightgreen",
-          "onlyH2": true
-        },
-        {
           "header": "Svelte",
-          "color": "lightgreen",
-          "onlyH2": true
+          "color": "lightgreen"
         },
+        { "header": "Flask", "color": "lightgreen" },
+        { "header": "React.js", "color": "yellow" },
+        { "header": "Open-CV", "color": "yellow" },
         {
-          "header": "NumPY",
-          "color": "lightgreen",
-          "onlyH2": true
-        },
-        {
-          "header": "OpenCV",
-          "color": "lightgreen",
-          "onlyH2": true
-        },
-        {
-          "header": "ROS2",
-          "color": "lightgreen",
-          "onlyH2": true
+          "header": "Requests (APIs)",
+          "color": "yellow"
         }
       ]
     },
@@ -130,29 +117,22 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {
       data: [
         {
-          "header": "React.js",
-          "color": "lightgreen",
-          "onlyH2": true
+          "header": "RStudio",
+          "color": "lightgreen"
+        },
+        { "header": "ROS", "color": "lightgreen" },
+        { "header": "Git", "color": "lightgreen" },
+        {
+          "header": "Docker",
+          "color": "lightgreen"
         },
         {
-          "header": "Svelte",
-          "color": "lightgreen",
-          "onlyH2": true
+          "header": "Andriod Studio",
+          "color": "yellow"
         },
         {
-          "header": "NumPY",
-          "color": "lightgreen",
-          "onlyH2": true
-        },
-        {
-          "header": "OpenCV",
-          "color": "lightgreen",
-          "onlyH2": true
-        },
-        {
-          "header": "ROS2",
-          "color": "lightgreen",
-          "onlyH2": true
+          "header": "Kubernetes",
+          "color": "yellow"
         }
       ]
     },
