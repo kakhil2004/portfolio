@@ -8,6 +8,15 @@
       "_paths.js"
     ]
   },
+  "_Carousel.js": {
+    "file": "chunks/Carousel.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Carousel.VNbS7xGE.css"
+    ]
+  },
   "_exports.js": {
     "file": "chunks/exports.js"
   },
@@ -105,7 +114,8 @@
     "src": "src/routes/projects/oscar/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_ssr.js"
+      "_ssr.js",
+      "_Carousel.js"
     ]
   },
   "src/routes/projects/oscar/+page.ts": {
@@ -131,7 +141,8 @@
     "src": "src/routes/projects/transformers/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_ssr.js"
+      "_ssr.js",
+      "_Carousel.js"
     ]
   },
   "src/routes/projects/transformers/+page.ts": {

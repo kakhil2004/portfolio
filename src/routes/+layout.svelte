@@ -17,7 +17,7 @@
 
 	<footer id="footer">
 		<div>
-			<p>©2023 Akhil, Powered by SvelteKit. More about this site - 1.0.0</p>
+			<p>©2023 Akhil, Powered by SvelteKit. <a href="{base}/about">More about this site</a>  - 1.0.0</p>
 		</div>
 	</footer>
 </div>

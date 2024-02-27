@@ -47,6 +47,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let proj = [
     {
       "header": "MyFinancePal",
+      "smallHead": "OpenAI, Sentiment Anaylsis,",
       "para": "New investors often struggle with tunnel vision, risky choices, and emotions. Our project tackles these by fostering a broad perspective, simplifying metrics, and promoting data-driven decision-making.",
       "redirect": "https://github.com/ErMa12345/MyFinancePal",
       "color": "lightblue"
@@ -70,7 +71,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       "color": "lightgreen"
     }
   ];
-  return `${$$result.head += `<!-- HEAD_svelte-vyda69_START -->${$$result.title = `<title>AK | Home</title>`, ""}<meta name="description" content="Svelte demo app"><!-- HEAD_svelte-vyda69_END -->`, ""} <section><div class="page-container" data-svelte-h="svelte-1e8thq5"><div class="content-container"><div class="image-container"><img class="bio" src="images/ak.png" alt="akhil"></div> <div class="content" style="margin: auto;"><p style="margin-bottom: 0px; text-align: center;">Hi I&#39;m</p> <h2 style="margin-top: 0px; text-align: center;">Akhil Kothapalli</h2> <p style="text-align: center;">a second-year CS major from Georgia. I enjoy coding and have done all sorts of projects from game dev to web apps. Other than that, I love going to the gym and have recently picked up indoor rock climbing (not amazing at it). I&#39;m excited to work with you and hopefully get you to enjoy this course as much as I did!</p> <div style="text-align: center;"><a class="nostyle" target="_blank" href="https://docs.google.com/document/d/1cx9gJDNv9LRQL82QafHxEocb3PT7T4Hx5ZAaa0BO750/edit?usp=sharing"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Resume</h3></button></a> <a class="nostyle" target="_blank" id="openPopup"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">How to Navigate Site</h3></button></a> <br> <a class="nostyle" target="_blank" href="https://www.linkedin.com/in/akhk1/"><img class="icon" src="images/linkedin.png" alt="LN"></a> <a class="nostyle" href="mailto:akothapalli31@gatech.edu?subject=Akhil&body=Hi Akhil, I got your email from your website!"><img class="icon" src="images/gmail.png" alt="GM"></a> <a class="nostyle" target="_blank" href="https://github.com/kakhil2004"><img class="icon" src="images/github.png" alt="GH"></a> <a class="nostyle" target="_blank" href="https://twitter.com/kakhil2004tech"><img class="icon" src="images/twitter.png" alt="X"></a></div></div></div></div> <hr id="proj"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-1vtnekl">Projects</h2> ${validate_component(BoxContainer, "BoxContainer").$$render($$result, { data: proj }, {}, {})}</div> <hr id="skill"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-n7npol">Skills</h2> <p style="text-align: center;" data-svelte-h="svelte-1cqnyex">Hover over a box to see how recently I used the skill! Green - Recent, Yellow - A little while ago</p> <h5 style="" data-svelte-h="svelte-1xt3awh">Programming Languages &amp; Database</h5> ${validate_component(TinyContainer, "TinyContainer").$$render(
+  return `${$$result.head += `<!-- HEAD_svelte-vyda69_START -->${$$result.title = `<title>AK | Home</title>`, ""}<meta name="description" content="Svelte demo app"><!-- HEAD_svelte-vyda69_END -->`, ""} <section><div class="page-container" data-svelte-h="svelte-1ysywsd"><div class="content-container"><div class="image-container"><img class="bio" src="images/ak.png" alt="akhil"></div> <div class="content" style="margin: auto;"><p style="margin-bottom: 0px; text-align: center;">Hi I&#39;m</p> <h2 style="margin-top: 0px; text-align: center;">Akhil Kothapalli</h2> <p style="text-align: center;">a second-year CS major from Georgia. I enjoy coding and have done all sorts of projects from game dev to web apps. Other than that, I love going to the gym and have recently picked up indoor rock climbing (not amazing at it). I&#39;m excited to work with you and hopefully get you to enjoy this course as much as I did!</p> <div style="text-align: center;"><a class="nostyle" target="_blank" href="https://docs.google.com/document/d/1cx9gJDNv9LRQL82QafHxEocb3PT7T4Hx5ZAaa0BO750/edit?usp=sharing"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Resume</h3></button></a> <a class="nostyle" target="_blank" id="openPopup"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Tutorial (If first time PLEASE click me)</h3></button></a> <br> <a class="nostyle" target="_blank" href="https://www.linkedin.com/in/akhk1/"><img class="icon" src="images/linkedin.png" alt="LN"></a> <a class="nostyle" href="mailto:akothapalli31@gatech.edu?subject=Akhil&body=Hi Akhil, I got your email from your website!"><img class="icon" src="images/gmail.png" alt="GM"></a> <a class="nostyle" target="_blank" href="https://github.com/kakhil2004"><img class="icon" src="images/github.png" alt="GH"></a> <a class="nostyle" target="_blank" href="https://twitter.com/kakhil2004tech"><img class="icon" src="images/twitter.png" alt="X"></a></div></div></div></div> <hr id="proj"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-1vtnekl">Projects</h2> ${validate_component(BoxContainer, "BoxContainer").$$render($$result, { data: proj }, {}, {})}</div> <hr id="skill"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-n7npol">Skills</h2> <p style="text-align: center;" data-svelte-h="svelte-1cqnyex">Hover over a box to see how recently I used the skill! Green - Recent, Yellow - A little while ago</p> <h5 style="" data-svelte-h="svelte-1xt3awh">Programming Languages &amp; Database</h5> ${validate_component(TinyContainer, "TinyContainer").$$render(
     $$result,
     {
       data: [
@@ -138,8 +139,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     },
     {},
     {}
-  )}</div> <hr id="exp"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-1ar0q8b">Experience</h2> ${validate_component(BoxContainer, "BoxContainer").$$render($$result, { data: exp }, {}, {})}</div> <button id="scrollToTopBtn" data-svelte-h="svelte-ne12jy">Top</button> <div id="popup" class="popup" data-svelte-h="svelte-mmlq1p"><div class="popup-content"><span class="close" id="closePopup">×</span> <h3>Boxes</h3> <p>Below for each section you will see boxes. Hover over them! If it turns <span style="color:green">green</span> then CLICK ON IT. If it is 
-				<span style="color:lightblue">blue</span> then it has a link which leaves this page. If it doesn&#39;t light up, then my resume covers it enough.</p> <h3>Top button</h3> <p>Use the little &quot;Top&quot; button in the corner to scroll back to the top</p></div></div> <script data-svelte-h="svelte-7cttd">window.onscroll = function() {scrollFunction()};
+  )}</div> <hr id="exp"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-1ar0q8b">Experience</h2> ${validate_component(BoxContainer, "BoxContainer").$$render($$result, { data: exp }, {}, {})}</div> <button id="scrollToTopBtn" data-svelte-h="svelte-ne12jy">Top</button> <div id="popup" class="popup" data-svelte-h="svelte-1w6rbco"><div class="popup-content"><span class="close" id="closePopup">×</span> <h3>Boxes</h3> <p>Below for each section you will see boxes. Hover over them! If it turns <span style="color:green">green</span> then you can click on it for a cool description of that item.
+				If it is <span style="color:lightblue">blue</span> then it has a link which leaves this page. If it doesn&#39;t light up, then my resume covers it enough OR I will add a page soon.</p> <h3>Top button</h3> <p>Use the little &quot;Top&quot; button in the corner to scroll back to the top</p></div></div> <script data-svelte-h="svelte-14b6k21">window.onscroll = function() {scrollFunction()};
 
 
 	function test(link) {
@@ -181,7 +182,41 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 		if (event.target == popup) {
 		popup.style.display = "none";
 		}
-	}<\/script></section>`;
+	}
+
+	
+
+	function sendDiscordNotification(content, webhookURL) {
+  const payload = {
+    content: content,
+  };
+
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  };
+
+  fetch(webhookURL, options)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(\`Error sending message: \${response.statusText}\`);
+      }
+      console.log('Message sent successfully!');
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+
+
+// Example usage:
+const webhookURL = 'https://discord.com/api/webhooks/1211865773082157127/tjYNjMYFupGBIdmGQqDIVVzApp3ZzsvRHvxwgVi_OCLPg4RWISiIqL7cYtFrPY8scqkh'; // Replace with your actual webhook URL
+const message = 'Someone visited';
+
+sendDiscordNotification(message, webhookURL);<\/script></section>`;
 });
 export {
   Page as default
