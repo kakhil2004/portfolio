@@ -82,6 +82,19 @@
     "src": "src/routes/+page.ts",
     "isEntry": true
   },
+  "src/routes/about/+page.svelte": {
+    "file": "entries/pages/about/_page.svelte.js",
+    "src": "src/routes/about/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "src/routes/about/+page.ts": {
+    "file": "entries/pages/about/_page.ts.js",
+    "src": "src/routes/about/+page.ts",
+    "isEntry": true
+  },
   "src/routes/attributions/+page.svelte": {
     "file": "entries/pages/attributions/_page.svelte.js",
     "src": "src/routes/attributions/+page.svelte",

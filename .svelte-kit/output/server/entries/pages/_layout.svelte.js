@@ -15,7 +15,7 @@ const css = {
 };
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `${$$result.head += `<!-- HEAD_svelte-ze56aw_START --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css"><link rel="stylesheet" href="${escape(base, true) + "/style.css"}" type="text/css"><!-- HEAD_svelte-ze56aw_END -->`, ""} <div id="page-container" class="svelte-1qf80bv">${validate_component(Header, "Header").$$render($$result, {}, {}, {})} <main id="content-wrap" class="svelte-1qf80bv">${slots.default ? slots.default({}) : ``}</main> <footer id="footer" class="svelte-1qf80bv" data-svelte-h="svelte-1qu81rz"><div><p>©2023 Akhil, Powered by SvelteKit. More about this site - 1.0.0</p></div></footer> </div>`;
+  return `${$$result.head += `<!-- HEAD_svelte-ze56aw_START --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css"><link rel="stylesheet" href="${escape(base, true) + "/style.css"}" type="text/css"><!-- HEAD_svelte-ze56aw_END -->`, ""} <div id="page-container" class="svelte-1qf80bv">${validate_component(Header, "Header").$$render($$result, {}, {}, {})} <main id="content-wrap" class="svelte-1qf80bv">${slots.default ? slots.default({}) : ``}</main> <footer id="footer" class="svelte-1qf80bv" data-svelte-h="svelte-7q9vp1"><div><p>©2023 Akhil, Powered by SvelteKit. <a href="${escape(base, true) + "/about"}">More about this site</a>  - 1.0.0</p></div></footer> </div>`;
 });
 export {
   Layout as default

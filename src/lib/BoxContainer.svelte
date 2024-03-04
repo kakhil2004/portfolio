@@ -16,7 +16,7 @@
                 {/if}
                 
                 {#if ("smallHead" in item)}
-                    <p><b>{item["smallHead"]}</b></p>
+                    <p style="margin:0px;"><b>{item["smallHead"]}</b></p>
                 {/if}
                 {#if ("para" in item)}
                     <p>{item["para"]}</p>
@@ -33,7 +33,7 @@
             {/if}
             
             {#if ("smallHead" in item)}
-                <p><b>{item["smallHead"]}</b></p>
+                <p style="margin:0px;"><b>{item["smallHead"]}</b></p>
             {/if}
             {#if ("para" in item)}
                 <p>{item["para"]}</p>

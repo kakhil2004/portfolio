@@ -26,19 +26,21 @@
 	let proj = [
 		{
 			"header" : "MyFinancePal",
-			"smallHead" : "OpenAI, Sentiment Anaylsis,",
+			"smallHead" : "OpenAI, Sentiment Anaylsis",
 			"para" : "New investors often struggle with tunnel vision, risky choices, and emotions. Our project tackles these by fostering a broad perspective, simplifying metrics, and promoting data-driven decision-making.",
 			"redirect" : "https://github.com/ErMa12345/MyFinancePal",
 			"color" : "lightblue"
 		},
 		{
 			"header" : "cLLiMate.tech",
+			"smallHead" : "Bias Anaylsis",
 			"para" : "We believe in tackling climate change by starting with personal awareness, emphasizing the need for reliable climate news sources. That's why we're creating a climate news feed using advanced technology like NLP and machine learning, making it easier to stay informed and understand the impacts of climate change.",
 			"redirect" : "https://devpost.com/software/cllimate",
 			"color" : "lightblue"
 		},
 		{
 			"header" : "OSCAR Notification Bot",
+			"smallHead" : "Python, Requests, Chrome DevTools",
 			"para" : "Bot that notifies you when a class seat opens on Georgia Tech's system. Almost instant response time. Way faster than courseicle.",
 			"redirect" : base+"/projects/oscar",
 			"color" : "lightgreen"
@@ -46,11 +48,22 @@
 		},
 		{
 			"header" : "Transforming Bots Tycoon",
+			"smallHead" : "Production level app, Game Dev",
 			"para" : "A full in-game economy where players can build their base, become robots and protect their land. Made raycasting physics, user data storage solutions etc.",
 			"redirect" : base+"/projects/transformers",
 			"color" : "lightgreen"
+		},
+		{
+			"header" : "Gym Tracker",
+			"smallHead" : "React.js, MongoDB -> SQL",
+			"para" : "A full stack app for tracking gym progress with visualizations",
+			"redirect" : "https://github.com/kakhil2004/Gym-Tracker",
+			"color" : "lightblue"
 		}
+
 	]
+
+
 </script>
 
 <svelte:head>
@@ -72,7 +85,7 @@
 				<div style="text-align: center;">
 
 					<a class="nostyle" target="_blank" href="https://docs.google.com/document/d/1cx9gJDNv9LRQL82QafHxEocb3PT7T4Hx5ZAaa0BO750/edit?usp=sharing"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Resume</h3></button></a>
-					<a class="nostyle" target="_blank" id="openPopup"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;"> Tutorial &#40If first time PLEASE click me&#41</h3></button></a>
+					<a class="nostyle" target="_blank" id="openPopup"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;"> Tutorial &#40First time? PLEASE click me&#41</h3></button></a>
 					
 					
 					<br>
@@ -153,6 +166,8 @@
 			</h3>
 			<p>Below for each section you will see boxes. Hover over them! If it turns <span style="color:green">green</span> then you can click on it for a cool description of that item.
 				If it is <span style="color:lightblue">blue</span> then it has a link which leaves this page. If it doesn't light up, then my resume covers it enough OR I will add a page soon.
+
+				Also for projects, look under the name to see <b>KEYWORDS</b> of what the project is about
 			</p>
 		<h3>
 		Top button
@@ -209,39 +224,7 @@
 		}
 	}
 
-	
 
-	function sendDiscordNotification(content, webhookURL) {
-  const payload = {
-    content: content,
-  };
-
-  const options = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(payload),
-  };
-
-  fetch(webhookURL, options)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Error sending message: ${response.statusText}`);
-      }
-      console.log('Message sent successfully!');
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-}
-
-
-// Example usage:
-const webhookURL = 'https://discord.com/api/webhooks/1211865773082157127/tjYNjMYFupGBIdmGQqDIVVzApp3ZzsvRHvxwgVi_OCLPg4RWISiIqL7cYtFrPY8scqkh'; // Replace with your actual webhook URL
-const message = 'Someone visited';
-
-sendDiscordNotification(message, webhookURL);
 </script>
 </section>
 
