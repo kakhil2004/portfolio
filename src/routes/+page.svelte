@@ -7,18 +7,22 @@
 			"header" : "Teaching Assistant",
 			"smallHead" : "Georiga Institute of Technology",
 			"para" : "I teach lectures every week to 30+ students, make weekly check-up quizzes for them on Canvas and spend 3 hours of 1-on-1 time every week. This led to me mastering this course",
+			"redirect" : "https://csvistool.com/",
+			"color" : "lightblue"
 		},
 		{
 			"header" : "Undergraduate Researcher",
 			"smallHead" : "Active Safety for Autonomous and Semi-Autonomous Vehicles",
 			"para" : "I spend several hours every week working on a cool car that has LIDAR, vision, an NVidia Jetson Nano etc. and I need to make it fully autonmous so it can race in F1Tenth. Will add a page for this soon!",
-		
+			"redirect" : "/exp/aevip",
+			"color" : "lightgreen"
 		},
 		{
 			"header" : "Electrical Mentor & Technician",
 			"smallHead" : "FRC Team 1683 - Techno Titans",
 			"para" : "I spent hours here tutoring students about electrical and programming for FRC and the real world (Microcontrollers & Shields). I was also the first person to be called if the robot ever needed repairs.",
-		
+			"redirect" : "https://www.technotitans.org/",
+			"color" : "lightblue"
 		}
 		
 		
@@ -76,7 +80,7 @@
 
 		<div class="content-container">
 			<div class="image-container">
-				<img class="bio" src="images/ak.png" alt="akhil">
+				<img class="bio" src="images/ak2.jpg" alt="akhil">
 			</div>
 			<div class="content" style="margin: auto;">
 				<p style="margin-bottom: 0px;  text-align: center;">Hi I'm</p>

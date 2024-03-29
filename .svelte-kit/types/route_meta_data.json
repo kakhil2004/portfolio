@@ -8,6 +8,9 @@
 	"/attributions": [
 		"src/routes/attributions/+page.ts"
 	],
+	"/exp/aevip": [
+		"src/routes/exp/aevip/+page.ts"
+	],
 	"/projects/dellserver": [
 		"src/routes/projects/dellserver/+page.ts"
 	],
