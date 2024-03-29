@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+	<title>AK</title>
+</head>
+
+<style>
+body {
+    max-width: 60%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+</style>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/simpleport2/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link href="/simpleport2/_app/immutable/assets/0.Kps9LtjI.css" rel="stylesheet">
+		<link href="/simpleport2/_app/immutable/assets/Carousel.VNbS7xGE.css" rel="stylesheet">
+		<link rel="modulepreload" href="/simpleport2/_app/immutable/entry/start.CAP7IUxH.js">
+		<link rel="modulepreload" href="/simpleport2/_app/immutable/chunks/entry.CKyjL1nk.js">
+		<link rel="modulepreload" href="/simpleport2/_app/immutable/chunks/scheduler.BfJEPAwo.js">
+		<link rel="modulepreload" href="/simpleport2/_app/immutable/chunks/paths.HKZUruwq.js">
+		<link rel="modulepreload" href="/simpleport2/_app/immutable/entry/app.3NKmqUj2.js">
+		<link rel="modulepreload" href="/simpleport2/_app/immutable/chunks/index.Cqvjk_UP.js">
+		<link rel="modulepreload" href="/simpleport2/_app/immutable/nodes/0.Cye3G4wr.js">
+		<link rel="modulepreload" href="/simpleport2/_app/immutable/nodes/5.hzcdl8Tj.js"><title>About</title><!-- HEAD_svelte-ze56aw_START --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css"><link rel="stylesheet" href="/simpleport2/style.css" type="text/css"><!-- HEAD_svelte-ze56aw_END --><!-- HEAD_svelte-1ds1qyu_START --><meta name="description" content="About this app"><!-- HEAD_svelte-1ds1qyu_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">   <div id="page-container" class="svelte-1qf80bv"><header><div class="topnav svelte-39akck"><h2 class="brand svelte-39akck">Akhil Kothapalli</h2> <div class="topnav-right svelte-39akck" data-svelte-h="svelte-1lpu03o"><a href="/simpleport2/#proj" class="svelte-39akck">Projects</a> <a href="/simpleport2/#skill" class="svelte-39akck">Skills</a> <a href="/simpleport2/#exp" class="svelte-39akck">Experience</a> <a href="/simpleport2/attributions" class="svelte-39akck">Attributions</a></div></div> </header> <main id="content-wrap" class="svelte-1qf80bv"> <div class="text-column" data-svelte-h="svelte-e27856"><h1>Undergradute Research Work</h1> <h3>Why?</h3> <p>I&#39;ve always loved working on remote control cars and trying to make them autonomous. You can see some of my work for this in my project.</p> <video controls><source src="../images/aevip/vid.mp4" type="video/mp4">
+	  Your browser does not support the video tag.</video> <h3>How?</h3> <p>First using devtools, I looked into the APIs used by the school&#39;s registration system and how they fetched class data. Each semester had a special code and that would be passed
+		in to an endpoint to fetch all the classes and their CRNs (unique id for each class). Then another API that takes in the CRN and returns the number of seats and waitlist 
+		seats avaliable.</p> <h3>Ethics</h3> <p>I did wonder if this was ethical and after reading Gerogia Tech&#39;s rules, I did not violate any. Also coursicle is an app that does the same thing but on a much larger scale.
+		My app is just an improvement of an already existing and widely used software. To further follow the guidelines, I made sure to not use the &quot;registration&quot; endpoint but instead
+		the &quot;look up&quot; API.</p> <h3>Tech Stack</h3> <ul><li>Python Requests</li> <li>Python Sets</li> <li>Beautiful Soup</li> <li>Discord.js</li> <li>Chrome DevTools</li></ul> <h3>Process</h3> <p>This app is rather simple, so I won&#39;t go into too much detail. After anaylzing the end points and looking at what parameters they take in, I replicated everything in Python Requests.
+		I then saved the data as a Python set so that I everytime I poll to the server, we can check if the data has been updated using set operations. Then if there is a change, push a 
+		notification to discord.</p></div></main> <footer id="footer" class="svelte-1qf80bv" data-svelte-h="svelte-7q9vp1"><div><p>©2023 Akhil, Powered by SvelteKit. <a href="/simpleport2/about">More about this site</a>  - 1.0.0</p></div></footer> </div> 
+			
+			<script>
+				{
+					__sveltekit_1p75ony = {
+						base: "/simpleport2",
+						assets: "/simpleport2"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("/simpleport2/_app/immutable/entry/start.CAP7IUxH.js"),
+						import("/simpleport2/_app/immutable/entry/app.3NKmqUj2.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 5],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
