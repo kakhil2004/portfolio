@@ -1,4 +1,5 @@
 import { c as create_ssr_component, d as each, f as add_attribute } from "./ssr.js";
+/* empty css                                       */
 const css = {
   code: ".carousel.svelte-fgjebk{display:flex;overflow-x:auto;position:relative;width:100%}.carousel__container.svelte-fgjebk{display:flex}",
   map: null

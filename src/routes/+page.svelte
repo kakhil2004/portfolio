@@ -14,7 +14,7 @@
 			"header" : "Undergraduate Researcher",
 			"smallHead" : "Active Safety for Autonomous and Semi-Autonomous Vehicles",
 			"para" : "I spend several hours every week working on a cool car that has LIDAR, vision, an NVidia Jetson Nano etc. and I need to make it fully autonmous so it can race in F1Tenth. Will add a page for this soon!",
-			"redirect" : "/exp/aevip",
+			"redirect" : base+"/exp/aevip",
 			"color" : "lightgreen"
 		},
 		{
@@ -93,6 +93,7 @@
 					
 					
 					<br>
+					<p><b>Click the icons below to contact me!</b></p>
 					<a class="nostyle" target="_blank" href="https://www.linkedin.com/in/akhk1/"><img class="icon"src="images/linkedin.png" alt="LN"></a>
 					<a class="nostyle" href="mailto:akothapalli31@gatech.edu?subject=Akhil&body=Hi Akhil, I got your email from your website!"><img class="icon"src="images/gmail.png" alt="GM"></a>
 					<a class="nostyle" target="_blank" href="https://github.com/kakhil2004"><img class="icon"src="images/github.png" alt="GH"></a>

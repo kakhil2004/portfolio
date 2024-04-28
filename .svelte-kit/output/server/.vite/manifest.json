@@ -17,6 +17,10 @@
       "_app/immutable/assets/Carousel.VNbS7xGE.css"
     ]
   },
+  "_Carousel.svelte_svelte_type_style_lang.js": {
+    "file": "_app/immutable/assets/Carousel.VNbS7xGE.css",
+    "src": "_Carousel.svelte_svelte_type_style_lang.js"
+  },
   "_exports.js": {
     "file": "chunks/exports.js"
   },
@@ -107,6 +111,22 @@
   "src/routes/attributions/+page.ts": {
     "file": "entries/pages/attributions/_page.ts.js",
     "src": "src/routes/attributions/+page.ts",
+    "isEntry": true
+  },
+  "src/routes/exp/aevip/+page.svelte": {
+    "file": "entries/pages/exp/aevip/_page.svelte.js",
+    "src": "src/routes/exp/aevip/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Carousel.VNbS7xGE.css"
+    ]
+  },
+  "src/routes/exp/aevip/+page.ts": {
+    "file": "entries/pages/exp/aevip/_page.ts.js",
+    "src": "src/routes/exp/aevip/+page.ts",
     "isEntry": true
   },
   "src/routes/projects/dellserver/+page.svelte": {
