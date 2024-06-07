@@ -142,6 +142,19 @@
     "src": "src/routes/projects/dellserver/+page.ts",
     "isEntry": true
   },
+  "src/routes/projects/esp32has/+page.md": {
+    "file": "entries/pages/projects/esp32has/_page.md.js",
+    "src": "src/routes/projects/esp32has/+page.md",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "src/routes/projects/esp32has/+page.ts": {
+    "file": "entries/pages/projects/esp32has/_page.ts.js",
+    "src": "src/routes/projects/esp32has/+page.ts",
+    "isEntry": true
+  },
   "src/routes/projects/oscar/+page.svelte": {
     "file": "entries/pages/projects/oscar/_page.svelte.js",
     "src": "src/routes/projects/oscar/+page.svelte",
@@ -181,6 +194,22 @@
   "src/routes/projects/transformers/+page.ts": {
     "file": "entries/pages/projects/transformers/_page.ts.js",
     "src": "src/routes/projects/transformers/+page.ts",
+    "isEntry": true
+  },
+  "src/routes/test/+page.svelte": {
+    "file": "entries/pages/test/_page.svelte.js",
+    "src": "src/routes/test/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.DeUMrcNL.css"
+    ]
+  },
+  "src/routes/test/+page.ts": {
+    "file": "entries/pages/test/_page.ts.js",
+    "src": "src/routes/test/+page.ts",
     "isEntry": true
   }
 }

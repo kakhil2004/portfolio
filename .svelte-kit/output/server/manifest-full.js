@@ -10,7 +10,7 @@ return {
 	assets: new Set([".DS_Store",".nojekyll","favicon.png","images/aevip/vid.mp4","images/ak1.png","images/ak2.jpg","images/github.png","images/gmail.png","images/linkedin.png","images/oscar/oscarbot.png","images/oscar/registration.png","images/trans/raycast.png","images/trans/shop.png","images/trans/t1.png","images/trans/transform.gif","images/twitter.png","robots.txt","style.css"]),
 	mimeTypes: {".png":"image/png",".mp4":"video/mp4",".jpg":"image/jpeg",".gif":"image/gif",".txt":"text/plain",".css":"text/css"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.BAJFaLvh.js","app":"_app/immutable/entry/app.CiNaqJHm.js","imports":["_app/immutable/entry/start.BAJFaLvh.js","_app/immutable/chunks/entry.C_QIgPVB.js","_app/immutable/chunks/scheduler.BfJEPAwo.js","_app/immutable/chunks/paths.DzmvcTKM.js","_app/immutable/entry/app.CiNaqJHm.js","_app/immutable/chunks/scheduler.BfJEPAwo.js","_app/immutable/chunks/index.Cqvjk_UP.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.DUcseXZL.js","app":"_app/immutable/entry/app.CM0my7Ai.js","imports":["_app/immutable/entry/start.DUcseXZL.js","_app/immutable/chunks/entry.DQAvOPyB.js","_app/immutable/chunks/scheduler.BfJEPAwo.js","_app/immutable/chunks/paths.BnzYlIBQ.js","_app/immutable/entry/app.CM0my7Ai.js","_app/immutable/chunks/scheduler.BfJEPAwo.js","_app/immutable/chunks/index.Cqvjk_UP.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
@@ -21,7 +21,9 @@ return {
 			__memo(() => import('./nodes/6.js')),
 			__memo(() => import('./nodes/7.js')),
 			__memo(() => import('./nodes/8.js')),
-			__memo(() => import('./nodes/9.js'))
+			__memo(() => import('./nodes/9.js')),
+			__memo(() => import('./nodes/10.js')),
+			__memo(() => import('./nodes/11.js'))
 		],
 		routes: [
 			{
@@ -60,24 +62,38 @@ return {
 				endpoint: null
 			},
 			{
+				id: "/projects/esp32has",
+				pattern: /^\/projects\/esp32has\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 7 },
+				endpoint: null
+			},
+			{
 				id: "/projects/oscar",
 				pattern: /^\/projects\/oscar\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 7 },
+				page: { layouts: [0,], errors: [1,], leaf: 8 },
 				endpoint: null
 			},
 			{
 				id: "/projects/remotepc",
 				pattern: /^\/projects\/remotepc\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 8 },
+				page: { layouts: [0,], errors: [1,], leaf: 9 },
 				endpoint: null
 			},
 			{
 				id: "/projects/transformers",
 				pattern: /^\/projects\/transformers\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 9 },
+				page: { layouts: [0,], errors: [1,], leaf: 10 },
+				endpoint: null
+			},
+			{
+				id: "/test",
+				pattern: /^\/test\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 11 },
 				endpoint: null
 			}
 		],

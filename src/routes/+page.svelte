@@ -11,13 +11,6 @@
 			"color" : "lightblue"
 		},
 		{
-			"header" : "Undergraduate Researcher",
-			"smallHead" : "Active Safety for Autonomous and Semi-Autonomous Vehicles",
-			"para" : "I spend several hours every week working on a cool car that has LIDAR, vision, an NVidia Jetson Nano etc. and I need to make it fully autonmous so it can race in F1Tenth. Will add a page for this soon!",
-			"redirect" : base+"/exp/aevip",
-			"color" : "lightgreen"
-		},
-		{
 			"header" : "Electrical Mentor & Technician",
 			"smallHead" : "FRC Team 1683 - Techno Titans",
 			"para" : "I spent hours here tutoring students about electrical and programming for FRC and the real world (Microcontrollers & Shields). I was also the first person to be called if the robot ever needed repairs.",
@@ -28,6 +21,27 @@
 		
 	]
 	let proj = [
+		{
+			"header" : "Home Automation System (NEW)",
+			"smallHead" : "Embedded System, Networking, C",
+			"para" : "Using the LoRa protocol to transmit data over extreme distances to automate tasks around the house",
+			"redirect" : base+"/projects/esp32has",
+			"color" : "lightgreen"
+		},
+		{
+			"header" : "Undergraduate Researcher",
+			"smallHead" : "Active Safety for Autonomous and Semi-Autonomous Vehicles",
+			"para" : "I spend several hours every week working on a cool car that has LIDAR, vision, an NVidia Jetson Nano etc. and I need to make it fully autonmous so it can race in F1Tenth. Will add a page for this soon!",
+			"redirect" : base+"/exp/aevip",
+			"color" : "lightgreen"
+		},
+		{
+			"header" : "Transforming Bots Tycoon",
+			"smallHead" : "Production level app, Game Dev",
+			"para" : "A full in-game economy where players can build their base, become robots and protect their land. Made raycasting physics, user data storage solutions etc.",
+			"redirect" : base+"/projects/transformers",
+			"color" : "lightgreen"
+		},
 		{
 			"header" : "MyFinancePal",
 			"smallHead" : "OpenAI, Sentiment Anaylsis",
@@ -49,13 +63,6 @@
 			"redirect" : base+"/projects/oscar",
 			"color" : "lightgreen"
 
-		},
-		{
-			"header" : "Transforming Bots Tycoon",
-			"smallHead" : "Production level app, Game Dev",
-			"para" : "A full in-game economy where players can build their base, become robots and protect their land. Made raycasting physics, user data storage solutions etc.",
-			"redirect" : base+"/projects/transformers",
-			"color" : "lightgreen"
 		},
 		{
 			"header" : "Gym Tracker",
@@ -85,7 +92,7 @@
 			<div class="content" style="margin: auto;">
 				<p style="margin-bottom: 0px;  text-align: center;">Hi I'm</p>
 				<h2 style="margin-top: 0px; text-align: center;">Akhil Kothapalli</h2>
-				<p style="text-align: center;">a second-year CS major from Georgia. I enjoy coding and have done all sorts of projects from game dev to web apps. Other than that, I love going to the gym and have recently picked up indoor rock climbing (not amazing at it). I'm excited to work with you and hopefully get you to enjoy this course as much as I did!</p>
+				<p style="text-align: center;">a third-year CS major from Georgia. I enjoy coding and have done all sorts of projects including <b>full-stack web apps, game development and working with embedded systems. Check out my projects below!</b></p>
 				<div style="text-align: center;">
 
 					<a class="nostyle" target="_blank" href="https://docs.google.com/document/d/1cx9gJDNv9LRQL82QafHxEocb3PT7T4Hx5ZAaa0BO750/edit?usp=sharing"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Resume</h3></button></a>
@@ -154,13 +161,13 @@
 	</div>
 	<hr id="exp">
 	<hr>
-
+<!--
 <div class="page-container">
 	<h2 style="text-align: center;">Experience</h2>
 	<BoxContainer data={exp}/>
 	
 </div>
-
+-->
 <button id="scrollToTopBtn">Top</button>
 
 <div id="popup" class="popup">

@@ -54,7 +54,6 @@
 		<div class="topnav-right">
 		  <a href="{base}/#proj">Projects</a>
 		  <a href="{base}/#skill">Skills</a>
-		  <a href="{base}/#exp">Experience</a>
 		  <a href="{base}/attributions"> Attributions</a>
 		</div>
 	  </div>

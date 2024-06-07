@@ -7,7 +7,7 @@ const css$1 = {
 let logo = "Akhil Kothapalli";
 const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css$1);
-  return `<header><div class="topnav svelte-39akck"><h2 class="brand svelte-39akck">${escape(logo)}</h2> <div class="topnav-right svelte-39akck" data-svelte-h="svelte-1lpu03o"><a href="${escape(base, true) + "/#proj"}" class="svelte-39akck">Projects</a> <a href="${escape(base, true) + "/#skill"}" class="svelte-39akck">Skills</a> <a href="${escape(base, true) + "/#exp"}" class="svelte-39akck">Experience</a> <a href="${escape(base, true) + "/attributions"}" class="svelte-39akck">Attributions</a></div></div> </header>`;
+  return `<header><div class="topnav svelte-39akck"><h2 class="brand svelte-39akck">${escape(logo)}</h2> <div class="topnav-right svelte-39akck" data-svelte-h="svelte-jwo2rj"><a href="${escape(base, true) + "/#proj"}" class="svelte-39akck">Projects</a> <a href="${escape(base, true) + "/#skill"}" class="svelte-39akck">Skills</a> <a href="${escape(base, true) + "/attributions"}" class="svelte-39akck">Attributions</a></div></div> </header>`;
 });
 const css = {
   code: "#page-container.svelte-1qf80bv{position:relative;min-height:98.6vh}#content-wrap.svelte-1qf80bv{padding-bottom:50px}#footer.svelte-1qf80bv{padding-top:20px;border-top:2px solid  var(--secondaryColor);position:absolute;bottom:0;width:100%;height:50px;text-align:center;font-size:small}",

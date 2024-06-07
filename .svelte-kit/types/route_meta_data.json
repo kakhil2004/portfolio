@@ -14,6 +14,9 @@
 	"/projects/dellserver": [
 		"src/routes/projects/dellserver/+page.ts"
 	],
+	"/projects/esp32has": [
+		"src/routes/projects/esp32has/+page.ts"
+	],
 	"/projects/oscar": [
 		"src/routes/projects/oscar/+page.ts"
 	],
@@ -22,5 +25,8 @@
 	],
 	"/projects/transformers": [
 		"src/routes/projects/transformers/+page.ts"
+	],
+	"/test": [
+		"src/routes/test/+page.ts"
 	]
 }

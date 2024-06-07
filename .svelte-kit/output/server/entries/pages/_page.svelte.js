@@ -27,13 +27,13 @@ const TinyContainer = create_ssr_component(($$result, $$props, $$bindings, slots
   })} </div>`;
 });
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let exp = [
+  let proj = [
     {
-      "header": "Teaching Assistant",
-      "smallHead": "Georiga Institute of Technology",
-      "para": "I teach lectures every week to 30+ students, make weekly check-up quizzes for them on Canvas and spend 3 hours of 1-on-1 time every week. This led to me mastering this course",
-      "redirect": "https://csvistool.com/",
-      "color": "lightblue"
+      "header": "Home Automation System (NEW)",
+      "smallHead": "Embedded System, Networking, C",
+      "para": "Using the LoRa protocol to transmit data over extreme distances to automate tasks around the house",
+      "redirect": base + "/projects/esp32has",
+      "color": "lightgreen"
     },
     {
       "header": "Undergraduate Researcher",
@@ -42,15 +42,6 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       "redirect": base + "/exp/aevip",
       "color": "lightgreen"
     },
-    {
-      "header": "Electrical Mentor & Technician",
-      "smallHead": "FRC Team 1683 - Techno Titans",
-      "para": "I spent hours here tutoring students about electrical and programming for FRC and the real world (Microcontrollers & Shields). I was also the first person to be called if the robot ever needed repairs.",
-      "redirect": "https://www.technotitans.org/",
-      "color": "lightblue"
-    }
-  ];
-  let proj = [
     {
       "header": "MyFinancePal",
       "smallHead": "OpenAI, Sentiment Anaylsis",
@@ -87,7 +78,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       "color": "lightblue"
     }
   ];
-  return `${$$result.head += `<!-- HEAD_svelte-1hxcyyj_START -->${$$result.title = `<title>AK | Home</title>`, ""}<meta name="description" content="Akhil Kothapalli's Portfolio website. Learn so much more about me here!"><!-- HEAD_svelte-1hxcyyj_END -->`, ""} <section><div class="page-container" data-svelte-h="svelte-1ud56s0"><div class="content-container"><div class="image-container"><img class="bio" src="images/ak2.jpg" alt="akhil"></div> <div class="content" style="margin: auto;"><p style="margin-bottom: 0px; text-align: center;">Hi I&#39;m</p> <h2 style="margin-top: 0px; text-align: center;">Akhil Kothapalli</h2> <p style="text-align: center;">a second-year CS major from Georgia. I enjoy coding and have done all sorts of projects from game dev to web apps. Other than that, I love going to the gym and have recently picked up indoor rock climbing (not amazing at it). I&#39;m excited to work with you and hopefully get you to enjoy this course as much as I did!</p> <div style="text-align: center;"><a class="nostyle" target="_blank" href="https://docs.google.com/document/d/1cx9gJDNv9LRQL82QafHxEocb3PT7T4Hx5ZAaa0BO750/edit?usp=sharing"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Resume</h3></button></a> <a class="nostyle" target="_blank" id="openPopup"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Tutorial (First time? PLEASE click me)</h3></button></a> <br> <p><b>Click the icons below to contact me!</b></p> <a class="nostyle" target="_blank" href="https://www.linkedin.com/in/akhk1/"><img class="icon" src="images/linkedin.png" alt="LN"></a> <a class="nostyle" href="mailto:akothapalli31@gatech.edu?subject=Akhil&body=Hi Akhil, I got your email from your website!"><img class="icon" src="images/gmail.png" alt="GM"></a> <a class="nostyle" target="_blank" href="https://github.com/kakhil2004"><img class="icon" src="images/github.png" alt="GH"></a> <a class="nostyle" target="_blank" href="https://twitter.com/kakhil2004tech"><img class="icon" src="images/twitter.png" alt="X"></a></div></div></div></div> <hr id="proj"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-1vtnekl">Projects</h2> ${validate_component(BoxContainer, "BoxContainer").$$render($$result, { data: proj }, {}, {})}</div> <hr id="skill"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-n7npol">Skills</h2> <p style="text-align: center;" data-svelte-h="svelte-1cqnyex">Hover over a box to see how recently I used the skill! Green - Recent, Yellow - A little while ago</p> <h5 style="" data-svelte-h="svelte-1xt3awh">Programming Languages &amp; Database</h5> ${validate_component(TinyContainer, "TinyContainer").$$render(
+  return `${$$result.head += `<!-- HEAD_svelte-1hxcyyj_START -->${$$result.title = `<title>AK | Home</title>`, ""}<meta name="description" content="Akhil Kothapalli's Portfolio website. Learn so much more about me here!"><!-- HEAD_svelte-1hxcyyj_END -->`, ""} <section><div class="page-container" data-svelte-h="svelte-1ecn7o7"><div class="content-container"><div class="image-container"><img class="bio" src="images/ak2.jpg" alt="akhil"></div> <div class="content" style="margin: auto;"><p style="margin-bottom: 0px; text-align: center;">Hi I&#39;m</p> <h2 style="margin-top: 0px; text-align: center;">Akhil Kothapalli</h2> <p style="text-align: center;">a third-year CS major from Georgia. I enjoy coding and have done all sorts of projects including <b>full-stack web apps, game development and working with embedded systems. Check out my projects below!</b></p> <div style="text-align: center;"><a class="nostyle" target="_blank" href="https://docs.google.com/document/d/1cx9gJDNv9LRQL82QafHxEocb3PT7T4Hx5ZAaa0BO750/edit?usp=sharing"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Resume</h3></button></a> <a class="nostyle" target="_blank" id="openPopup"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Tutorial (First time? PLEASE click me)</h3></button></a> <br> <p><b>Click the icons below to contact me!</b></p> <a class="nostyle" target="_blank" href="https://www.linkedin.com/in/akhk1/"><img class="icon" src="images/linkedin.png" alt="LN"></a> <a class="nostyle" href="mailto:akothapalli31@gatech.edu?subject=Akhil&body=Hi Akhil, I got your email from your website!"><img class="icon" src="images/gmail.png" alt="GM"></a> <a class="nostyle" target="_blank" href="https://github.com/kakhil2004"><img class="icon" src="images/github.png" alt="GH"></a> <a class="nostyle" target="_blank" href="https://twitter.com/kakhil2004tech"><img class="icon" src="images/twitter.png" alt="X"></a></div></div></div></div> <hr id="proj"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-1vtnekl">Projects</h2> ${validate_component(BoxContainer, "BoxContainer").$$render($$result, { data: proj }, {}, {})}</div> <hr id="skill"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-n7npol">Skills</h2> <p style="text-align: center;" data-svelte-h="svelte-1cqnyex">Hover over a box to see how recently I used the skill! Green - Recent, Yellow - A little while ago</p> <h5 style="" data-svelte-h="svelte-1xt3awh">Programming Languages &amp; Database</h5> ${validate_component(TinyContainer, "TinyContainer").$$render(
     $$result,
     {
       data: [
@@ -155,7 +146,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     },
     {},
     {}
-  )}</div> <hr id="exp"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-1ar0q8b">Experience</h2> ${validate_component(BoxContainer, "BoxContainer").$$render($$result, { data: exp }, {}, {})}</div> <button id="scrollToTopBtn" data-svelte-h="svelte-ne12jy">Top</button> <div id="popup" class="popup" data-svelte-h="svelte-1irpnyi"><div class="popup-content"><span class="close" id="closePopup">×</span> <h3>Boxes</h3> <p>Below for each section you will see boxes. Hover over them! If it turns <span style="color:green">green</span> then you can click on it for a cool description of that item.
+  )}</div> <hr id="exp"> <hr>  <button id="scrollToTopBtn" data-svelte-h="svelte-ne12jy">Top</button> <div id="popup" class="popup" data-svelte-h="svelte-1irpnyi"><div class="popup-content"><span class="close" id="closePopup">×</span> <h3>Boxes</h3> <p>Below for each section you will see boxes. Hover over them! If it turns <span style="color:green">green</span> then you can click on it for a cool description of that item.
 				If it is <span style="color:lightblue">blue</span> then it has a link which leaves this page. If it doesn&#39;t light up, then my resume covers it enough OR I will add a page soon.
 
 				Also for projects, look under the name to see <b>KEYWORDS</b> of what the project is about</p> <h3>Top button</h3> <p>Use the little &quot;Top&quot; button in the corner to scroll back to the top</p></div></div> <script data-svelte-h="svelte-mg5rox">window.onscroll = function() {scrollFunction()};
