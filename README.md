@@ -1,6 +1,16 @@
-# Simple Portfolio - 2
+# Portfolio Page
 
-## The focus of this portfolio is simplicity and UI design.
+## Simplicity and UI design.
 
-I focused on making things intutive and making the website nice and friendly looking. 
+I have made portfolio sites in the past but they are usually very complicated. This time I focused on simplicity and cleanliness while leveraging good frameworks & libraries like Svelte and Sakura CSS. 
+
+##
+To try this page on your computer run the following commands
+
+```shell
+npm i 
+npm run dev
+```
+
+
 

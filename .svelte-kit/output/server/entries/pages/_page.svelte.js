@@ -43,6 +43,13 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       "color": "lightgreen"
     },
     {
+      "header": "Transforming Bots Tycoon",
+      "smallHead": "Production level app, Game Dev",
+      "para": "A full in-game economy where players can build their base, become robots and protect their land. Made raycasting physics, user data storage solutions etc.",
+      "redirect": base + "/projects/transformers",
+      "color": "lightgreen"
+    },
+    {
       "header": "MyFinancePal",
       "smallHead": "OpenAI, Sentiment Anaylsis",
       "para": "New investors often struggle with tunnel vision, risky choices, and emotions. Our project tackles these by fostering a broad perspective, simplifying metrics, and promoting data-driven decision-making.",
@@ -64,13 +71,6 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       "color": "lightgreen"
     },
     {
-      "header": "Transforming Bots Tycoon",
-      "smallHead": "Production level app, Game Dev",
-      "para": "A full in-game economy where players can build their base, become robots and protect their land. Made raycasting physics, user data storage solutions etc.",
-      "redirect": base + "/projects/transformers",
-      "color": "lightgreen"
-    },
-    {
       "header": "Gym Tracker",
       "smallHead": "React.js, MongoDB -> SQL",
       "para": "A full stack app for tracking gym progress with visualizations",
@@ -78,7 +78,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       "color": "lightblue"
     }
   ];
-  return `${$$result.head += `<!-- HEAD_svelte-1hxcyyj_START -->${$$result.title = `<title>AK | Home</title>`, ""}<meta name="description" content="Akhil Kothapalli's Portfolio website. Learn so much more about me here!"><!-- HEAD_svelte-1hxcyyj_END -->`, ""} <section><div class="page-container" data-svelte-h="svelte-1ecn7o7"><div class="content-container"><div class="image-container"><img class="bio" src="images/ak2.jpg" alt="akhil"></div> <div class="content" style="margin: auto;"><p style="margin-bottom: 0px; text-align: center;">Hi I&#39;m</p> <h2 style="margin-top: 0px; text-align: center;">Akhil Kothapalli</h2> <p style="text-align: center;">a third-year CS major from Georgia. I enjoy coding and have done all sorts of projects including <b>full-stack web apps, game development and working with embedded systems. Check out my projects below!</b></p> <div style="text-align: center;"><a class="nostyle" target="_blank" href="https://docs.google.com/document/d/1cx9gJDNv9LRQL82QafHxEocb3PT7T4Hx5ZAaa0BO750/edit?usp=sharing"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Resume</h3></button></a> <a class="nostyle" target="_blank" id="openPopup"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Tutorial (First time? PLEASE click me)</h3></button></a> <br> <p><b>Click the icons below to contact me!</b></p> <a class="nostyle" target="_blank" href="https://www.linkedin.com/in/akhk1/"><img class="icon" src="images/linkedin.png" alt="LN"></a> <a class="nostyle" href="mailto:akothapalli31@gatech.edu?subject=Akhil&body=Hi Akhil, I got your email from your website!"><img class="icon" src="images/gmail.png" alt="GM"></a> <a class="nostyle" target="_blank" href="https://github.com/kakhil2004"><img class="icon" src="images/github.png" alt="GH"></a> <a class="nostyle" target="_blank" href="https://twitter.com/kakhil2004tech"><img class="icon" src="images/twitter.png" alt="X"></a></div></div></div></div> <hr id="proj"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-1vtnekl">Projects</h2> ${validate_component(BoxContainer, "BoxContainer").$$render($$result, { data: proj }, {}, {})}</div> <hr id="skill"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-n7npol">Skills</h2> <p style="text-align: center;" data-svelte-h="svelte-1cqnyex">Hover over a box to see how recently I used the skill! Green - Recent, Yellow - A little while ago</p> <h5 style="" data-svelte-h="svelte-1xt3awh">Programming Languages &amp; Database</h5> ${validate_component(TinyContainer, "TinyContainer").$$render(
+  return `${$$result.head += `<!-- HEAD_svelte-1hxcyyj_START -->${$$result.title = `<title>AK | Home</title>`, ""}<meta name="description" content="Akhil Kothapalli's Portfolio website. Learn so much more about me here!"><!-- HEAD_svelte-1hxcyyj_END -->`, ""} <section><div class="page-container" data-svelte-h="svelte-7od10"><div class="content-container"><div class="image-container"><img class="bio" src="images/ak3.jpg" alt="akhil"></div> <div class="content" style="margin: auto;"><p style="margin-bottom: 0px; text-align: center;">Hi I&#39;m</p> <h2 style="margin-top: 0px; text-align: center;">Akhil Kothapalli</h2> <p style="text-align: center;">a third-year CS major from Georgia. I enjoy coding and have done all sorts of projects including <b>full-stack web apps, game development and working with embedded systems. Check out my projects below!</b></p> <div style="text-align: center;"><a class="nostyle" target="_blank" href="https://docs.google.com/document/d/1cx9gJDNv9LRQL82QafHxEocb3PT7T4Hx5ZAaa0BO750/edit?usp=sharing"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Resume</h3></button></a> <a class="nostyle" target="_blank" id="openPopup"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Tutorial (First time? PLEASE click me)</h3></button></a> <br> <p><b>Click the icons below to contact me!</b></p> <a class="nostyle" target="_blank" href="https://www.linkedin.com/in/akhk1/"><img class="icon" src="images/linkedin.png" alt="LN"></a> <a class="nostyle" href="mailto:akothapalli31@gatech.edu?subject=Akhil&body=Hi Akhil, I got your email from your website!"><img class="icon" src="images/gmail.png" alt="GM"></a> <a class="nostyle" target="_blank" href="https://github.com/kakhil2004"><img class="icon" src="images/github.png" alt="GH"></a> <a class="nostyle" target="_blank" href="https://twitter.com/kakhil2004tech"><img class="icon" src="images/twitter.png" alt="X"></a></div></div></div></div> <hr id="proj"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-1vtnekl">Projects</h2> ${validate_component(BoxContainer, "BoxContainer").$$render($$result, { data: proj }, {}, {})}</div> <hr id="skill"> <hr> <div class="page-container"><h2 style="text-align: center;" data-svelte-h="svelte-n7npol">Skills</h2> <p style="text-align: center;" data-svelte-h="svelte-1cqnyex">Hover over a box to see how recently I used the skill! Green - Recent, Yellow - A little while ago</p> <h5 style="" data-svelte-h="svelte-1xt3awh">Programming Languages &amp; Database</h5> ${validate_component(TinyContainer, "TinyContainer").$$render(
     $$result,
     {
       data: [

@@ -1,4 +1,4 @@
-let base = "/simpleport2";
+let base = "/portfolio";
 let assets = base;
 const initial = { base, assets };
 function reset() {

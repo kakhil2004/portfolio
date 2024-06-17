@@ -87,7 +87,7 @@
 
 		<div class="content-container">
 			<div class="image-container">
-				<img class="bio" src="images/ak2.jpg" alt="akhil">
+				<img class="bio" src="images/ak3.jpg" alt="akhil">
 			</div>
 			<div class="content" style="margin: auto;">
 				<p style="margin-bottom: 0px;  text-align: center;">Hi I'm</p>
