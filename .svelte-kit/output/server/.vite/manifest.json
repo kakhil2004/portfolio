@@ -17,10 +17,6 @@
       "_app/immutable/assets/Carousel.VNbS7xGE.css"
     ]
   },
-  "_Carousel.svelte_svelte_type_style_lang.js": {
-    "file": "_app/immutable/assets/Carousel.VNbS7xGE.css",
-    "src": "_Carousel.svelte_svelte_type_style_lang.js"
-  },
   "_exports.js": {
     "file": "chunks/exports.js"
   },
@@ -113,15 +109,13 @@
     "src": "src/routes/attributions/+page.ts",
     "isEntry": true
   },
-  "src/routes/exp/aevip/+page.svelte": {
-    "file": "entries/pages/exp/aevip/_page.svelte.js",
-    "src": "src/routes/exp/aevip/+page.svelte",
+  "src/routes/exp/aevip/+page.md": {
+    "file": "entries/pages/exp/aevip/_page.md.js",
+    "src": "src/routes/exp/aevip/+page.md",
     "isEntry": true,
     "imports": [
-      "_ssr.js"
-    ],
-    "css": [
-      "_app/immutable/assets/Carousel.VNbS7xGE.css"
+      "_ssr.js",
+      "_Carousel.js"
     ]
   },
   "src/routes/exp/aevip/+page.ts": {

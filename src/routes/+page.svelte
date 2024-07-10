@@ -29,29 +29,29 @@
 			"color" : "lightgreen"
 		},
 		{
-			"header" : "Undergraduate Researcher",
-			"smallHead" : "Active Safety for Autonomous and Semi-Autonomous Vehicles",
-			"para" : "I spend several hours every week working on a cool car that has LIDAR, vision, an NVidia Jetson Nano etc. and I need to make it fully autonmous so it can race in F1Tenth. Will add a page for this soon!",
+			"header" : "Autonomous Vehicles Research",
+			"smallHead" : "ROS, Python, C, Git, Linux",
+			"para" : "I spend several hours every week working on a cool car that has LIDAR, vision, an NVidia Jetson Nano etc. and I need to make it fully autonmous so it can race in F1Tenth.",
 			"redirect" : base+"/exp/aevip",
 			"color" : "lightgreen"
 		},
 		{
 			"header" : "Transforming Bots Tycoon",
-			"smallHead" : "Production level app, Game Dev",
+			"smallHead" : "Product, Lua, Game Dev",
 			"para" : "A full in-game economy where players can build their base, become robots and protect their land. Made raycasting physics, user data storage solutions etc.",
 			"redirect" : base+"/projects/transformers",
 			"color" : "lightgreen"
 		},
 		{
 			"header" : "MyFinancePal",
-			"smallHead" : "OpenAI, Sentiment Anaylsis",
+			"smallHead" : "AI, Prompt Engineering, Data Science",
 			"para" : "New investors often struggle with tunnel vision, risky choices, and emotions. Our project tackles these by fostering a broad perspective, simplifying metrics, and promoting data-driven decision-making.",
 			"redirect" : "https://github.com/ErMa12345/MyFinancePal",
 			"color" : "lightblue"
 		},
 		{
 			"header" : "cLLiMate.tech",
-			"smallHead" : "Bias Anaylsis",
+			"smallHead" : "Data Science, K-n neighbors",
 			"para" : "We believe in tackling climate change by starting with personal awareness, emphasizing the need for reliable climate news sources. That's why we're creating a climate news feed using advanced technology like NLP and machine learning, making it easier to stay informed and understand the impacts of climate change.",
 			"redirect" : "https://devpost.com/software/cllimate",
 			"color" : "lightblue"
@@ -96,7 +96,7 @@
 				<div style="text-align: center;">
 
 					<a class="nostyle" target="_blank" href="https://docs.google.com/document/d/1cx9gJDNv9LRQL82QafHxEocb3PT7T4Hx5ZAaa0BO750/edit?usp=sharing"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Resume</h3></button></a>
-					<a class="nostyle" target="_blank" id="openPopup"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;"> Tutorial &#40First time? PLEASE click me&#41</h3></button></a>
+					<a class="nostyle" target="_blank" id="openPopup"><button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;"> Tutorial of Site</h3></button></a>
 					
 					
 					<br>
