@@ -1,5 +1,5 @@
 body {
-    max-width: 60%;
+    max-width: 70%;
 }
 
 html {
@@ -53,9 +53,10 @@ html {
 /*Deals with the bio part */
 img.bio {
     border-radius: 30px;
+    max-height: 80vh;
 }
 
-/* styles.css */
+
 
 
 .page-container {
