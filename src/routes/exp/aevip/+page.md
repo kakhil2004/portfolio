@@ -1,20 +1,53 @@
 <script>
   import Carousel from "$lib/Carousel.svelte";
+  let test = "../images/aevip/wallAlgo.png"
   let metadata = [
 			{
 			path: '../images/aevip/aeCar.jpg',
 			id: '',
-			alt: 'Atributo ALT de ejemplo para la imagen #1',
+			alt: 'ae1',
 		},
 		{
 			path: '../images/aevip/oldCar.jpg',
 			id: '',
-			alt: 'Atributo ALT de ejemplo para la imagen #1',
+			alt: 'ae2',
 		},
 		{
 			path: '../images/aevip/brokenCar.jpg',
 			id: '',
-			alt: 'Atributo ALT de ejemplo para la imagen #1',
+			alt: 'ae3',
+		}
+		]
+	let metadata2 = [
+		{
+			path: '../images/aevip/map/1.jpg',
+			id: '',
+			alt: 'Map image 1',
+		},
+		{
+			path: '../images/aevip/map/2.png',
+			id: '',
+			alt: 'Map image 2',
+		},
+		{
+			path: '../images/aevip/map/3.png',
+			id: '',
+			alt: 'Map image 3',
+		},
+		{
+			path: '../images/aevip/map/4.png',
+			id: '',
+			alt: 'Map image 4',
+		},
+		{
+			path: '../images/aevip/map/5.png',
+			id: '',
+			alt: 'Map image 5',
+		},
+		{
+			path: '../images/aevip/map/6.png',
+			id: '',
+			alt: 'Map image 6',
 		}
 		]
 </script>
@@ -56,7 +89,9 @@ The car in my research position (shown below) was on a different scale. It had a
 ## 2. Creating Basic algorithms
 ---
 #### Understanding the system
-This was my first time working with **ROS** so it took a week to understand the master slave system and the relevant nodes. After that I was able to create simple algorithms to get the car moving around a track. Here was a simple wall following algorithm I made!
+This was my first time working with **ROS** so it took a week to understand the master slave system and the relevant nodes. After that I was able to create simple algorithms to get the car moving around a track. Here was a simple wall following algorithm I made! 
+
+##### Algorithm
 
 <div class="video-container">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N_wLJqZBL7o?si=iilT77tWwscr4pcf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -69,4 +104,35 @@ After some research and realizing that the ESP's antenna was just too small, I f
 #### 
 
 <div id="step-3"></div>
+
+## 3. Trying to use LIDAR and generating racelines
+---
+We already had a forked version of [Hector SLAM](https://f1tenth.org/code/legacy1/lab_instructions/W3_T1_Using%20the%20Hector%20SLAM.pdf) so after running it and doing some tests, we found out that it wasn't in very usable format. It was just a pgm (black and white image) file and we needed a way to extract more data. 
+
+
+After thinking for a while I came up with the following approach:
+
+
+##### Steps taken
+---
+1. Clearly distiguish between walls and driveable surface using Open-CV (images 2,3)
+2. Sample points and check if withtin the driveable surface (image 3)
+3. Create a directed graph where the edges must go in a way that creates progress (image 4)
+4. Come up with an algorithm to create racelines (image 5)
+
+(These images are upscaled to view easily. The first image is what the SLAM algorithm outputs)
+<Carousel images={metadata2} imageHeight=300 imageSpacing=4/>
+
+
+
 <div id="step-4"></div>
+
+#### Showcase
+---
+My teamates worked on getting localization working (figuring out how to actually know where the car is relative to the environment), but due to time constraints we had to go back to our reactive algorithm. The algorithm worked by finding the biggest gap and going towards it, while ensuring that it is staying away from the walls. Depending on how far away the gap is we told the car to increase speed or go slower.
+
+
+
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WMhNEloiu8g?si=aAPgpOKj7BnDcjg9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>

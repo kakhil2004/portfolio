@@ -66,8 +66,8 @@ void loop() {
 ## Why?
 I bought a google home assistant and some lights and could control them using my voice. Why not try to use the same thing to water my garden and get some stats about it?
 
-## High Level Process
-1. Decide which communicaiton system to use (WiFi, Bluetooth, NRF24L01 etc.)
+## High Level Process (changed over time)
+1. Decide which communication system to use (WiFi, Bluetooth, NRF24L01 etc.)
 2. Wire up the electronics 
 3. Connect it to [Sinric Pro](https://sinric.pro/)
 4. Complete!
@@ -92,3 +92,18 @@ After some research and realizing that the ESP's antenna was just too small, I f
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oz0a7Ur7nko?si=TRT9Fx0RM0AYx2Ty" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 </div>
+
+#### Using the LR protocol
+
+There isn't proper code documentation on this protocol so it took me some time to find it and I was able to get it to work. After a few old forums I managed to create the following testing code:
+<a href="https://github.com/kakhil2004/esp32-testing" target="_blank">
+<button>Click me to see code</button>
+</a>
+
+
+The problem was I couldn't have LR running on the ESP32 and use normal Wi-Fi since they were two seperate protocols. To solve this I needed to combine two ESP32s, one that uses Wi-Fi and the other that talks to the devies in the house. Using the TX and RX pins, I could make the two communicate using the Serial monitor. 
+
+
+#### Creating a test server
+Using Glitch I was able to test if it worked and it did, I will add pictures soon!
+

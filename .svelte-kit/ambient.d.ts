@@ -28,6 +28,7 @@
 declare module '$env/static/private' {
 	export const ALLUSERSPROFILE: string;
 	export const AMDRMPATH: string;
+	export const AMDRMSDKPATH: string;
 	export const APPDATA: string;
 	export const CHROME_CRASHPAD_PIPE_NAME: string;
 	export const COLOR: string;
@@ -141,6 +142,7 @@ declare module '$env/dynamic/private' {
 	export const env: {
 		ALLUSERSPROFILE: string;
 		AMDRMPATH: string;
+		AMDRMSDKPATH: string;
 		APPDATA: string;
 		CHROME_CRASHPAD_PIPE_NAME: string;
 		COLOR: string;

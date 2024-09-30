@@ -14,7 +14,7 @@
                 {:else}
                 <h2>{item["header"]}</h2>
                 {/if}
-                
+                <img src={item["sImgSrc"]} alt="small image desc" class="smallimagedesc">
                 {#if ("smallHead" in item)}
                     <p style="margin:0px;"><b>{item["smallHead"]}</b></p>
                 {/if}
@@ -77,5 +77,11 @@
     cursor: pointer;
 }
 
+.smallimagedesc {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    object-fit: cover;
+}
 
 </style>
