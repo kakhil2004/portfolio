@@ -25,14 +25,14 @@ html {
 		<meta name="viewport" content="width=device-width" />
 		
 		<link href="../_app/immutable/assets/0.Kps9LtjI.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.B-7YkEIx.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/entry.B9oOotl7.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.BfJEPAwo.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/paths.YoBtgXUx.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.CtsZhF1Y.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.DMVctPuR.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.DeBceQzi.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/7.D-26mgSq.js"><!-- HEAD_svelte-ze56aw_START --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css"><link rel="stylesheet" href="../style.css" type="text/css"><!-- HEAD_svelte-ze56aw_END -->
+		<link rel="modulepreload" href="../_app/immutable/entry/start.eKDuVrYp.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/entry.BWRnYY4V.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.Dw93JyHj.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.CfzqsVc3.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.DS11lCfl.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.CUTYeL1M.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.BQKJtSbM.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/7.BB-xA-Oo.js"><!-- HEAD_svelte-ze56aw_START --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css"><link rel="stylesheet" href="../style.css" type="text/css"><!-- HEAD_svelte-ze56aw_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">   <div id="page-container" class="svelte-1qf80bv"><header><div class="topnav svelte-39akck"><h2 class="brand svelte-39akck">Akhil Kothapalli</h2> <div class="topnav-right svelte-39akck" data-svelte-h="svelte-jwo2rj"><a href="../#proj" class="svelte-39akck">Projects</a> <a href="../#skill" class="svelte-39akck">Skills</a> <a href="../attributions" class="svelte-39akck">Attributions</a></div></div> </header> <main id="content-wrap" class="svelte-1qf80bv"><h1 data-svelte-h="svelte-1vm0idr">Self-Gardener</h1> <p data-svelte-h="svelte-1okoqye"><a href="https://github.com/kakhil2004/esp32-testing" rel="nofollow">Click me for GitHub Link</a></p> <h5 data-svelte-h="svelte-ewv9e9">Still in progress (Will add updates as I go)</h5> <h2 data-svelte-h="svelte-lerqz1">Why?</h2> <p data-svelte-h="svelte-vwb3wt">I bought a google home assistant and some lights and could control them using my voice. Why not try to use the same thing to water my garden and get some stats about it?</p> <h2 data-svelte-h="svelte-tgtk4b">High Level Process (changed over time)</h2> <ol data-svelte-h="svelte-2ro0ei"><li>Decide which communication system to use (WiFi, Bluetooth, NRF24L01 etc.)</li> <li>Wire up the electronics</li> <li>Connect it to <a href="https://sinric.pro/" rel="nofollow">Sinric Pro</a></li> <li>Complete!</li></ol> <h2 data-svelte-h="svelte-ushnq7">Step 1</h2> <h4 data-svelte-h="svelte-14i9luh">The device</h4> <p data-svelte-h="svelte-kxq196">Immediately I knew that an ESP32 is the way to go since it is tiny, uses much less power than a Raspberry PI but comes with in-built WiFi unlike a regular Arduino. There is also one more advantage that I discovered later.</p> <h4 data-svelte-h="svelte-bb08dg">Using the standard WiFi protocol 802.11 b/g/n</h4> <p data-svelte-h="svelte-1eg3mdf">These protocols were super simple to use and after I connected it to my network. I could easily transmit data. The problem was the range was absolutely terrible. If I went more than 5 meters away while having a direct line from the ESP32 to the router, it would lose connection. This was extremely frustrating because it had already taken me so long to figure out everything to this point due to the lack of documentation.</p> <details><summary><b>Look here for the code for WiFi protocols 802.11 b/g/n</b></summary> <br> <pre class="language-'''"><code class="language-'''">#include &lt;WiFi.h>;
@@ -89,11 +89,11 @@ void loop() {
   }   
   delay(5000);
 }</code>
-</pre></details> <h4 data-svelte-h="svelte-y0f5is">Research the LoRa protocol</h4> <p data-svelte-h="svelte-dfbnfi">After some research and realizing that the ESP’s antenna was just too small, I found the LoRa protocol. Apparently ESP32s without an external antenna could communicate with one another over huge ranges (500 meters). I could not believe it since the regular protocols performed so terribly.</p> <h4></h4> <div class="video-container" data-svelte-h="svelte-ju4td8"><iframe width="560" height="315" src="https://www.youtube.com/embed/oz0a7Ur7nko?si=TRT9Fx0RM0AYx2Ty" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div> <h4 data-svelte-h="svelte-16gq1bl">Using the LR protocol</h4> <p data-svelte-h="svelte-gnrgs0">There isn’t proper code documentation on this protocol so it took me some time to find it and I was able to get it to work. After a few old forums I managed to create the following testing code:</p> <a href="https://github.com/kakhil2004/esp32-testing" target="_blank" data-svelte-h="svelte-4zc7fy"><button>Click me to see code</button></a> <p data-svelte-h="svelte-1xey7h8">The problem was I couldn’t have LR running on the ESP32 and use normal Wi-Fi since they were two seperate protocols. To solve this I needed to combine two ESP32s, one that uses Wi-Fi and the other that talks to the devies in the house. Using the TX and RX pins, I could make the two communicate using the Serial monitor.</p> <h4 data-svelte-h="svelte-105myhh">Creating a test server</h4> <p data-svelte-h="svelte-t2agd4">Using Glitch I was able to test if it worked and it did, I will add pictures soon!</p></main> <footer id="footer" class="svelte-1qf80bv" data-svelte-h="svelte-1kei9k0"><div><p>©2023 Akhil, Powered by SvelteKit. <a href="../about">More about this site</a>  - 1.2.1</p></div></footer> </div> 
+</pre></details> <h4 data-svelte-h="svelte-y0f5is">Research the LoRa protocol</h4> <p data-svelte-h="svelte-dfbnfi">After some research and realizing that the ESP’s antenna was just too small, I found the LoRa protocol. Apparently ESP32s without an external antenna could communicate with one another over huge ranges (500 meters). I could not believe it since the regular protocols performed so terribly.</p> <h4></h4> <div class="video-container" data-svelte-h="svelte-ju4td8"><iframe width="560" height="315" src="https://www.youtube.com/embed/oz0a7Ur7nko?si=TRT9Fx0RM0AYx2Ty" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div> <h4 data-svelte-h="svelte-16gq1bl">Using the LR protocol</h4> <p data-svelte-h="svelte-gnrgs0">There isn’t proper code documentation on this protocol so it took me some time to find it and I was able to get it to work. After a few old forums I managed to create the following testing code:</p> <a href="https://github.com/kakhil2004/esp32-testing" target="_blank" data-svelte-h="svelte-4zc7fy"><button>Click me to see code</button></a> <p data-svelte-h="svelte-1xey7h8">The problem was I couldn’t have LR running on the ESP32 and use normal Wi-Fi since they were two seperate protocols. To solve this I needed to combine two ESP32s, one that uses Wi-Fi and the other that talks to the devies in the house. Using the TX and RX pins, I could make the two communicate using the Serial monitor.</p> <h4 data-svelte-h="svelte-105myhh">Creating a test server</h4> <p data-svelte-h="svelte-t2agd4">Using Glitch I was able to test if it worked and it did, I will add pictures soon!</p></main> <footer id="footer" class="svelte-1qf80bv" data-svelte-h="svelte-1ry1jg5"><div><p>©2023 Akhil, Powered by SvelteKit. <a href="../about">More about this site</a>  - 1.2.2</p></div></footer> </div> 
 			
 			<script>
 				{
-					__sveltekit_d4g2rd = {
+					__sveltekit_fiivht = {
 						base: new URL("..", location).pathname.slice(0, -1)
 					};
 
@@ -102,8 +102,8 @@ void loop() {
 					const data = [null,null];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.B-7YkEIx.js"),
-						import("../_app/immutable/entry/app.CtsZhF1Y.js")
+						import("../_app/immutable/entry/start.eKDuVrYp.js"),
+						import("../_app/immutable/entry/app.DS11lCfl.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 7],
