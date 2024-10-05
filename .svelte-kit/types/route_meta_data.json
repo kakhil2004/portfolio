@@ -11,6 +11,9 @@
 	"/exp/aevip": [
 		"src/routes/exp/aevip/+page.ts"
 	],
+	"/projects/antibot": [
+		"src/routes/projects/antibot/+page.ts"
+	],
 	"/projects/dellserver": [
 		"src/routes/projects/dellserver/+page.ts"
 	],
