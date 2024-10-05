@@ -2,10 +2,8 @@ import { c as create_ssr_component, e as escape, v as validate_component } from 
 const Code = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { data } = $$props;
   let { sum } = $$props;
-  if ($$props.data === void 0 && $$bindings.data && data !== void 0)
-    $$bindings.data(data);
-  if ($$props.sum === void 0 && $$bindings.sum && sum !== void 0)
-    $$bindings.sum(sum);
+  if ($$props.data === void 0 && $$bindings.data && data !== void 0) $$bindings.data(data);
+  if ($$props.sum === void 0 && $$bindings.sum && sum !== void 0) $$bindings.sum(sum);
   return `<details><summary><b>${escape(sum)}</b></summary> <br> <pre class="language-'''"><code class="language-'''">${escape(data)}</code>
 </pre></details>`;
 });

@@ -1,6 +1,7 @@
 {
   ".svelte-kit/generated/server/internal.js": {
     "file": "internal.js",
+    "name": "internal",
     "src": ".svelte-kit/generated/server/internal.js",
     "isEntry": true,
     "imports": [
@@ -10,6 +11,7 @@
   },
   "_Carousel.js": {
     "file": "chunks/Carousel.js",
+    "name": "Carousel",
     "imports": [
       "_ssr.js"
     ],
@@ -18,24 +20,29 @@
     ]
   },
   "_exports.js": {
-    "file": "chunks/exports.js"
+    "file": "chunks/exports.js",
+    "name": "exports"
   },
   "_internal.js": {
     "file": "chunks/internal.js",
+    "name": "internal",
     "imports": [
       "_ssr.js",
       "_paths.js"
     ]
   },
   "_paths.js": {
-    "file": "chunks/paths.js"
+    "file": "chunks/paths.js",
+    "name": "paths"
   },
   "_ssr.js": {
-    "file": "chunks/ssr.js"
+    "file": "chunks/ssr.js",
+    "name": "ssr"
   },
-  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+  "node_modules/@sveltejs/kit/src/runtime/components/svelte-4/error.svelte": {
     "file": "entries/fallbacks/error.svelte.js",
-    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
+    "name": "entries/fallbacks/error.svelte",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/svelte-4/error.svelte",
     "isEntry": true,
     "imports": [
       "_ssr.js",
@@ -44,6 +51,7 @@
   },
   "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
     "file": "index.js",
+    "name": "index",
     "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js",
     "isEntry": true,
     "imports": [
@@ -55,6 +63,7 @@
   },
   "src/routes/+layout.svelte": {
     "file": "entries/pages/_layout.svelte.js",
+    "name": "entries/pages/_layout.svelte",
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
@@ -67,6 +76,7 @@
   },
   "src/routes/+page.svelte": {
     "file": "entries/pages/_page.svelte.js",
+    "name": "entries/pages/_page.svelte",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -79,11 +89,13 @@
   },
   "src/routes/+page.ts": {
     "file": "entries/pages/_page.ts.js",
+    "name": "entries/pages/_page.ts",
     "src": "src/routes/+page.ts",
     "isEntry": true
   },
   "src/routes/about/+page.svelte": {
     "file": "entries/pages/about/_page.svelte.js",
+    "name": "entries/pages/about/_page.svelte",
     "src": "src/routes/about/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -92,11 +104,13 @@
   },
   "src/routes/about/+page.ts": {
     "file": "entries/pages/about/_page.ts.js",
+    "name": "entries/pages/about/_page.ts",
     "src": "src/routes/about/+page.ts",
     "isEntry": true
   },
   "src/routes/attributions/+page.svelte": {
     "file": "entries/pages/attributions/_page.svelte.js",
+    "name": "entries/pages/attributions/_page.svelte",
     "src": "src/routes/attributions/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -106,11 +120,13 @@
   },
   "src/routes/attributions/+page.ts": {
     "file": "entries/pages/attributions/_page.ts.js",
+    "name": "entries/pages/attributions/_page.ts",
     "src": "src/routes/attributions/+page.ts",
     "isEntry": true
   },
   "src/routes/exp/aevip/+page.md": {
     "file": "entries/pages/exp/aevip/_page.md.js",
+    "name": "entries/pages/exp/aevip/_page.md",
     "src": "src/routes/exp/aevip/+page.md",
     "isEntry": true,
     "imports": [
@@ -120,11 +136,13 @@
   },
   "src/routes/exp/aevip/+page.ts": {
     "file": "entries/pages/exp/aevip/_page.ts.js",
+    "name": "entries/pages/exp/aevip/_page.ts",
     "src": "src/routes/exp/aevip/+page.ts",
     "isEntry": true
   },
   "src/routes/projects/dellserver/+page.svelte": {
     "file": "entries/pages/projects/dellserver/_page.svelte.js",
+    "name": "entries/pages/projects/dellserver/_page.svelte",
     "src": "src/routes/projects/dellserver/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -133,11 +151,13 @@
   },
   "src/routes/projects/dellserver/+page.ts": {
     "file": "entries/pages/projects/dellserver/_page.ts.js",
+    "name": "entries/pages/projects/dellserver/_page.ts",
     "src": "src/routes/projects/dellserver/+page.ts",
     "isEntry": true
   },
   "src/routes/projects/esp32has/+page.md": {
     "file": "entries/pages/projects/esp32has/_page.md.js",
+    "name": "entries/pages/projects/esp32has/_page.md",
     "src": "src/routes/projects/esp32has/+page.md",
     "isEntry": true,
     "imports": [
@@ -146,11 +166,13 @@
   },
   "src/routes/projects/esp32has/+page.ts": {
     "file": "entries/pages/projects/esp32has/_page.ts.js",
+    "name": "entries/pages/projects/esp32has/_page.ts",
     "src": "src/routes/projects/esp32has/+page.ts",
     "isEntry": true
   },
   "src/routes/projects/oscar/+page.svelte": {
     "file": "entries/pages/projects/oscar/_page.svelte.js",
+    "name": "entries/pages/projects/oscar/_page.svelte",
     "src": "src/routes/projects/oscar/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -160,11 +182,13 @@
   },
   "src/routes/projects/oscar/+page.ts": {
     "file": "entries/pages/projects/oscar/_page.ts.js",
+    "name": "entries/pages/projects/oscar/_page.ts",
     "src": "src/routes/projects/oscar/+page.ts",
     "isEntry": true
   },
   "src/routes/projects/remotepc/+page.svelte": {
     "file": "entries/pages/projects/remotepc/_page.svelte.js",
+    "name": "entries/pages/projects/remotepc/_page.svelte",
     "src": "src/routes/projects/remotepc/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -173,11 +197,13 @@
   },
   "src/routes/projects/remotepc/+page.ts": {
     "file": "entries/pages/projects/remotepc/_page.ts.js",
+    "name": "entries/pages/projects/remotepc/_page.ts",
     "src": "src/routes/projects/remotepc/+page.ts",
     "isEntry": true
   },
   "src/routes/projects/transformers/+page.svelte": {
     "file": "entries/pages/projects/transformers/_page.svelte.js",
+    "name": "entries/pages/projects/transformers/_page.svelte",
     "src": "src/routes/projects/transformers/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -187,11 +213,13 @@
   },
   "src/routes/projects/transformers/+page.ts": {
     "file": "entries/pages/projects/transformers/_page.ts.js",
+    "name": "entries/pages/projects/transformers/_page.ts",
     "src": "src/routes/projects/transformers/+page.ts",
     "isEntry": true
   },
   "src/routes/test/+page.svelte": {
     "file": "entries/pages/test/_page.svelte.js",
+    "name": "entries/pages/test/_page.svelte",
     "src": "src/routes/test/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -203,6 +231,7 @@
   },
   "src/routes/test/+page.ts": {
     "file": "entries/pages/test/_page.ts.js",
+    "name": "entries/pages/test/_page.ts",
     "src": "src/routes/test/+page.ts",
     "isEntry": true
   }
