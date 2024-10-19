@@ -140,6 +140,21 @@
     "src": "src/routes/exp/aevip/+page.ts",
     "isEntry": true
   },
+  "src/routes/projects/antibot/+page.md": {
+    "file": "entries/pages/projects/antibot/_page.md.js",
+    "name": "entries/pages/projects/antibot/_page.md",
+    "src": "src/routes/projects/antibot/+page.md",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "src/routes/projects/antibot/+page.ts": {
+    "file": "entries/pages/projects/antibot/_page.ts.js",
+    "name": "entries/pages/projects/antibot/_page.ts",
+    "src": "src/routes/projects/antibot/+page.ts",
+    "isEntry": true
+  },
   "src/routes/projects/dellserver/+page.svelte": {
     "file": "entries/pages/projects/dellserver/_page.svelte.js",
     "name": "entries/pages/projects/dellserver/_page.svelte",

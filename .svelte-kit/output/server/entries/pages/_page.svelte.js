@@ -30,7 +30,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       "header": "Anti-bot",
       "smallHead": "Javascript, RESTful APIs, Backend",
       "para": "Stop bots from sending too many requests using browser data and Machine Learning. Based on Akamai and PerimeterX",
-      "redirect": "https://antibot.akhilkothapalli.com/",
+      "redirect": base + "/projects/antibot",
       "color": "lightgreen",
       "sImgSrc": base + "/images/antibot/pfp.png"
     },

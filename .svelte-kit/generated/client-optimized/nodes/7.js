@@ -1,3 +1,3 @@
-import * as universal from "../../../../src/routes/projects/esp32has/+page.ts";
+import * as universal from "../../../../src/routes/projects/dellserver/+page.ts";
 export { universal };
-export { default as component } from "../../../../src/routes/projects/esp32has/+page.md";
+export { default as component } from "../../../../src/routes/projects/dellserver/+page.svelte";
