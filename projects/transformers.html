@@ -28,13 +28,13 @@ html {
 		
 		<link href="../_app/immutable/assets/0.Kps9LtjI.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/Carousel.VNbS7xGE.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.BiwmOPqA.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/entry.DJB71fpO.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.CeCRR-Fz.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/entry.B09h7Zo1.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.Dw93JyHj.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/paths.CKA2SV5K.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.TOKotxb2.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.Ci8cXOsl.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.vvoKgHsZ.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.CUTYeL1M.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.BcDI9Fsv.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.WuzT_ZOZ.js">
 		<link rel="modulepreload" href="../_app/immutable/nodes/12.C_TUeCYM.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/Carousel.CzMQ9hLL.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/each.BKn9QdG9.js"><title>About</title><!-- HEAD_svelte-191q6qr_START --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css"><link rel="stylesheet" href="../style.css" type="text/css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ1FLCMN0B" data-svelte-h="svelte-1o7uq4p"></script><script data-svelte-h="svelte-7blg4c">window.dataLayer = window.dataLayer || [];
@@ -53,11 +53,11 @@ html {
 		<a href="https://www.roblox.com/games/8553376182/Transforming-Bots-Tycoon-ALPHA">Click me to visit the game</a></p> <div class="carousel svelte-fgjebk"><div class="carousel__container svelte-fgjebk"><img src="../images/trans/transform.gif" alt="Atributo ALT de ejemplo para la imagen #1" id="" style="height: 300px; margin-right: 4px"><img src="../images/trans/raycast.png" alt="Atributo ALT de ejemplo para la imagen #1" id="" style="height: 300px; margin-right: 4px"><img src="../images/trans/shop.png" alt="Atributo ALT de ejemplo para la imagen #1" id="" style="height: 300px; margin-right: 4px"></div> </div> <h3 data-svelte-h="svelte-dorzh6">How to navigate this page?</h3> <p data-svelte-h="svelte-1e1r0u9">Since building a roblox game and explaining it takes a lot of work, I will just tell you about the challenges I overcame while making this.</p> <h3 data-svelte-h="svelte-dg8ifi">Storing Data Efficiently</h3> <p data-svelte-h="svelte-qwsuf9">Players have these things called Tycoons that are essentially bases they build to generate the in-game currency. Users asked for a way to save progress so I first came up with the
 		idea of saving the physical Tycoon model in User Storage. This is obviously a terrible idea since the bases are all the same, and I would have so many replicated items that are clogging 
 		up storage space. To solve this, I had to make a <b>schema</b> that would save the progress of the base and the user. I also had to change the way the base appeared.</p> <h3 data-svelte-h="svelte-1t6iwh6">Changes in the base</h3> <p data-svelte-h="svelte-6fyy6u">Rather than creating a new clone of a tycoon part and getting it from storage, the whole base is replicated and the upgrades are hidden. They are hidden such that the player can&#39;t see or touch them. 
-		This made it much easier and faster to build the base as we didn&#39;t load everything one by one. It was all dealt with when the player first joins and then we simply change two attributes.</p></div></main> <footer id="footer" class="svelte-1qf80bv" data-svelte-h="svelte-wy8ifz"><div><p>©2023 Akhil, Powered by SvelteKit. <a href="../about">More about this site</a>  - 1.4</p></div></footer> </div> 
+		This made it much easier and faster to build the base as we didn&#39;t load everything one by one. It was all dealt with when the player first joins and then we simply change two attributes.</p></div></main> <footer id="footer" class="svelte-1qf80bv" data-svelte-h="svelte-176x6ac"><div><p>©2023 Akhil, Powered by SvelteKit. <a href="../about">More about this site</a>  - 1.5</p></div></footer> </div> 
 			
 			<script>
 				{
-					__sveltekit_t49o7x = {
+					__sveltekit_19voh8x = {
 						base: new URL("..", location).pathname.slice(0, -1)
 					};
 
@@ -66,8 +66,8 @@ html {
 					const data = [null,null];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.BiwmOPqA.js"),
-						import("../_app/immutable/entry/app.TOKotxb2.js")
+						import("../_app/immutable/entry/start.CeCRR-Fz.js"),
+						import("../_app/immutable/entry/app.vvoKgHsZ.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 12],

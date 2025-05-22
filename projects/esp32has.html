@@ -27,13 +27,13 @@ html {
 		<meta name="viewport" content="width=device-width" />
 		
 		<link href="../_app/immutable/assets/0.Kps9LtjI.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.BiwmOPqA.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/entry.DJB71fpO.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.CeCRR-Fz.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/entry.B09h7Zo1.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.Dw93JyHj.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/paths.CKA2SV5K.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.TOKotxb2.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.Ci8cXOsl.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.vvoKgHsZ.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.CUTYeL1M.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.BcDI9Fsv.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.WuzT_ZOZ.js">
 		<link rel="modulepreload" href="../_app/immutable/nodes/8.BB-xA-Oo.js"><!-- HEAD_svelte-191q6qr_START --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css"><link rel="stylesheet" href="../style.css" type="text/css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ1FLCMN0B" data-svelte-h="svelte-1o7uq4p"></script><script data-svelte-h="svelte-7blg4c">window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
@@ -98,11 +98,11 @@ void loop() {
   }   
   delay(5000);
 }</code>
-</pre></details> <h4 data-svelte-h="svelte-y0f5is">Research the LoRa protocol</h4> <p data-svelte-h="svelte-dfbnfi">After some research and realizing that the ESP’s antenna was just too small, I found the LoRa protocol. Apparently ESP32s without an external antenna could communicate with one another over huge ranges (500 meters). I could not believe it since the regular protocols performed so terribly.</p> <h4></h4> <div class="video-container" data-svelte-h="svelte-ju4td8"><iframe width="560" height="315" src="https://www.youtube.com/embed/oz0a7Ur7nko?si=TRT9Fx0RM0AYx2Ty" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div> <h4 data-svelte-h="svelte-16gq1bl">Using the LR protocol</h4> <p data-svelte-h="svelte-gnrgs0">There isn’t proper code documentation on this protocol so it took me some time to find it and I was able to get it to work. After a few old forums I managed to create the following testing code:</p> <a href="https://github.com/kakhil2004/esp32-testing" target="_blank" data-svelte-h="svelte-4zc7fy"><button>Click me to see code</button></a> <p data-svelte-h="svelte-1xey7h8">The problem was I couldn’t have LR running on the ESP32 and use normal Wi-Fi since they were two seperate protocols. To solve this I needed to combine two ESP32s, one that uses Wi-Fi and the other that talks to the devies in the house. Using the TX and RX pins, I could make the two communicate using the Serial monitor.</p> <h4 data-svelte-h="svelte-105myhh">Creating a test server</h4> <p data-svelte-h="svelte-t2agd4">Using Glitch I was able to test if it worked and it did, I will add pictures soon!</p></main> <footer id="footer" class="svelte-1qf80bv" data-svelte-h="svelte-wy8ifz"><div><p>©2023 Akhil, Powered by SvelteKit. <a href="../about">More about this site</a>  - 1.4</p></div></footer> </div> 
+</pre></details> <h4 data-svelte-h="svelte-y0f5is">Research the LoRa protocol</h4> <p data-svelte-h="svelte-dfbnfi">After some research and realizing that the ESP’s antenna was just too small, I found the LoRa protocol. Apparently ESP32s without an external antenna could communicate with one another over huge ranges (500 meters). I could not believe it since the regular protocols performed so terribly.</p> <h4></h4> <div class="video-container" data-svelte-h="svelte-ju4td8"><iframe width="560" height="315" src="https://www.youtube.com/embed/oz0a7Ur7nko?si=TRT9Fx0RM0AYx2Ty" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div> <h4 data-svelte-h="svelte-16gq1bl">Using the LR protocol</h4> <p data-svelte-h="svelte-gnrgs0">There isn’t proper code documentation on this protocol so it took me some time to find it and I was able to get it to work. After a few old forums I managed to create the following testing code:</p> <a href="https://github.com/kakhil2004/esp32-testing" target="_blank" data-svelte-h="svelte-4zc7fy"><button>Click me to see code</button></a> <p data-svelte-h="svelte-1xey7h8">The problem was I couldn’t have LR running on the ESP32 and use normal Wi-Fi since they were two seperate protocols. To solve this I needed to combine two ESP32s, one that uses Wi-Fi and the other that talks to the devies in the house. Using the TX and RX pins, I could make the two communicate using the Serial monitor.</p> <h4 data-svelte-h="svelte-105myhh">Creating a test server</h4> <p data-svelte-h="svelte-t2agd4">Using Glitch I was able to test if it worked and it did, I will add pictures soon!</p></main> <footer id="footer" class="svelte-1qf80bv" data-svelte-h="svelte-176x6ac"><div><p>©2023 Akhil, Powered by SvelteKit. <a href="../about">More about this site</a>  - 1.5</p></div></footer> </div> 
 			
 			<script>
 				{
-					__sveltekit_t49o7x = {
+					__sveltekit_19voh8x = {
 						base: new URL("..", location).pathname.slice(0, -1)
 					};
 
@@ -111,8 +111,8 @@ void loop() {
 					const data = [null,null];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.BiwmOPqA.js"),
-						import("../_app/immutable/entry/app.TOKotxb2.js")
+						import("../_app/immutable/entry/start.CeCRR-Fz.js"),
+						import("../_app/immutable/entry/app.vvoKgHsZ.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 8],
