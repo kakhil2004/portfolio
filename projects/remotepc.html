@@ -10,13 +10,215 @@
 
 
 <style>
-body {
-    max-width: 60%;
-}
+/* Removed body max-width constraint to allow full-width backgrounds */
 
 html {
     scroll-behavior: smooth;
+	font-size: 62.5%;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
+
+body {
+  font-size: 1.8rem;
+  line-height: 1.618;
+  margin: auto;
+  color: #4a4a4a;
+  background-color: #f9f9f9;
+  padding: 13px;
+}
+
+@media (max-width: 684px) {
+  body {
+    font-size: 1.53rem;
+  }
+}
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+}
+
+h1 {
+  font-size: 2.35em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
+}
+
+small, sub, sup {
+  font-size: 75%;
+}
+hr {
+  border-color: #1d7484;
+}
+ul {
+  padding-left: 1.4em;
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
+}
+
+li {
+  margin-bottom: 0.4em;
+}
+
+blockquote {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 1em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  padding-right: 0.8em;
+  border-left: 5px solid #1d7484;
+  margin-bottom: 2.5rem;
+  background-color: #f1f1f1;
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
+}
+
+/* Pre and Code */
+pre {
+  background-color: #f1f1f1;
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
+  font-size: 0.9em;
+}
+
+code, kbd, samp {
+  font-size: 0.9em;
+  padding: 0 0.5em;
+  background-color: #f1f1f1;
+  white-space: pre-wrap;
+}
+
+pre > code {
+  padding: 0;
+  background-color: transparent;
+  white-space: pre;
+  font-size: 1em;
+}
+
+/* Tables */
+table {
+  text-align: justify;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+td, th {
+  padding: 0.5em;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+/* Buttons, forms and input */
+input, textarea {
+  border: 1px solid #4a4a4a;
+}
+input:focus, textarea:focus {
+  border: 1px solid #1d7484;
+}
+
+textarea {
+  width: 100%;
+}
+
+.button, button, input[type=submit], input[type=reset], input[type=button], input[type=file]::file-selector-button {
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #1d7484;
+  color: #f9f9f9;
+  border-radius: 1px;
+  border: 1px solid #1d7484;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.button[disabled], button[disabled], input[type=submit][disabled], input[type=reset][disabled], input[type=button][disabled], input[type=file]::file-selector-button[disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+.button:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover, input[type=file]::file-selector-button:hover {
+  background-color: #982c61;
+  color: #f9f9f9;
+  outline: 0;
+}
+.button:focus-visible, button:focus-visible, input[type=submit]:focus-visible, input[type=reset]:focus-visible, input[type=button]:focus-visible, input[type=file]::file-selector-button:focus-visible {
+  outline-style: solid;
+  outline-width: 2px;
+}
+
+textarea, select, input {
+  color: #4a4a4a;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  margin-bottom: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+textarea:focus, select:focus, input:focus {
+  border: 1px solid #1d7484;
+  outline: 0;
+}
+
+input[type=checkbox]:focus {
+  outline: 1px dotted #1d7484;
+}
+
+label, legend, fieldset {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
 
 </style>
 
@@ -26,26 +228,26 @@ html {
 		<link rel="icon" href="../favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		
-		<link href="../_app/immutable/assets/0.Dy2aBOhD.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.B1vb5QbX.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/entry.BakuRUN6.js">
+		<link href="../_app/immutable/assets/0.BVJ2pCqz.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.DErRcBfi.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/entry.D2X8VmDJ.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.Dw93JyHj.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/paths.KHjO10j8.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.B6zvYQtv.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.hlI-rDMR.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.BFgvjOxJ.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.DdJWsZXy.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.CdEIMl-c.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/11.CR5pwTZn.js"><title>About</title><!-- HEAD_svelte-g7rkd5_START --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css"><link rel="stylesheet" href="../style.css" type="text/css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ1FLCMN0B" data-svelte-h="svelte-1o7uq4p"></script><script data-svelte-h="svelte-1xs1lay">window.dataLayer = window.dataLayer || [];
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.D99t5fC2.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/11.CR5pwTZn.js"><title>About</title><!-- HEAD_svelte-1pukul4_START --><link rel="stylesheet" href="../style.css" type="text/css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ1FLCMN0B" data-svelte-h="svelte-1o7uq4p"></script><script data-svelte-h="svelte-1xs1lay">window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-		gtag('config', 'G-RQ1FLCMN0B');</script><!-- HEAD_svelte-g7rkd5_END --><!-- HEAD_svelte-1ds1qyu_START --><meta name="description" content="About this app"><!-- HEAD_svelte-1ds1qyu_END -->
+		gtag('config', 'G-RQ1FLCMN0B');</script><!-- HEAD_svelte-1pukul4_END --><!-- HEAD_svelte-1ds1qyu_START --><meta name="description" content="About this app"><!-- HEAD_svelte-1ds1qyu_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">   <div id="page-container" class="svelte-1oi8g1j"><header><div class="topnav svelte-39akck"><h2 class="brand svelte-39akck">Akhil Kothapalli</h2> <div class="topnav-right svelte-39akck" data-svelte-h="svelte-1rh5wqe"><a href="../#proj" class="svelte-39akck">Projects</a> <a href="../attributions" class="svelte-39akck">Attributions</a></div></div> </header> <main id="content-wrap" class="svelte-1oi8g1j"> <div class="text-column" data-svelte-h="svelte-s7fy4g"><h1>Remote PC</h1> <h3>Problem</h3> <p>When I&#39;m out on vacation or just back at college, there are times when I need a powerful computer to take care of intensive tasks. Other times I just forget to upload my latest
-		code to github. I already figured out how to access my computer remotely but my computer had to been turned on. Now if there was nobody at home how would I do this?</p> <h3>A possible solution</h3> <p>I read an article about <a href="https://en.wikipedia.org/wiki/Wake-on-LAN">Wake-on-LAN </a>but my computer was far away from the router.</p></div></main> <footer id="footer" class="svelte-1oi8g1j" data-svelte-h="svelte-pfeh6l"><div><p>©2023 Akhil, Powered by SvelteKit. <a href="../about">More about this site</a>  - 1.6</p></div></footer> </div> 
+		<div style="display: contents">   <div id="page-container" class="svelte-15t06wg"><header class="svelte-16qkw3m"><div class="topnav svelte-16qkw3m"><a href="../" class="brand-link svelte-16qkw3m"><h2 class="brand svelte-16qkw3m">Akhil Kothapalli</h2></a> <div class="topnav-right svelte-16qkw3m" data-svelte-h="svelte-damnas"><a href="../#proj" class="svelte-16qkw3m">Projects</a> <a href="../attributions" class="svelte-16qkw3m">Attributions</a></div></div> </header> <main id="content-wrap" class="svelte-15t06wg"> <div class="text-column" data-svelte-h="svelte-s7fy4g"><h1>Remote PC</h1> <h3>Problem</h3> <p>When I&#39;m out on vacation or just back at college, there are times when I need a powerful computer to take care of intensive tasks. Other times I just forget to upload my latest
+		code to github. I already figured out how to access my computer remotely but my computer had to been turned on. Now if there was nobody at home how would I do this?</p> <h3>A possible solution</h3> <p>I read an article about <a href="https://en.wikipedia.org/wiki/Wake-on-LAN">Wake-on-LAN </a>but my computer was far away from the router.</p></div></main> <footer id="footer" class="svelte-15t06wg" data-svelte-h="svelte-pfeh6l"><div><p>©2023 Akhil, Powered by SvelteKit. <a href="../about">More about this site</a>  - 1.6</p></div></footer> </div> 
 			
 			<script>
 				{
-					__sveltekit_1x6dkl2 = {
+					__sveltekit_1e2psuy = {
 						base: new URL("..", location).pathname.slice(0, -1)
 					};
 
@@ -54,8 +256,8 @@ html {
 					const data = [null,null];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.B1vb5QbX.js"),
-						import("../_app/immutable/entry/app.B6zvYQtv.js")
+						import("../_app/immutable/entry/start.DErRcBfi.js"),
+						import("../_app/immutable/entry/app.BFgvjOxJ.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 11],

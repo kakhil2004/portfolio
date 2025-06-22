@@ -1,9 +1,17 @@
 body {
-    max-width: 70%;
+    /* No width constraints - let content flow naturally */
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+/* Remove all max-width constraints */
+
+/* Add max-width to main content areas */
+main, .content-container, .box-container {
+    /* Removed max-width - let content use full width */
+    margin: 0 auto;
 }
 
 .video-container {
@@ -153,8 +161,8 @@ a.nostyle:hover {
 }
 
 @media screen and (min-width:320px) and (max-width:640px) {
-    body {
-        max-width: 80%;
+    main, .content-container, .box-container {
+        /* Removed max-width - let content use full width on mobile too */
     }
 }
 
