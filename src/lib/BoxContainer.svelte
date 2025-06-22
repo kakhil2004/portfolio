@@ -72,14 +72,14 @@
     margin-bottom: 50px auto;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 14px;
     max-height: 80%;
     padding: 20px;
     overflow: auto;
 }
 
 .box {
-    flex: 0 0 calc(32% - 20px);
+    flex: 0 0 calc(27% - 14px);
     min-height: 280px;
     background: #ffffff;
     border: 2px solid #e0e0e0;

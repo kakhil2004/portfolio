@@ -4,7 +4,6 @@
 </script>
 
 <svelte:head>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css">
 	<link rel="stylesheet" href="{base}/style.css" type="text/css">
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ1FLCMN0B"></script>
@@ -38,6 +37,9 @@
 
 	#content-wrap {
 		padding-bottom: 50px;    /* Footer height */
+		padding-top: 40px;       /* Header height */
+		max-width: 68%;
+		margin: 0 auto;
 	}
 
 	#footer {

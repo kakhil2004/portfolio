@@ -4,6 +4,7 @@
 	
 	let selectedSkills = new Set<string>();
 	let allSkills = new Set<string>();
+	let filterExpanded = false;
 	
 	let exp = [
 		{
@@ -131,6 +132,10 @@
 		selectedSkills = selectedSkills; // trigger reactivity
 	}
 
+	function toggleFilter() {
+		filterExpanded = !filterExpanded;
+	}
+
 </script>
 
 <svelte:head>
@@ -139,7 +144,7 @@
 </svelte:head>
 
 <section>
-	<div class="page-container" >
+	<div class="page-container">
 
 		<div class="content-container">
 			<div class="image-container">
@@ -167,38 +172,51 @@
 		
 	</div>
 
-	<hr id="proj">
-	<hr>
+	<!-- Invisible anchor for navigation -->
+	<div id="proj" style="position: relative; top: -80px; visibility: hidden;"></div>
 
-
-	<div class="page-container">
-		<h2 style="text-align: center;">Projects</h2>
-		<p style="text-align: center;">Hover over the boxes and click on the  <mark style="background-color: lightgreen; color:white;">green</mark> ones!</p>
-		
-		<!-- Skill Filter Section -->
-		<div class="filter-section">
-			<div class="filter-header">
-				<h4>Filter by Skills:</h4>
-				{#if selectedSkills.size > 0}
-					<button class="clear-filters-btn" on:click={clearFilters}>
-						Clear Filters ({selectedSkills.size})
-					</button>
+	<div style="background: #f5f5f5; width: 100vw; margin-left: calc(-50vw + 50%); padding: 40px 0;">
+		<div class="page-container" style="max-width: 68%; margin: 0 auto;">
+			<h2 style="text-align: center;">Projects</h2>
+			<p style="text-align: center;">Hover over the boxes and click on the  <mark style="background-color: lightgreen; color:white;">green</mark> ones!</p>
+			
+			<!-- Skill Filter Section -->
+			<div class="filter-section">
+				<div class="filter-toggle" on:click={toggleFilter}>
+					<div class="filter-toggle-content">
+						<h4>Filter by Skills</h4>
+						{#if selectedSkills.size > 0}
+							<span class="filter-count">({selectedSkills.size} selected)</span>
+						{/if}
+					</div>
+					<div class="filter-arrow {filterExpanded ? 'expanded' : ''}">▼</div>
+				</div>
+				
+				{#if filterExpanded}
+					<div class="filter-content">
+						<div class="filter-header">
+							{#if selectedSkills.size > 0}
+								<button class="clear-filters-btn" on:click={clearFilters}>
+									Clear Filters ({selectedSkills.size})
+								</button>
+							{/if}
+						</div>
+						<div class="filter-skills">
+							{#each Array.from(allSkills) as skill}
+								<button 
+									class="filter-skill-btn {selectedSkills.has(skill) ? 'active' : ''}"
+									on:click={() => toggleSkill(skill)}
+								>
+									{skill}
+								</button>
+							{/each}
+						</div>
+					</div>
 				{/if}
 			</div>
-			<div class="filter-skills">
-				{#each Array.from(allSkills) as skill}
-					<button 
-						class="filter-skill-btn {selectedSkills.has(skill) ? 'active' : ''}"
-						on:click={() => toggleSkill(skill)}
-					>
-						{skill}
-					</button>
-				{/each}
-			</div>
+			
+			<BoxContainer data={filteredProjects}/>
 		</div>
-		
-		<BoxContainer data={filteredProjects}/>
-		
 	</div>
 	<hr id="exp">
 	<hr>
@@ -284,23 +302,76 @@
 <style>
 	.filter-section {
 		margin: 30px 0;
-		padding: 20px;
 		background: #f8f9fa;
 		border-radius: 12px;
 		border: 1px solid #e9ecef;
+		overflow: hidden;
+	}
+
+	.filter-toggle {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px 20px;
+		cursor: pointer;
+		background: #ffffff;
+		border-bottom: 1px solid #e9ecef;
+		transition: background-color 0.2s ease;
+	}
+
+	.filter-toggle:hover {
+		background: #f8f9fa;
+	}
+
+	.filter-toggle-content {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.filter-toggle h4 {
+		margin: 0;
+		color: #495057;
+		font-size: 1.1em;
+		font-weight: 600;
+	}
+
+	.filter-count {
+		color: #4A90E2;
+		font-size: 0.9em;
+		font-weight: 500;
+	}
+
+	.filter-arrow {
+		font-size: 0.8em;
+		color: #6c757d;
+		transition: transform 0.3s ease;
+	}
+
+	.filter-arrow.expanded {
+		transform: rotate(180deg);
+	}
+
+	.filter-content {
+		padding: 20px;
+		animation: slideDown 0.3s ease;
+	}
+
+	@keyframes slideDown {
+		from {
+			opacity: 0;
+			max-height: 0;
+		}
+		to {
+			opacity: 1;
+			max-height: 500px;
+		}
 	}
 
 	.filter-header {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		justify-content: flex-end;
 		margin-bottom: 15px;
-	}
-
-	.filter-header h4 {
-		margin: 0;
-		color: #495057;
-		font-size: 1.1em;
 	}
 
 	.clear-filters-btn {
@@ -350,15 +421,18 @@
 	}
 
 	@media (max-width: 768px) {
-		.filter-section {
-			padding: 15px;
-			margin: 20px 0;
+		.filter-toggle {
+			padding: 12px 15px;
 		}
 
-		.filter-header {
+		.filter-content {
+			padding: 15px;
+		}
+
+		.filter-toggle-content {
 			flex-direction: column;
-			gap: 10px;
 			align-items: flex-start;
+			gap: 5px;
 		}
 
 		.filter-skills {
