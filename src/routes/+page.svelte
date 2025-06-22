@@ -443,6 +443,34 @@
 			font-size: 0.85em;
 			padding: 5px 10px;
 		}
+
+		/* Mobile responsive for projects section */
+		.page-container {
+			max-width: 100% !important;
+			margin: 0 auto;
+		}
+
+		/* Mobile responsive for intro section */
+		.content-container {
+			flex-direction: column !important;
+			align-items: center;
+			gap: 30px;
+		}
+
+		.image-container {
+			margin-top: 0 !important;
+			text-align: center;
+		}
+
+		.bio {
+			max-width: 250px !important;
+			height: auto;
+		}
+
+		.content {
+			text-align: center;
+			padding: 0 20px;
+		}
 	}
 </style>
 

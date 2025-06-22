@@ -97,12 +97,6 @@ This was my first time working with **ROS** so it took a week to understand the 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N_wLJqZBL7o?si=iilT77tWwscr4pcf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-#### Research the LoRa protocol
-
-After some research and realizing that the ESP's antenna was just too small, I found the LoRa protocol. Apparently ESP32s without an external antenna could communicate with one another over huge ranges (500 meters). I could not believe it since the regular protocols performed so terribly. 
-
-#### 
-
 <div id="step-3"></div>
 
 ## 3. Trying to use LIDAR and generating racelines

@@ -5,10 +5,6 @@
 	
 	let logo = "Akhil Kothapalli"
 	if (browser) {
-		
-		if (Device.isMobile) {
-			logo = "AK"
-		}
 
 		function sendDiscordNotification(content: string, webhookURL: string) {
 			const payload = {

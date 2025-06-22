@@ -42,6 +42,15 @@
 		margin: 0 auto;
 	}
 
+	/* Mobile responsive - full width on small screens */
+	@media (max-width: 768px) {
+		#content-wrap {
+			max-width: 100%;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
 	#footer {
 		padding-top: 20px;
 		border-top: 2px solid  var(--secondaryColor);

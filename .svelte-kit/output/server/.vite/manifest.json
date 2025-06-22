@@ -71,7 +71,7 @@
       "_paths.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.Dy2aBOhD.css"
+      "_app/immutable/assets/_layout.DThfHusp.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -84,7 +84,7 @@
       "_paths.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.FOVQRKJB.css"
+      "_app/immutable/assets/_page.D1lXCdLj.css"
     ]
   },
   "src/routes/+page.ts": {
