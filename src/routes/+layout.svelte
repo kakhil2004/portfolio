@@ -6,6 +6,14 @@
 <svelte:head>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css">
 	<link rel="stylesheet" href="{base}/style.css" type="text/css">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ1FLCMN0B"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-RQ1FLCMN0B');
+	</script>
 </svelte:head>
 
 <div id="page-container">
@@ -17,11 +25,10 @@
 
 	<footer id="footer">
 		<div>
-			<p>©2023 Akhil, Powered by SvelteKit. <a href="{base}/about">More about this site</a>  - 1.2.2</p>
+			<p>©2023 Akhil, Powered by SvelteKit. <a href="{base}/about">More about this site</a>  - 1.6</p>
 		</div>
 	</footer>
 </div>
-
 
 <style>
 	#page-container {
@@ -43,5 +50,4 @@
 		text-align: center;
 		font-size: small;
 	}
-
 </style>

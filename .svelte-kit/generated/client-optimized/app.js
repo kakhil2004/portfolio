@@ -13,7 +13,8 @@ export const nodes = [
 	() => import('./nodes/9'),
 	() => import('./nodes/10'),
 	() => import('./nodes/11'),
-	() => import('./nodes/12')
+	() => import('./nodes/12'),
+	() => import('./nodes/13')
 ];
 
 export const server_loads = [];
@@ -27,9 +28,10 @@ export const dictionary = {
 		"/projects/dellserver": [7],
 		"/projects/esp32has": [8],
 		"/projects/oscar": [9],
-		"/projects/remotepc": [10],
-		"/projects/transformers": [11],
-		"/test": [12]
+		"/projects/r6drone": [10],
+		"/projects/remotepc": [11],
+		"/projects/transformers": [12],
+		"/test": [13]
 	};
 
 export const hooks = {

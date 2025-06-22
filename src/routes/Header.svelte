@@ -53,7 +53,6 @@
 		<h2 class="brand">{logo}</h2>
 		<div class="topnav-right">
 		  <a href="{base}/#proj">Projects</a>
-		  <a href="{base}/#skill">Skills</a>
 		  <a href="{base}/attributions"> Attributions</a>
 		</div>
 	  </div>

@@ -1,7 +1,10 @@
-<script>
+<script lang="ts">
 	import BoxContainer from "$lib/BoxContainer.svelte";
-	import TinyContainer from "$lib/TinyContainer.svelte";
 	import { base } from '$app/paths';
+	
+	let selectedSkills = new Set<string>();
+	let allSkills = new Set<string>();
+	
 	let exp = [
 		{
 			"header" : "Teaching Assistant",
@@ -22,12 +25,22 @@
 	]
 	let proj = [
 		{
+			"header" : "Rainbox Six Siege Drone",
+			"smallHead" : "Python, WebSockets, HTML",
+			"para" : "Cool prototype of the drone from Rainbow Six Siege",
+			"redirect" : base + "/projects/r6drone",
+			"color" : "lightgreen",
+			"sImgSrc" : base  + "/images/r6drone/drone.jpg",
+			"skills" : ["Python", "WebSockets", "HTML"]
+		},
+		{
 			"header" : "Anti-bot",
 			"smallHead" : "Javascript, RESTful APIs, Backend",
 			"para" : "Stop bots from sending too many requests using browser data and Machine Learning. Based on Akamai and PerimeterX",
 			"redirect" : base + "/projects/antibot",
 			"color" : "lightgreen",
-			"sImgSrc" : base  + "/images/antibot/pfp.png"
+			"sImgSrc" : base  + "/images/antibot/pfp.png",
+			"skills" : ["Javascript", "RESTful APIs", "Backend", "Machine Learning"]
 		},
 		{
 			"header" : "Home Automation System (NEW)",
@@ -35,7 +48,8 @@
 			"para" : "Using the LoRa protocol to transmit data over extreme distances to automate tasks around the house",
 			"redirect" : base+"/projects/esp32has",
 			"color" : "lightgreen",
-			"sImgSrc" : base  + "/images/sig/image.jpg"
+			"sImgSrc" : base  + "/images/sig/image.jpg",
+			"skills" : ["C/C++", "Embedded Systems", "Networking", "LoRa"]
 		},
 		{
 			"header" : "Autonomous Vehicles Research",
@@ -43,7 +57,8 @@
 			"para" : "I spend several hours every week working on a cool car that has LIDAR, vision, an NVidia Jetson Nano etc. and I need to make it fully autonmous so it can race in F1Tenth.",
 			"redirect" : base+"/exp/aevip",
 			"color" : "lightgreen",
-			"sImgSrc" : base  +  "/images/aevip/aeCar.jpg"
+			"sImgSrc" : base  +  "/images/aevip/aeCar.jpg",
+			"skills" : ["Python", "C/C++", "ROS", "Git", "Linux", "Computer Vision", "LIDAR"]
 		},
 		{
 			"header" : "Transforming Bots Tycoon",
@@ -51,7 +66,8 @@
 			"para" : "A full in-game economy where players can build their base, become robots and protect their land. Made raycasting physics, user data storage solutions etc.",
 			"redirect" : base+"/projects/transformers",
 			"color" : "lightgreen",
-			"sImgSrc" : base  + "/images/trans/transform.gif"
+			"sImgSrc" : base  + "/images/trans/transform.gif",
+			"skills" : ["Lua", "Game Development", "Product Management", "Physics", "User Data Storage"]
 		},
 		{
 			"header" : "MyFinancePal",
@@ -59,7 +75,8 @@
 			"para" : "New investors often struggle with tunnel vision, risky choices, and emotions. Our project tackles these by fostering a broad perspective, simplifying metrics, and promoting data-driven decision-making.",
 			"redirect" : "https://github.com/ErMa12345/MyFinancePal",
 			"color" : "lightblue",
-			"sImgSrc" : base  + "/images/mfp.png"
+			"sImgSrc" : base  + "/images/mfp.png",
+			"skills" : ["AI", "Prompt Engineering", "Data Science", "Machine Learning"]
 		},
 		{
 			"header" : "cLLiMate.tech",
@@ -67,7 +84,8 @@
 			"para" : "We believe in tackling climate change by starting with personal awareness, emphasizing the need for reliable climate news sources. That's why we're creating a climate news feed using advanced technology like NLP and machine learning, making it easier to stay informed and understand the impacts of climate change.",
 			"redirect" : "https://devpost.com/software/cllimate",
 			"color" : "lightblue",
-			"sImgSrc" : base  + "/images/climate.png"
+			"sImgSrc" : base  + "/images/climate.png",
+			"skills" : ["Data Science", "Machine Learning", "NLP", "K-n neighbors"]
 
 		},
 		{
@@ -76,11 +94,42 @@
 			"para" : "Bot that notifies you when a class seat opens on Georgia Tech's system. Almost instant response time. Way faster than courseicle.",
 			"redirect" : base+"/projects/oscar",
 			"color" : "lightgreen",
-			"sImgSrc" : base  +  "/images/oscar/oscarbot.png"
+			"sImgSrc" : base  +  "/images/oscar/oscarbot.png",
+			"skills" : ["Python", "Requests", "Chrome DevTools", "Automation"]
 
 		}
 	]
-
+	
+	// Collect all unique skills from projects
+	$: {
+		allSkills.clear();
+		proj.forEach(project => {
+			if (project.skills) {
+				project.skills.forEach((skill: string) => allSkills.add(skill));
+			}
+		});
+	}
+	
+	// Filter projects based on selected skills
+	$: filteredProjects = selectedSkills.size === 0 
+		? proj 
+		: proj.filter(project => 
+			project.skills && project.skills.some((skill: string) => selectedSkills.has(skill))
+		);
+	
+	function toggleSkill(skill: string) {
+		if (selectedSkills.has(skill)) {
+			selectedSkills.delete(skill);
+		} else {
+			selectedSkills.add(skill);
+		}
+		selectedSkills = selectedSkills; // trigger reactivity
+	}
+	
+	function clearFilters() {
+		selectedSkills.clear();
+		selectedSkills = selectedSkills; // trigger reactivity
+	}
 
 </script>
 
@@ -109,7 +158,6 @@
 					<br>
 					<p><b>Click the icons below to contact me!</b></p>
 					<a class="nostyle" target="_blank" href="https://www.linkedin.com/in/akhk1/"><img class="icon"src="images/linkedin.png" alt="LN"></a>
-					<a class="nostyle" href="mailto:akothapalli31@gatech.edu?subject=Akhil&body=Hi Akhil, I got your email from your website!"><img class="icon"src="images/gmail.png" alt="GM"></a>
 					<a class="nostyle" target="_blank" href="https://github.com/kakhil2004"><img class="icon"src="images/github.png" alt="GH"></a>
 					<a class="nostyle" target="_blank" href="https://twitter.com/kakhil2004tech"><img class="icon"src="images/twitter.png" alt="X"></a>
 
@@ -126,45 +174,30 @@
 	<div class="page-container">
 		<h2 style="text-align: center;">Projects</h2>
 		<p style="text-align: center;">Hover over the boxes and click on the  <mark style="background-color: lightgreen; color:white;">green</mark> ones!</p>
-		<BoxContainer data={proj}/>
 		
-	</div>
-	<hr id="skill">
-	<hr>
-
-	<div class="page-container">
-		<h2 style="text-align: center;">Skills</h2>
-		<p style="text-align: center;">Hover over a box to see how recently I used the skill! Green - Recent, Yellow - A little while ago</p>
-		<h5 style="">Programming Languages & Database</h5>
-		<TinyContainer data={[
-			{"header" : "Python","color":"lightgreen"},
-			{"header" : "Javascript","color":"lightgreen"},
-			{"header" : "C/C++","color":"lightgreen"},
-			{"header" : "Java","color":"lightgreen"},
-			{"header" : "SQL (MySQL)","color":"lightgreen"},
-			{"header" : "R","color":"yellow"},
+		<!-- Skill Filter Section -->
+		<div class="filter-section">
+			<div class="filter-header">
+				<h4>Filter by Skills:</h4>
+				{#if selectedSkills.size > 0}
+					<button class="clear-filters-btn" on:click={clearFilters}>
+						Clear Filters ({selectedSkills.size})
+					</button>
+				{/if}
+			</div>
+			<div class="filter-skills">
+				{#each Array.from(allSkills) as skill}
+					<button 
+						class="filter-skill-btn {selectedSkills.has(skill) ? 'active' : ''}"
+						on:click={() => toggleSkill(skill)}
+					>
+						{skill}
+					</button>
+				{/each}
+			</div>
+		</div>
 		
-			]}/>
-		<h5 style="">Frameworks</h5>
-		<TinyContainer data={[
-			{"header" : "Svelte","color":"lightgreen"},
-			{"header" : "Flask","color":"lightgreen"},
-			{"header" : "React.js","color":"yellow"},
-			{"header" : "Open-CV","color":"yellow"},
-			{"header" : "Requests (APIs)","color":"yellow"},
-		
-			]}/>
-		<h5 style="">Tools</h5>
-		<TinyContainer data={[
-			{"header" : "RStudio","color":"lightgreen"},
-			{"header" : "ROS","color":"lightgreen"},
-			{"header" : "Git","color":"lightgreen"},
-			{"header" : "Docker","color":"lightgreen"},
-			{"header" : "Andriod Studio","color":"yellow"},
-			{"header" : "Kubernetes","color":"yellow"},
-		
-			]}/>
-		
+		<BoxContainer data={filteredProjects}/>
 		
 	</div>
 	<hr id="exp">
@@ -247,4 +280,95 @@
 
 </script>
 </section>
+
+<style>
+	.filter-section {
+		margin: 30px 0;
+		padding: 20px;
+		background: #f8f9fa;
+		border-radius: 12px;
+		border: 1px solid #e9ecef;
+	}
+
+	.filter-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 15px;
+	}
+
+	.filter-header h4 {
+		margin: 0;
+		color: #495057;
+		font-size: 1.1em;
+	}
+
+	.clear-filters-btn {
+		background: #dc3545;
+		color: white;
+		border: none;
+		padding: 6px 12px;
+		border-radius: 6px;
+		font-size: 0.9em;
+		cursor: pointer;
+		transition: background-color 0.2s ease;
+	}
+
+	.clear-filters-btn:hover {
+		background: #c82333;
+	}
+
+	.filter-skills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	.filter-skill-btn {
+		background: white;
+		border: 2px solid #dee2e6;
+		color: #6c757d;
+		padding: 6px 12px;
+		border-radius: 20px;
+		font-size: 0.9em;
+		cursor: pointer;
+		transition: all 0.2s ease;
+		font-weight: 500;
+	}
+
+	.filter-skill-btn:hover {
+		border-color: #4A90E2;
+		color: #4A90E2;
+		transform: translateY(-1px);
+	}
+
+	.filter-skill-btn.active {
+		background: #4A90E2;
+		border-color: #4A90E2;
+		color: white;
+		box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+	}
+
+	@media (max-width: 768px) {
+		.filter-section {
+			padding: 15px;
+			margin: 20px 0;
+		}
+
+		.filter-header {
+			flex-direction: column;
+			gap: 10px;
+			align-items: flex-start;
+		}
+
+		.filter-skills {
+			gap: 6px;
+		}
+
+		.filter-skill-btn {
+			font-size: 0.85em;
+			padding: 5px 10px;
+		}
+	}
+</style>
 

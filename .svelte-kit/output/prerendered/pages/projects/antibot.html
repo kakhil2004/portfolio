@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+	<title>AK</title>
+</head>
+
+
+
+<style>
+body {
+    max-width: 60%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+</style>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link href="../_app/immutable/assets/0.Dy2aBOhD.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.CGTULpdf.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/entry.CreEUk8k.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.Dw93JyHj.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.CwaZEVzh.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.C8HHzMQu.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.DdJWsZXy.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.CWElJfGR.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/6.zqcDWR9u.js"><!-- HEAD_svelte-g7rkd5_START --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css" type="text/css"><link rel="stylesheet" href="../style.css" type="text/css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-RQ1FLCMN0B" data-svelte-h="svelte-1o7uq4p"></script><script data-svelte-h="svelte-1xs1lay">window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-RQ1FLCMN0B');</script><!-- HEAD_svelte-g7rkd5_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">   <div id="page-container" class="svelte-1oi8g1j"><header><div class="topnav svelte-39akck"><h2 class="brand svelte-39akck">Akhil Kothapalli</h2> <div class="topnav-right svelte-39akck" data-svelte-h="svelte-1rh5wqe"><a href="../#proj" class="svelte-39akck">Projects</a> <a href="../attributions" class="svelte-39akck">Attributions</a></div></div> </header> <main id="content-wrap" class="svelte-1oi8g1j"><h1 data-svelte-h="svelte-8o0bw">Anti-bot</h1> <a href="https://antibot.akhilkothapalli.com/" data-svelte-h="svelte-3ua2bc"><button>Check out the Demo!</button></a> <h3 data-svelte-h="svelte-1diyj43">Overview</h3> <p data-svelte-h="svelte-1oneszf">Akhil’s Anti-bot is a lightweight solution designed to detect and block malicious bots by issuing sensor-based and puzzle-based challenges. These challenges help ensure that only legitimate users can access your website, while blocking automated bot attacks like DDoS.</p> <h3 data-svelte-h="svelte-19npr6a">What is it?</h3> <p data-svelte-h="svelte-1pcy9n3">When you access websites, your browser sends <strong>requests</strong> to the server to retrieve data. This is similar to a REST API, where a project might fetch weather information or other data. However, bots can abuse this system for malicious purposes, such as launching Distributed Denial of Service (DDoS) attacks.</p> <p data-svelte-h="svelte-19zas41">To combat this, anti-bot systems were developed. Companies like Akamai, PerimeterX, Cloudflare, and others implement challenges that only a real browser can solve, effectively blocking bots.</p> <h3 data-svelte-h="svelte-8rbpvv">Akhil’s Anti-bot</h3> <p data-svelte-h="svelte-1w0l7ei">Akhil’s Anti-bot uses two key challenges to determine if the request is coming from a real user:</p> <ol data-svelte-h="svelte-2oru7h"><li><strong>Sensor Data</strong>: Collects detailed information about the device (e.g., screen size, user activity) to verify if it is legitimate or automated. It also tracks your mouse for a little while to see if it is bot like.</li> <li><strong>Math Puzzle</strong>: Issues a puzzle to the user’s device, which must be solved and returned as part of the validation process.</li></ol> <h3 data-svelte-h="svelte-yrj2n">Obfuscation</h3> <p data-svelte-h="svelte-1ygj36o">If you open your browser’s developer tools (F12), you’ll find two scripts: <code>sD.js</code> (for Sensor Data) and <code>puz.js</code> (for the Math Puzzle). Both of these scripts are <strong>obfuscated</strong>, meaning their code has been deliberately made difficult to read, making it harder for bots or malicious users to understand and bypass the challenges.</p> <h3 data-svelte-h="svelte-gso46x">Want to beat it? Here are some hints:</h3> <ol data-svelte-h="svelte-1pozbg9"><li>The obfuscation can be deobfuscated using some online tools &amp; manual work since I didn’t want to make it too tough</li> <li>Sensor Data has been obfuscated using base64 and replacements of some parts of the string</li> <li>I added a rate limit so that <strong>YOU ACTUALLY</strong> try to deobfuscate it rather than brute forcing. You will get a 429 page error</li> <li>If you want to check how many challenges you passed (there are 2), make a request to the “/api/didimakeit” endpoint <strong>WITH</strong> the cookie</li></ol></main> <footer id="footer" class="svelte-1oi8g1j" data-svelte-h="svelte-pfeh6l"><div><p>©2023 Akhil, Powered by SvelteKit. <a href="../about">More about this site</a>  - 1.6</p></div></footer> </div> 
+			
+			<script>
+				{
+					__sveltekit_10629it = {
+						base: new URL("..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.CGTULpdf.js"),
+						import("../_app/immutable/entry/app.C8HHzMQu.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 6],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

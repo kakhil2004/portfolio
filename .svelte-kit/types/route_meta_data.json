@@ -23,6 +23,9 @@
 	"/projects/oscar": [
 		"src/routes/projects/oscar/+page.ts"
 	],
+	"/projects/r6drone": [
+		"src/routes/projects/r6drone/+page.ts"
+	],
 	"/projects/remotepc": [
 		"src/routes/projects/remotepc/+page.ts"
 	],

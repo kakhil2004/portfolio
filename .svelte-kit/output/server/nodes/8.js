@@ -5,6 +5,6 @@ let component_cache;
 export const component = async () => component_cache ??= (await import('../entries/pages/projects/esp32has/_page.md.js')).default;
 export { universal };
 export const universal_id = "src/routes/projects/esp32has/+page.ts";
-export const imports = ["_app/immutable/nodes/8.CEUXz8dk.js","_app/immutable/chunks/scheduler.Dw93JyHj.js","_app/immutable/chunks/index.CUTYeL1M.js"];
+export const imports = ["_app/immutable/nodes/8.BF-71nE7.js","_app/immutable/chunks/scheduler.Dw93JyHj.js","_app/immutable/chunks/index.DdJWsZXy.js"];
 export const stylesheets = [];
 export const fonts = [];

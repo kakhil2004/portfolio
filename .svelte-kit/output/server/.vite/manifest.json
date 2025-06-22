@@ -71,7 +71,7 @@
       "_paths.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.Kps9LtjI.css"
+      "_app/immutable/assets/_layout.Dy2aBOhD.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -84,7 +84,7 @@
       "_paths.js"
     ],
     "css": [
-      "_app/immutable/assets/_page.zgXM97w0.css"
+      "_app/immutable/assets/_page.FOVQRKJB.css"
     ]
   },
   "src/routes/+page.ts": {
@@ -199,6 +199,24 @@
     "file": "entries/pages/projects/oscar/_page.ts.js",
     "name": "entries/pages/projects/oscar/_page.ts",
     "src": "src/routes/projects/oscar/+page.ts",
+    "isEntry": true
+  },
+  "src/routes/projects/r6drone/+page.md": {
+    "file": "entries/pages/projects/r6drone/_page.md.js",
+    "name": "entries/pages/projects/r6drone/_page.md",
+    "src": "src/routes/projects/r6drone/+page.md",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.DLH5uCab.css"
+    ]
+  },
+  "src/routes/projects/r6drone/+page.ts": {
+    "file": "entries/pages/projects/r6drone/_page.ts.js",
+    "name": "entries/pages/projects/r6drone/_page.ts",
+    "src": "src/routes/projects/r6drone/+page.ts",
     "isEntry": true
   },
   "src/routes/projects/remotepc/+page.svelte": {
