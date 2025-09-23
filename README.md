@@ -4,6 +4,8 @@
 
 I have made portfolio sites in the past but they are usually very complicated. This time I focused on simplicity and cleanliness while leveraging good frameworks & libraries like Svelte and Sakura CSS. 
 
+It also uses Google Analytics
+
 ##
 To try this page on your computer run the following commands
 
@@ -11,6 +13,8 @@ To try this page on your computer run the following commands
 npm i 
 npm run dev
 ```
+
+
 
 
 
