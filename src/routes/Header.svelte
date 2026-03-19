@@ -1,42 +1,7 @@
-<script context="module" lang="ts">
-	import { browser } from '$app/environment'
-	import Device from 'svelte-device-info'
+<script lang="ts">
 	import { base } from '$app/paths';
-	
-	let logo = "Akhil Kothapalli"
-	if (browser) {
 
-		function sendDiscordNotification(content: string, webhookURL: string) {
-			const payload = {
-				content: content,
-			};
-
-			const options = {
-				method: 'POST',
-				headers: {
-				'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(payload),
-			};
-
-			fetch(webhookURL, options)
-				.then(response => {
-				if (!response.ok) {
-					throw new Error(`Error sending message: ${response.statusText}`);
-				}
-				console.log('Message sent successfully!');
-				})
-				.catch(error => {
-				console.error('Error:', error);
-				});
-			}
-
-		let urlParams = new URLSearchParams(window.location.search);
-    	let isBeta = urlParams.has('comp');
-		if (isBeta) {
-			sendDiscordNotification('Visited by - ' + urlParams.get("comp"), 'https://discord.com/api/webhooks/1211865773082157127/tjYNjMYFupGBIdmGQqDIVVzApp3ZzsvRHvxwgVi_OCLPg4RWISiIqL7cYtFrPY8scqkh');
-		}
-	}
+	const logo = 'Akhil Kothapalli';
 </script>
 
 <header>
