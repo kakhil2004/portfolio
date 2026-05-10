@@ -5,25 +5,98 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" href="../favicon.png" />
 	<title>AK</title>
-	<link href="../_app/immutable/entry/start.ENOO_sDz.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/FZdu6DzT.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/CpC96wrK.js" rel="modulepreload">
-		<link href="../_app/immutable/entry/app.CbVADVgL.js" rel="modulepreload">
+	<script>
+		(function() {
+			try {
+				var saved = localStorage.getItem('theme');
+				document.documentElement.setAttribute('data-theme', saved || 'dark');
+			} catch(e) {}
+		})();
+	</script>
+	<link href="../_app/immutable/entry/start.BrWJy7A8.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CNcsxFq6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CAt3Me7R.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.CP9y7C-Y.js" rel="modulepreload">
 		<link href="../_app/immutable/chunks/C-OaypFN.js" rel="modulepreload">
 		<link href="../_app/immutable/chunks/t62M88qj.js" rel="modulepreload">
-		<link href="../_app/immutable/nodes/0.PAj9LhFS.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/Bqht0n_i.js" rel="modulepreload">
-		<link href="../_app/immutable/nodes/5.upqyP5eV.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/BFXCP99x.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.DoKua3Eg.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/5.DGgqD_E2.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ViJdONpo.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B6EOGh4S.js" rel="modulepreload">
 		<!--12qhfyh--><link rel="stylesheet" href="../style.css" type="text/css"/> <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RQ1FLCMN0B"></script> <script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 		gtag('config', 'G-RQ1FLCMN0B');
 	</script><!---->
-		<link href="../_app/immutable/assets/0.C6AZNS3h.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/0.DGWEQtz2.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/Carousel.MKeWc5qq.css" rel="stylesheet">
 	<style>
+:root {
+  --bg-primary: #f9f9f9;
+  --bg-secondary: #f1f1f1;
+  --bg-card: #ffffff;
+  --bg-section: #f5f5f5;
+  --bg-filter: #f8f9fa;
+  --text-primary: #4a4a4a;
+  --text-secondary: #555;
+  --text-muted: #6c757d;
+  --text-heading: #2c3e50;
+  --text-nav: #333;
+  --text-filter-label: #495057;
+  --border-card: #e0e0e0;
+  --border-ui: #e9ecef;
+  --border-box: #4A4A4A;
+  --accent-blue: #4A90E2;
+  --accent-teal: #1d7484;
+  --secondaryColor: #1d7484;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --header-border: rgba(0, 0, 0, 0.1);
+  --hover-green: #d1fae5;
+  --hover-blue: #dbeafe;
+  --skill-recent-bg: linear-gradient(135deg, #e8f5e8, #f0f9f0);
+  --skill-recent-border: #c8e6c9;
+  --skill-recent-text: #2e7d32;
+  --skill-intermediate-bg: linear-gradient(135deg, #fff8e1, #fffde7);
+  --skill-intermediate-border: #ffecb3;
+  --skill-intermediate-text: #f57c00;
+  --skill-basic-bg: linear-gradient(135deg, #f5f5f5, #fafafa);
+  --skill-basic-border: #e0e0e0;
+  --skill-basic-text: #666;
+}
+
+html[data-theme="dark"] {
+    --bg-primary: #121212;
+    --bg-secondary: #2a2a2a;
+    --bg-card: #1e1e1e;
+    --bg-section: #161616;
+    --bg-filter: #252525;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-muted: #9e9e9e;
+    --text-heading: #e8e8e8;
+    --text-nav: #d0d0d0;
+    --text-filter-label: #c0c0c0;
+    --border-card: #383838;
+    --border-ui: #333333;
+    --border-box: #606060;
+    --accent-teal: #1d9baf;
+    --secondaryColor: #333333;
+    --header-bg: rgba(18, 18, 18, 0.95);
+    --header-border: rgba(255, 255, 255, 0.08);
+    --hover-green: #1a3a22;
+    --hover-blue: #1a2d4a;
+    --skill-recent-bg: linear-gradient(135deg, #1b2e1b, #1e361e);
+    --skill-recent-border: #2d5a2d;
+    --skill-recent-text: #81c784;
+    --skill-intermediate-bg: linear-gradient(135deg, #2e2200, #3a2b00);
+    --skill-intermediate-border: #5c4500;
+    --skill-intermediate-text: #ffb74d;
+    --skill-basic-bg: linear-gradient(135deg, #252525, #2d2d2d);
+    --skill-basic-border: #404040;
+    --skill-basic-text: #9e9e9e;
+}
+
 html {
     scroll-behavior: smooth;
 	font-size: 62.5%;
@@ -34,8 +107,8 @@ body {
   font-size: 1.8rem;
   line-height: 1.618;
   margin: auto;
-  color: #4a4a4a;
-  background-color: #f9f9f9;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
   padding: 13px;
 }
 
@@ -75,7 +148,7 @@ p {
 
 small, sub, sup { font-size: 75%; }
 
-hr { border-color: #1d7484; }
+hr { border-color: var(--accent-teal); }
 
 ul {
   padding-left: 1.4em;
@@ -92,9 +165,9 @@ blockquote {
   padding-top: 0.8em;
   padding-bottom: 0.8em;
   padding-right: 0.8em;
-  border-left: 5px solid #1d7484;
+  border-left: 5px solid var(--accent-teal);
   margin-bottom: 2.5rem;
-  background-color: #f1f1f1;
+  background-color: var(--bg-secondary);
 }
 
 blockquote p { margin-bottom: 0; }
@@ -107,7 +180,7 @@ img, video {
 }
 
 pre {
-  background-color: #f1f1f1;
+  background-color: var(--bg-secondary);
   display: block;
   padding: 1em;
   overflow-x: auto;
@@ -119,7 +192,7 @@ pre {
 code, kbd, samp {
   font-size: 0.9em;
   padding: 0 0.5em;
-  background-color: #f1f1f1;
+  background-color: var(--bg-secondary);
   white-space: pre-wrap;
 }
 
@@ -139,11 +212,11 @@ table {
 
 td, th {
   padding: 0.5em;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid var(--border-ui);
 }
 
-input, textarea { border: 1px solid #4a4a4a; }
-input:focus, textarea:focus { border: 1px solid #1d7484; }
+input, textarea { border: 1px solid var(--border-box); }
+input:focus, textarea:focus { border: 1px solid var(--accent-teal); }
 
 textarea { width: 100%; }
 
@@ -175,21 +248,21 @@ textarea { width: 100%; }
 }
 
 textarea, select, input {
-  color: #4a4a4a;
+  color: var(--text-primary);
   padding: 6px 10px;
   margin-bottom: 10px;
-  background-color: #f1f1f1;
-  border: 1px solid #f1f1f1;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--bg-secondary);
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
 }
 textarea:focus, select:focus, input:focus {
-  border: 1px solid #1d7484;
+  border: 1px solid var(--accent-teal);
   outline: 0;
 }
 
-input[type=checkbox]:focus { outline: 1px dotted #1d7484; }
+input[type=checkbox]:focus { outline: 1px dotted var(--accent-teal); }
 
 label, legend, fieldset {
   display: block;
@@ -199,19 +272,19 @@ label, legend, fieldset {
 	</style>
 </head>
 <body data-sveltekit-preload-data="hover">
-	<div style="display: contents"><!--[--><!--[0--><!--[--><header class="svelte-vny38x"><div class="topnav svelte-vny38x"><a href="../" class="brand-link svelte-vny38x"><h2 class="brand svelte-vny38x">Akhil Kothapalli</h2></a> <div class="topnav-right svelte-vny38x"><a href="../#proj" class="svelte-vny38x">Projects</a> <a href="../attributions" class="svelte-vny38x">Attributions</a></div></div></header><!----> <div id="page-container" class="svelte-12qhfyh"><main id="content-wrap" class="svelte-12qhfyh"><!--[--><h1>Autonomous Vehicles</h1> <p><strong>Skills: ROS, Python, C, Linux, Git (version control)</strong></p> <p><a href="https://github.gatech.edu/dbergman8/racecar_group_2" rel="nofollow">Click me for GitHub Link</a></p> <h2>Why?</h2> <p>I’ve always loved working on remote control cars and trying to make them autonomous. You can see some of my work for this in my project.</p> <h2>High Level Overview</h2> <hr/> <ol><li><a href="#step-1">Understanding the system</a></li> <li><a href="#step-2">Creating Basic algorithms</a></li> <li><a href="#step-3">Trying to use LIDAR and generating racelines</a></li> <li><a href="#step-4">Showcase</a></li></ol> <div id="step-1"></div> <h2>1. Understanding the system</h2> <hr/> <p>I have built my own remote control drones in the past. For example, I created a remote control tank that was powered with a Raspberry PI and used WebSockets. My computer would interpret the signals from the Xbox Controller and send them to my public server. Then that would send information directly to the tank and it would move. With this method, the tank would work anywhere in the world as long as it has Wi-Fi. It also had a camera!</p> <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/Bc-4rDAujwg?si=9hwMYAMt1rRgetfF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></div> <h4>The New Car</h4> <p>The car in my research position (shown below) was on a different scale. It had an <strong>Nvidia Jetson Nano, a high-end LIDAR (Hokuyo UST-10LX), a ZED camera and was really fast</strong>. On top of that we had huge spaces to test the car!</p> <div class="carousel svelte-er9umx"><div class="carousel__container svelte-er9umx"><!--[--><img src="../images/aevip/aeCar.jpg" alt="ae1" id="" style="height: 300px; margin-right: 4px"/><img src="../images/aevip/oldCar.jpg" alt="ae2" id="" style="height: 300px; margin-right: 4px"/><img src="../images/aevip/brokenCar.jpg" alt="ae3" id="" style="height: 300px; margin-right: 4px"/><!--]--></div></div><!----> <div id="step-2"></div> <h2>2. Creating Basic algorithms</h2> <hr/> <h4>Understanding the system</h4> <p>This was my first time working with <strong>ROS</strong> so it took a week to understand the master slave system and the relevant nodes. After that I was able to create simple algorithms to get the car moving around a track. Here was a simple wall following algorithm I made!</p> <h5>Algorithm</h5> <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/N_wLJqZBL7o?si=iilT77tWwscr4pcf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></div> <div id="step-3"></div> <h2>3. Trying to use LIDAR and generating racelines</h2> <hr/> <p>We already had a forked version of <a href="https://f1tenth.org/code/legacy1/lab_instructions/W3_T1_Using%20the%20Hector%20SLAM.pdf" rel="nofollow">Hector SLAM</a> so after running it and doing some tests, we found out that it wasn’t in very usable format. It was just a pgm (black and white image) file and we needed a way to extract more data.</p> <p>After thinking for a while I came up with the following approach:</p> <h5>Steps taken</h5> <hr/> <ol><li>Clearly distiguish between walls and driveable surface using Open-CV (images 2,3)</li> <li>Sample points and check if withtin the driveable surface (image 3)</li> <li>Create a directed graph where the edges must go in a way that creates progress (image 4)</li> <li>Come up with an algorithm to create racelines (image 5)</li></ol> <p>(These images are upscaled to view easily. The first image is what the SLAM algorithm outputs)</p> <div class="carousel svelte-er9umx"><div class="carousel__container svelte-er9umx"><!--[--><img src="../images/aevip/map/1.jpg" alt="Map image 1" id="" style="height: 300px; margin-right: 4px"/><img src="../images/aevip/map/2.png" alt="Map image 2" id="" style="height: 300px; margin-right: 4px"/><img src="../images/aevip/map/3.png" alt="Map image 3" id="" style="height: 300px; margin-right: 4px"/><img src="../images/aevip/map/4.png" alt="Map image 4" id="" style="height: 300px; margin-right: 4px"/><img src="../images/aevip/map/5.png" alt="Map image 5" id="" style="height: 300px; margin-right: 4px"/><img src="../images/aevip/map/6.png" alt="Map image 6" id="" style="height: 300px; margin-right: 4px"/><!--]--></div></div><!----> <div id="step-4"></div> <h4>Showcase</h4> <hr/> <p>My teamates worked on getting localization working (figuring out how to actually know where the car is relative to the environment), but due to time constraints we had to go back to our reactive algorithm. The algorithm worked by finding the biggest gap and going towards it, while ensuring that it is staying away from the walls. Depending on how far away the gap is we told the car to increase speed or go slower.</p> <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/WMhNEloiu8g?si=aAPgpOKj7BnDcjg9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></div><!--]--><!----></main> <footer id="footer" class="svelte-12qhfyh"><div><p>©2023 Akhil, Powered by SvelteKit. <a href="../about">More about this site</a> - 1.6</p></div></footer></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+	<div style="display: contents"><!--[--><!--[0--><!--[--><header class="svelte-vny38x"><div class="topnav svelte-vny38x"><a href="../" class="brand-link svelte-vny38x"><h2 class="brand svelte-vny38x">Akhil Kothapalli</h2></a> <div class="topnav-right svelte-vny38x"><a href="../#proj" class="svelte-vny38x">Projects</a> <a href="../attributions" class="svelte-vny38x">Attributions</a> <button class="theme-toggle svelte-vny38x" aria-label="Toggle theme"><!--[-1--><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><!--]--></button></div></div></header><!----> <div id="page-container" class="svelte-12qhfyh"><main id="content-wrap" class="svelte-12qhfyh"><!--[--><h1>Autonomous Vehicles</h1> <p><strong>Skills: ROS, Python, C, Linux, Git (version control)</strong></p> <p><a href="https://github.gatech.edu/dbergman8/racecar_group_2" rel="nofollow">Click me for GitHub Link</a></p> <h2>Why?</h2> <p>I’ve always loved working on remote control cars and trying to make them autonomous. You can see some of my work for this in my project.</p> <h2>High Level Overview</h2> <hr/> <ol><li><a href="#step-1">Understanding the system</a></li> <li><a href="#step-2">Creating Basic algorithms</a></li> <li><a href="#step-3">Trying to use LIDAR and generating racelines</a></li> <li><a href="#step-4">Showcase</a></li></ol> <div id="step-1"></div> <h2>1. Understanding the system</h2> <hr/> <p>I have built my own remote control drones in the past. For example, I created a remote control tank that was powered with a Raspberry PI and used WebSockets. My computer would interpret the signals from the Xbox Controller and send them to my public server. Then that would send information directly to the tank and it would move. With this method, the tank would work anywhere in the world as long as it has Wi-Fi. It also had a camera!</p> <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/Bc-4rDAujwg?si=9hwMYAMt1rRgetfF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></div> <h4>The New Car</h4> <p>The car in my research position (shown below) was on a different scale. It had an <strong>Nvidia Jetson Nano, a high-end LIDAR (Hokuyo UST-10LX), a ZED camera and was really fast</strong>. On top of that we had huge spaces to test the car!</p> <div class="carousel svelte-er9umx"><div class="carousel__container svelte-er9umx"><!--[--><img src="../images/aevip/aeCar.jpg" alt="ae1" id="" style="height: 300px; margin-right: 4px"/><img src="../images/aevip/oldCar.jpg" alt="ae2" id="" style="height: 300px; margin-right: 4px"/><img src="../images/aevip/brokenCar.jpg" alt="ae3" id="" style="height: 300px; margin-right: 4px"/><!--]--></div></div><!----> <div id="step-2"></div> <h2>2. Creating Basic algorithms</h2> <hr/> <h4>Understanding the system</h4> <p>This was my first time working with <strong>ROS</strong> so it took a week to understand the master slave system and the relevant nodes. After that I was able to create simple algorithms to get the car moving around a track. Here was a simple wall following algorithm I made!</p> <h5>Algorithm</h5> <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/N_wLJqZBL7o?si=iilT77tWwscr4pcf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></div> <div id="step-3"></div> <h2>3. Trying to use LIDAR and generating racelines</h2> <hr/> <p>We already had a forked version of <a href="https://f1tenth.org/code/legacy1/lab_instructions/W3_T1_Using%20the%20Hector%20SLAM.pdf" rel="nofollow">Hector SLAM</a> so after running it and doing some tests, we found out that it wasn’t in very usable format. It was just a pgm (black and white image) file and we needed a way to extract more data.</p> <p>After thinking for a while I came up with the following approach:</p> <h5>Steps taken</h5> <hr/> <ol><li>Clearly distiguish between walls and driveable surface using Open-CV (images 2,3)</li> <li>Sample points and check if withtin the driveable surface (image 3)</li> <li>Create a directed graph where the edges must go in a way that creates progress (image 4)</li> <li>Come up with an algorithm to create racelines (image 5)</li></ol> <p>(These images are upscaled to view easily. The first image is what the SLAM algorithm outputs)</p> <div class="carousel svelte-er9umx"><div class="carousel__container svelte-er9umx"><!--[--><img src="../images/aevip/map/1.jpg" alt="Map image 1" id="" style="height: 300px; margin-right: 4px"/><img src="../images/aevip/map/2.png" alt="Map image 2" id="" style="height: 300px; margin-right: 4px"/><img src="../images/aevip/map/3.png" alt="Map image 3" id="" style="height: 300px; margin-right: 4px"/><img src="../images/aevip/map/4.png" alt="Map image 4" id="" style="height: 300px; margin-right: 4px"/><img src="../images/aevip/map/5.png" alt="Map image 5" id="" style="height: 300px; margin-right: 4px"/><img src="../images/aevip/map/6.png" alt="Map image 6" id="" style="height: 300px; margin-right: 4px"/><!--]--></div></div><!----> <div id="step-4"></div> <h4>Showcase</h4> <hr/> <p>My teamates worked on getting localization working (figuring out how to actually know where the car is relative to the environment), but due to time constraints we had to go back to our reactive algorithm. The algorithm worked by finding the biggest gap and going towards it, while ensuring that it is staying away from the walls. Depending on how far away the gap is we told the car to increase speed or go slower.</p> <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/WMhNEloiu8g?si=aAPgpOKj7BnDcjg9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></div><!--]--><!----></main> <footer id="footer" class="svelte-12qhfyh"><div><p>©2025 Akhil, Powered by SvelteKit and cleaned up using Claude. <a href="../about">More about this site</a> - 2.0</p></div></footer></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_11hf5vc = {
+					__sveltekit_1ihvkzd = {
 						base: new URL("..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../_app/immutable/entry/start.ENOO_sDz.js"),
-						import("../_app/immutable/entry/app.CbVADVgL.js")
+						import("../_app/immutable/entry/start.BrWJy7A8.js"),
+						import("../_app/immutable/entry/app.CP9y7C-Y.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 5],

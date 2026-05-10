@@ -5,23 +5,96 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" href="./favicon.png" />
 	<title>AK</title>
-	<link href="./_app/immutable/entry/start.ENOO_sDz.js" rel="modulepreload">
-		<link href="./_app/immutable/chunks/FZdu6DzT.js" rel="modulepreload">
-		<link href="./_app/immutable/chunks/CpC96wrK.js" rel="modulepreload">
-		<link href="./_app/immutable/entry/app.CbVADVgL.js" rel="modulepreload">
+	<script>
+		(function() {
+			try {
+				var saved = localStorage.getItem('theme');
+				document.documentElement.setAttribute('data-theme', saved || 'dark');
+			} catch(e) {}
+		})();
+	</script>
+	<link href="./_app/immutable/entry/start.BrWJy7A8.js" rel="modulepreload">
+		<link href="./_app/immutable/chunks/CNcsxFq6.js" rel="modulepreload">
+		<link href="./_app/immutable/chunks/CAt3Me7R.js" rel="modulepreload">
+		<link href="./_app/immutable/entry/app.CP9y7C-Y.js" rel="modulepreload">
 		<link href="./_app/immutable/chunks/C-OaypFN.js" rel="modulepreload">
 		<link href="./_app/immutable/chunks/t62M88qj.js" rel="modulepreload">
-		<link href="./_app/immutable/nodes/0.PAj9LhFS.js" rel="modulepreload">
-		<link href="./_app/immutable/chunks/Bqht0n_i.js" rel="modulepreload">
-		<link href="./_app/immutable/nodes/3.HNQrWeGb.js" rel="modulepreload">
+		<link href="./_app/immutable/nodes/0.DoKua3Eg.js" rel="modulepreload">
+		<link href="./_app/immutable/nodes/3.BXnKRUZ8.js" rel="modulepreload">
+		<link href="./_app/immutable/chunks/ViJdONpo.js" rel="modulepreload">
 		<!--12qhfyh--><link rel="stylesheet" href="./style.css" type="text/css"/> <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RQ1FLCMN0B"></script> <script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 		gtag('config', 'G-RQ1FLCMN0B');
 	</script><!----><!--cwls5q--><meta name="description" content="About this app"/><!----><title>About this Website</title>
-		<link href="./_app/immutable/assets/0.C6AZNS3h.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/0.DGWEQtz2.css" rel="stylesheet">
 	<style>
+:root {
+  --bg-primary: #f9f9f9;
+  --bg-secondary: #f1f1f1;
+  --bg-card: #ffffff;
+  --bg-section: #f5f5f5;
+  --bg-filter: #f8f9fa;
+  --text-primary: #4a4a4a;
+  --text-secondary: #555;
+  --text-muted: #6c757d;
+  --text-heading: #2c3e50;
+  --text-nav: #333;
+  --text-filter-label: #495057;
+  --border-card: #e0e0e0;
+  --border-ui: #e9ecef;
+  --border-box: #4A4A4A;
+  --accent-blue: #4A90E2;
+  --accent-teal: #1d7484;
+  --secondaryColor: #1d7484;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --header-border: rgba(0, 0, 0, 0.1);
+  --hover-green: #d1fae5;
+  --hover-blue: #dbeafe;
+  --skill-recent-bg: linear-gradient(135deg, #e8f5e8, #f0f9f0);
+  --skill-recent-border: #c8e6c9;
+  --skill-recent-text: #2e7d32;
+  --skill-intermediate-bg: linear-gradient(135deg, #fff8e1, #fffde7);
+  --skill-intermediate-border: #ffecb3;
+  --skill-intermediate-text: #f57c00;
+  --skill-basic-bg: linear-gradient(135deg, #f5f5f5, #fafafa);
+  --skill-basic-border: #e0e0e0;
+  --skill-basic-text: #666;
+}
+
+html[data-theme="dark"] {
+    --bg-primary: #121212;
+    --bg-secondary: #2a2a2a;
+    --bg-card: #1e1e1e;
+    --bg-section: #161616;
+    --bg-filter: #252525;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-muted: #9e9e9e;
+    --text-heading: #e8e8e8;
+    --text-nav: #d0d0d0;
+    --text-filter-label: #c0c0c0;
+    --border-card: #383838;
+    --border-ui: #333333;
+    --border-box: #606060;
+    --accent-teal: #1d9baf;
+    --secondaryColor: #333333;
+    --header-bg: rgba(18, 18, 18, 0.95);
+    --header-border: rgba(255, 255, 255, 0.08);
+    --hover-green: #1a3a22;
+    --hover-blue: #1a2d4a;
+    --skill-recent-bg: linear-gradient(135deg, #1b2e1b, #1e361e);
+    --skill-recent-border: #2d5a2d;
+    --skill-recent-text: #81c784;
+    --skill-intermediate-bg: linear-gradient(135deg, #2e2200, #3a2b00);
+    --skill-intermediate-border: #5c4500;
+    --skill-intermediate-text: #ffb74d;
+    --skill-basic-bg: linear-gradient(135deg, #252525, #2d2d2d);
+    --skill-basic-border: #404040;
+    --skill-basic-text: #9e9e9e;
+}
+
 html {
     scroll-behavior: smooth;
 	font-size: 62.5%;
@@ -32,8 +105,8 @@ body {
   font-size: 1.8rem;
   line-height: 1.618;
   margin: auto;
-  color: #4a4a4a;
-  background-color: #f9f9f9;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
   padding: 13px;
 }
 
@@ -73,7 +146,7 @@ p {
 
 small, sub, sup { font-size: 75%; }
 
-hr { border-color: #1d7484; }
+hr { border-color: var(--accent-teal); }
 
 ul {
   padding-left: 1.4em;
@@ -90,9 +163,9 @@ blockquote {
   padding-top: 0.8em;
   padding-bottom: 0.8em;
   padding-right: 0.8em;
-  border-left: 5px solid #1d7484;
+  border-left: 5px solid var(--accent-teal);
   margin-bottom: 2.5rem;
-  background-color: #f1f1f1;
+  background-color: var(--bg-secondary);
 }
 
 blockquote p { margin-bottom: 0; }
@@ -105,7 +178,7 @@ img, video {
 }
 
 pre {
-  background-color: #f1f1f1;
+  background-color: var(--bg-secondary);
   display: block;
   padding: 1em;
   overflow-x: auto;
@@ -117,7 +190,7 @@ pre {
 code, kbd, samp {
   font-size: 0.9em;
   padding: 0 0.5em;
-  background-color: #f1f1f1;
+  background-color: var(--bg-secondary);
   white-space: pre-wrap;
 }
 
@@ -137,11 +210,11 @@ table {
 
 td, th {
   padding: 0.5em;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid var(--border-ui);
 }
 
-input, textarea { border: 1px solid #4a4a4a; }
-input:focus, textarea:focus { border: 1px solid #1d7484; }
+input, textarea { border: 1px solid var(--border-box); }
+input:focus, textarea:focus { border: 1px solid var(--accent-teal); }
 
 textarea { width: 100%; }
 
@@ -173,21 +246,21 @@ textarea { width: 100%; }
 }
 
 textarea, select, input {
-  color: #4a4a4a;
+  color: var(--text-primary);
   padding: 6px 10px;
   margin-bottom: 10px;
-  background-color: #f1f1f1;
-  border: 1px solid #f1f1f1;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--bg-secondary);
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
 }
 textarea:focus, select:focus, input:focus {
-  border: 1px solid #1d7484;
+  border: 1px solid var(--accent-teal);
   outline: 0;
 }
 
-input[type=checkbox]:focus { outline: 1px dotted #1d7484; }
+input[type=checkbox]:focus { outline: 1px dotted var(--accent-teal); }
 
 label, legend, fieldset {
   display: block;
@@ -197,20 +270,20 @@ label, legend, fieldset {
 	</style>
 </head>
 <body data-sveltekit-preload-data="hover">
-	<div style="display: contents"><!--[--><!--[0--><!--[--><header class="svelte-vny38x"><div class="topnav svelte-vny38x"><a href="./" class="brand-link svelte-vny38x"><h2 class="brand svelte-vny38x">Akhil Kothapalli</h2></a> <div class="topnav-right svelte-vny38x"><a href="./#proj" class="svelte-vny38x">Projects</a> <a href="./attributions" class="svelte-vny38x">Attributions</a></div></div></header><!----> <div id="page-container" class="svelte-12qhfyh"><main id="content-wrap" class="svelte-12qhfyh"><!--[--><div class="text-column"><h1>About this Website</h1> <h3>Why</h3> <p>My resume cannot do my projects justice. I need to explain them properly here. Plus since I made this website myself, that to using Svelte, I can easily add new features.</p> <h3>Challenges I faced</h3> <h3>Too much</h3> <p>It took me three iterations to make this website. I always struggled with trying to make everything. This time I focused on something very simply. In fact, this was going to 
-		vanilla js, html and css. I stayed strong but missed Svelte, so thats the only addition so far.</p> <h3>.nojekyll file</h3> <p>My app was not able to get some of it's files. It took me so long to find out that the .gitignore wasn't uploading the .nojekyll file which was messing everything up.</p></div><!--]--><!----></main> <footer id="footer" class="svelte-12qhfyh"><div><p>©2023 Akhil, Powered by SvelteKit. <a href="./about">More about this site</a> - 1.6</p></div></footer></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+	<div style="display: contents"><!--[--><!--[0--><!--[--><header class="svelte-vny38x"><div class="topnav svelte-vny38x"><a href="./" class="brand-link svelte-vny38x"><h2 class="brand svelte-vny38x">Akhil Kothapalli</h2></a> <div class="topnav-right svelte-vny38x"><a href="./#proj" class="svelte-vny38x">Projects</a> <a href="./attributions" class="svelte-vny38x">Attributions</a> <button class="theme-toggle svelte-vny38x" aria-label="Toggle theme"><!--[-1--><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><!--]--></button></div></div></header><!----> <div id="page-container" class="svelte-12qhfyh"><main id="content-wrap" class="svelte-12qhfyh"><!--[--><div class="text-column"><h1>About this Website</h1> <h3>Why</h3> <p>My resume cannot do my projects justice. I need to explain them properly here. Plus since I made this website myself, that to using Svelte, I can easily add new features.</p> <h3>Challenges I faced</h3> <h3>Too much</h3> <p>It took me three iterations to make this website. I always struggled with trying to make everything. This time I focused on something very simply. In fact, this was going to 
+		vanilla js, html and css. I stayed strong but missed Svelte, so thats the only addition so far.</p> <h3>.nojekyll file</h3> <p>My app was not able to get some of it's files. It took me so long to find out that the .gitignore wasn't uploading the .nojekyll file which was messing everything up.</p></div><!--]--><!----></main> <footer id="footer" class="svelte-12qhfyh"><div><p>©2025 Akhil, Powered by SvelteKit and cleaned up using Claude. <a href="./about">More about this site</a> - 2.0</p></div></footer></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_11hf5vc = {
+					__sveltekit_1ihvkzd = {
 						base: new URL(".", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./_app/immutable/entry/start.ENOO_sDz.js"),
-						import("./_app/immutable/entry/app.CbVADVgL.js")
+						import("./_app/immutable/entry/start.BrWJy7A8.js"),
+						import("./_app/immutable/entry/app.CP9y7C-Y.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 3],

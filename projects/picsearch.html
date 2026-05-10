@@ -5,23 +5,96 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" href="../favicon.png" />
 	<title>AK</title>
-	<link href="../_app/immutable/entry/start.ENOO_sDz.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/FZdu6DzT.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/CpC96wrK.js" rel="modulepreload">
-		<link href="../_app/immutable/entry/app.CbVADVgL.js" rel="modulepreload">
+	<script>
+		(function() {
+			try {
+				var saved = localStorage.getItem('theme');
+				document.documentElement.setAttribute('data-theme', saved || 'dark');
+			} catch(e) {}
+		})();
+	</script>
+	<link href="../_app/immutable/entry/start.BrWJy7A8.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CNcsxFq6.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CAt3Me7R.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.CP9y7C-Y.js" rel="modulepreload">
 		<link href="../_app/immutable/chunks/C-OaypFN.js" rel="modulepreload">
 		<link href="../_app/immutable/chunks/t62M88qj.js" rel="modulepreload">
-		<link href="../_app/immutable/nodes/0.PAj9LhFS.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/Bqht0n_i.js" rel="modulepreload">
-		<link href="../_app/immutable/nodes/10.Di3S6uqb.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.DoKua3Eg.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/10.DT7Y-OhC.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/ViJdONpo.js" rel="modulepreload">
 		<!--12qhfyh--><link rel="stylesheet" href="../style.css" type="text/css"/> <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RQ1FLCMN0B"></script> <script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 		gtag('config', 'G-RQ1FLCMN0B');
 	</script><!---->
-		<link href="../_app/immutable/assets/0.C6AZNS3h.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/0.DGWEQtz2.css" rel="stylesheet">
 	<style>
+:root {
+  --bg-primary: #f9f9f9;
+  --bg-secondary: #f1f1f1;
+  --bg-card: #ffffff;
+  --bg-section: #f5f5f5;
+  --bg-filter: #f8f9fa;
+  --text-primary: #4a4a4a;
+  --text-secondary: #555;
+  --text-muted: #6c757d;
+  --text-heading: #2c3e50;
+  --text-nav: #333;
+  --text-filter-label: #495057;
+  --border-card: #e0e0e0;
+  --border-ui: #e9ecef;
+  --border-box: #4A4A4A;
+  --accent-blue: #4A90E2;
+  --accent-teal: #1d7484;
+  --secondaryColor: #1d7484;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --header-border: rgba(0, 0, 0, 0.1);
+  --hover-green: #d1fae5;
+  --hover-blue: #dbeafe;
+  --skill-recent-bg: linear-gradient(135deg, #e8f5e8, #f0f9f0);
+  --skill-recent-border: #c8e6c9;
+  --skill-recent-text: #2e7d32;
+  --skill-intermediate-bg: linear-gradient(135deg, #fff8e1, #fffde7);
+  --skill-intermediate-border: #ffecb3;
+  --skill-intermediate-text: #f57c00;
+  --skill-basic-bg: linear-gradient(135deg, #f5f5f5, #fafafa);
+  --skill-basic-border: #e0e0e0;
+  --skill-basic-text: #666;
+}
+
+html[data-theme="dark"] {
+    --bg-primary: #121212;
+    --bg-secondary: #2a2a2a;
+    --bg-card: #1e1e1e;
+    --bg-section: #161616;
+    --bg-filter: #252525;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-muted: #9e9e9e;
+    --text-heading: #e8e8e8;
+    --text-nav: #d0d0d0;
+    --text-filter-label: #c0c0c0;
+    --border-card: #383838;
+    --border-ui: #333333;
+    --border-box: #606060;
+    --accent-teal: #1d9baf;
+    --secondaryColor: #333333;
+    --header-bg: rgba(18, 18, 18, 0.95);
+    --header-border: rgba(255, 255, 255, 0.08);
+    --hover-green: #1a3a22;
+    --hover-blue: #1a2d4a;
+    --skill-recent-bg: linear-gradient(135deg, #1b2e1b, #1e361e);
+    --skill-recent-border: #2d5a2d;
+    --skill-recent-text: #81c784;
+    --skill-intermediate-bg: linear-gradient(135deg, #2e2200, #3a2b00);
+    --skill-intermediate-border: #5c4500;
+    --skill-intermediate-text: #ffb74d;
+    --skill-basic-bg: linear-gradient(135deg, #252525, #2d2d2d);
+    --skill-basic-border: #404040;
+    --skill-basic-text: #9e9e9e;
+}
+
 html {
     scroll-behavior: smooth;
 	font-size: 62.5%;
@@ -32,8 +105,8 @@ body {
   font-size: 1.8rem;
   line-height: 1.618;
   margin: auto;
-  color: #4a4a4a;
-  background-color: #f9f9f9;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
   padding: 13px;
 }
 
@@ -73,7 +146,7 @@ p {
 
 small, sub, sup { font-size: 75%; }
 
-hr { border-color: #1d7484; }
+hr { border-color: var(--accent-teal); }
 
 ul {
   padding-left: 1.4em;
@@ -90,9 +163,9 @@ blockquote {
   padding-top: 0.8em;
   padding-bottom: 0.8em;
   padding-right: 0.8em;
-  border-left: 5px solid #1d7484;
+  border-left: 5px solid var(--accent-teal);
   margin-bottom: 2.5rem;
-  background-color: #f1f1f1;
+  background-color: var(--bg-secondary);
 }
 
 blockquote p { margin-bottom: 0; }
@@ -105,7 +178,7 @@ img, video {
 }
 
 pre {
-  background-color: #f1f1f1;
+  background-color: var(--bg-secondary);
   display: block;
   padding: 1em;
   overflow-x: auto;
@@ -117,7 +190,7 @@ pre {
 code, kbd, samp {
   font-size: 0.9em;
   padding: 0 0.5em;
-  background-color: #f1f1f1;
+  background-color: var(--bg-secondary);
   white-space: pre-wrap;
 }
 
@@ -137,11 +210,11 @@ table {
 
 td, th {
   padding: 0.5em;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid var(--border-ui);
 }
 
-input, textarea { border: 1px solid #4a4a4a; }
-input:focus, textarea:focus { border: 1px solid #1d7484; }
+input, textarea { border: 1px solid var(--border-box); }
+input:focus, textarea:focus { border: 1px solid var(--accent-teal); }
 
 textarea { width: 100%; }
 
@@ -173,21 +246,21 @@ textarea { width: 100%; }
 }
 
 textarea, select, input {
-  color: #4a4a4a;
+  color: var(--text-primary);
   padding: 6px 10px;
   margin-bottom: 10px;
-  background-color: #f1f1f1;
-  border: 1px solid #f1f1f1;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--bg-secondary);
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
 }
 textarea:focus, select:focus, input:focus {
-  border: 1px solid #1d7484;
+  border: 1px solid var(--accent-teal);
   outline: 0;
 }
 
-input[type=checkbox]:focus { outline: 1px dotted #1d7484; }
+input[type=checkbox]:focus { outline: 1px dotted var(--accent-teal); }
 
 label, legend, fieldset {
   display: block;
@@ -197,7 +270,7 @@ label, legend, fieldset {
 	</style>
 </head>
 <body data-sveltekit-preload-data="hover">
-	<div style="display: contents"><!--[--><!--[0--><!--[--><header class="svelte-vny38x"><div class="topnav svelte-vny38x"><a href="../" class="brand-link svelte-vny38x"><h2 class="brand svelte-vny38x">Akhil Kothapalli</h2></a> <div class="topnav-right svelte-vny38x"><a href="../#proj" class="svelte-vny38x">Projects</a> <a href="../attributions" class="svelte-vny38x">Attributions</a></div></div></header><!----> <div id="page-container" class="svelte-12qhfyh"><main id="content-wrap" class="svelte-12qhfyh"><!--[--><h1>PicSearch</h1> <a class="github-button" href="https://github.com/kakhil2004/ai-gallery" target="_blank" rel="noopener"><svg class="github-icon" viewBox="0 0 16 16" fill="currentColor" width="20" height="20"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 
+	<div style="display: contents"><!--[--><!--[0--><!--[--><header class="svelte-vny38x"><div class="topnav svelte-vny38x"><a href="../" class="brand-link svelte-vny38x"><h2 class="brand svelte-vny38x">Akhil Kothapalli</h2></a> <div class="topnav-right svelte-vny38x"><a href="../#proj" class="svelte-vny38x">Projects</a> <a href="../attributions" class="svelte-vny38x">Attributions</a> <button class="theme-toggle svelte-vny38x" aria-label="Toggle theme"><!--[-1--><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><!--]--></button></div></div></header><!----> <div id="page-container" class="svelte-12qhfyh"><main id="content-wrap" class="svelte-12qhfyh"><!--[--><h1>PicSearch</h1> <a class="github-button" href="https://github.com/kakhil2004/ai-gallery" target="_blank" rel="noopener"><svg class="github-icon" viewBox="0 0 16 16" fill="currentColor" width="20" height="20"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 
     0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
     -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 
     2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
@@ -207,19 +280,19 @@ label, legend, fieldset {
     2.13.51.56.82 1.27.82 2.15 0 3.07-1.87 
     3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 
     1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 
-    0016 8c0-4.42-3.58-8-8-8z"></path></svg> View on GitHub</a> <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/Cg14ZrTWqx0" title="PicSearch demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></div> <h3>The Problem</h3> <p>Apple Photos has a search feature, but it is very strict — you have to get the query exactly right for it to find anything. I wanted to see if I could build something where you just describe what you’re looking for in plain sentences and it actually understands you.</p> <p>That’s PicSearch: upload your photos once, then find them by meaning rather than by filename or exact tags.</p> <h3>How It Works</h3> <p>When you upload an image, GPT-5-nano (vision) generates a 2-3 sentence description and 15 keywords for it. That description is then embedded into a vector using <strong>Sentence Transformers</strong> (<code>all-MiniLM-L6-v2</code>) and stored in memory.</p> <p>When you search, your query gets embedded the same way and compared against every stored image embedding using <strong>cosine similarity</strong>. Results are ranked by relevance score, so the most semantically similar images surface first — even if none of your exact words appear in the description.</p> <h3>Stack</h3> <ul><li><strong>Backend</strong>: FastAPI (Python)</li> <li><strong>AI Description</strong>: OpenAI GPT-5-nano(vision) — generates descriptions + keywords per image</li> <li><strong>Semantic Search</strong>: Sentence Transformers (<code>all-MiniLM-L6-v2</code>) + NumPy cosine similarity</li> <li><strong>Frontend</strong>: Single-file HTML/CSS/JS — dark theme, drag-and-drop upload, responsive grid (Made by Claude Code)</li></ul> <h3>Why Sentence Transformers?</h3> <p><code>all-MiniLM-L6-v2</code> is a lightweight embedding model trained specifically for semantic similarity tasks. It maps sentences into a 384-dimensional vector space where sentences with similar meaning end up close together — so a query like <em>“dog at the beach”</em> will surface an image described as <em>“a golden retriever running along the shoreline”</em> even though none of those words match.</p> <h3>Why can’t I demo the app myself?</h3> <p>Servers and OpenAI credits are not free. There are malicious people that could easily attack the site and cause it to create a huge API bill.</p> <h3>API</h3> <table><thead><tr><th>Method</th><th>Endpoint</th><th>Description</th></tr></thead><tbody><tr><td><code>GET</code></td><td><code>/</code></td><td>Serves the UI</td></tr><tr><td><code>GET</code></td><td><code>/search?query=</code></td><td>Returns images ranked by semantic similarity (empty query returns all)</td></tr><tr><td><code>POST</code></td><td><code>/upload</code></td><td>Accepts <code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>, <code>.webp</code>; analyzes and indexes the image</td></tr></tbody></table><!--]--><!----></main> <footer id="footer" class="svelte-12qhfyh"><div><p>©2023 Akhil, Powered by SvelteKit. <a href="../about">More about this site</a> - 1.6</p></div></footer></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+    0016 8c0-4.42-3.58-8-8-8z"></path></svg> View on GitHub</a> <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/Cg14ZrTWqx0" title="PicSearch demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></div> <h3>The Problem</h3> <p>Apple Photos has a search feature, but it is very strict — you have to get the query exactly right for it to find anything. I wanted to see if I could build something where you just describe what you’re looking for in plain sentences and it actually understands you.</p> <p>That’s PicSearch: upload your photos once, then find them by meaning rather than by filename or exact tags.</p> <h3>How It Works</h3> <p>When you upload an image, GPT-5-nano (vision) generates a 2-3 sentence description and 15 keywords for it. That description is then embedded into a vector using <strong>Sentence Transformers</strong> (<code>all-MiniLM-L6-v2</code>) and stored in memory.</p> <p>When you search, your query gets embedded the same way and compared against every stored image embedding using <strong>cosine similarity</strong>. Results are ranked by relevance score, so the most semantically similar images surface first — even if none of your exact words appear in the description.</p> <h3>Stack</h3> <ul><li><strong>Backend</strong>: FastAPI (Python)</li> <li><strong>AI Description</strong>: OpenAI GPT-5-nano(vision) — generates descriptions + keywords per image</li> <li><strong>Semantic Search</strong>: Sentence Transformers (<code>all-MiniLM-L6-v2</code>) + NumPy cosine similarity</li> <li><strong>Frontend</strong>: Single-file HTML/CSS/JS — dark theme, drag-and-drop upload, responsive grid (Made by Claude Code)</li></ul> <h3>Why Sentence Transformers?</h3> <p><code>all-MiniLM-L6-v2</code> is a lightweight embedding model trained specifically for semantic similarity tasks. It maps sentences into a 384-dimensional vector space where sentences with similar meaning end up close together — so a query like <em>“dog at the beach”</em> will surface an image described as <em>“a golden retriever running along the shoreline”</em> even though none of those words match.</p> <h3>Why can’t I demo the app myself?</h3> <p>Servers and OpenAI credits are not free. There are malicious people that could easily attack the site and cause it to create a huge API bill.</p> <h3>API</h3> <table><thead><tr><th>Method</th><th>Endpoint</th><th>Description</th></tr></thead><tbody><tr><td><code>GET</code></td><td><code>/</code></td><td>Serves the UI</td></tr><tr><td><code>GET</code></td><td><code>/search?query=</code></td><td>Returns images ranked by semantic similarity (empty query returns all)</td></tr><tr><td><code>POST</code></td><td><code>/upload</code></td><td>Accepts <code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>, <code>.webp</code>; analyzes and indexes the image</td></tr></tbody></table><!--]--><!----></main> <footer id="footer" class="svelte-12qhfyh"><div><p>©2025 Akhil, Powered by SvelteKit and cleaned up using Claude. <a href="../about">More about this site</a> - 2.0</p></div></footer></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_11hf5vc = {
+					__sveltekit_1ihvkzd = {
 						base: new URL("..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../_app/immutable/entry/start.ENOO_sDz.js"),
-						import("../_app/immutable/entry/app.CbVADVgL.js")
+						import("../_app/immutable/entry/start.BrWJy7A8.js"),
+						import("../_app/immutable/entry/app.CP9y7C-Y.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 10],
