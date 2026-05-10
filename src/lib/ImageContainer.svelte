@@ -1,19 +1,21 @@
 <script lang="ts">
-    export let data: any[] = [];
-    let hoveredItem: any = null;
+    let { data = [] }: { data: any[] } = $props();
+    let hoveredItem = $state<any>(null);
 </script>
 
 <div class="box-container" style="margin-bottom:40px;">
     {#each data as item}
         {#if ("redirect" in item)}
             <div
-                on:click={() => item.redirect && (window.location.href = item.redirect)}
-                on:mouseover={() => hoveredItem = item}
-                on:mouseout={() => hoveredItem = null}
-                on:focus={() => hoveredItem = item}
-                on:blur={() => hoveredItem = null}
+                onclick={() => item.redirect && (window.location.href = item.redirect)}
+                onkeydown={e => (e.key === 'Enter' || e.key === ' ') && item.redirect && (window.location.href = item.redirect)}
+                onmouseover={() => hoveredItem = item}
+                onmouseout={() => hoveredItem = null}
+                onfocus={() => hoveredItem = item}
+                onblur={() => hoveredItem = null}
                 class="box"
-                style="background-color: {hoveredItem === item && item.color ? item.color : ''}"
+                class:hovered-green={hoveredItem === item && item.color === 'lightgreen'}
+                class:hovered-blue={hoveredItem === item && item.color === 'lightblue'}
                 role="button"
                 tabindex="0"
             >
@@ -36,12 +38,14 @@
             </div>
         {:else}
         <div
-            on:mouseover={() => hoveredItem = item}
-            on:mouseout={() => hoveredItem = null}
-            on:focus={() => hoveredItem = item}
-            on:blur={() => hoveredItem = null}
+            onmouseover={() => hoveredItem = item}
+            onmouseout={() => hoveredItem = null}
+            onfocus={() => hoveredItem = item}
+            onblur={() => hoveredItem = null}
             class="box"
-            style="background-color: {hoveredItem === item && item.color ? item.color : ''}"
+            class:hovered-green={hoveredItem === item && item.color === 'lightgreen'}
+            class:hovered-blue={hoveredItem === item && item.color === 'lightblue'}
+            role="region"
         >
             {#if ("onlyH2" in item)}
             <h4 style="margin:0px;">{item["header"]}</h4>
@@ -75,7 +79,7 @@
 
 .box {
     flex: 0 0 calc(90% - 20px);
-    border: 3px solid #4A4A4A;
+    border: 3px solid var(--border-box);
     border-radius: 10px;
     padding: 20px;
     font-size: 1.5vh;
@@ -98,5 +102,13 @@
 
 .box:hover {
     cursor: pointer;
+}
+
+.box.hovered-green {
+    background-color: var(--hover-green);
+}
+
+.box.hovered-blue {
+    background-color: var(--hover-blue);
 }
 </style>

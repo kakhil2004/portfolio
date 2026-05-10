@@ -1,15 +1,6 @@
 <script lang="ts">
-    export let data: any[] = [];
-    let hoveredIndex = -1;
-    
-    function handleMouseEnter(index: number) {
-        hoveredIndex = index;
-    }
-    
-    function handleMouseLeave() {
-        hoveredIndex = -1;
-    }
-    
+    let { data = [] }: { data: any[] } = $props();
+
     function getColorClass(color: string) {
         if (color === "lightgreen") return "skill-recent";
         if (color === "yellow") return "skill-intermediate";
@@ -19,11 +10,7 @@
 
 <div class="skills-container">
     {#each data as item, index}
-        <div 
-            class="skill-item {getColorClass(item.color)}"
-            on:mouseenter={() => handleMouseEnter(index)}
-            on:mouseleave={handleMouseLeave}
-        >
+        <div class="skill-item {getColorClass(item.color)}">
             <span class="skill-name">{item.header}</span>
             <div class="skill-indicator"></div>
         </div>
@@ -88,9 +75,9 @@
 
 /* Recent skills (lightgreen) */
 .skill-recent {
-    background: linear-gradient(135deg, #e8f5e8, #f0f9f0);
-    border: 1px solid #c8e6c9;
-    color: #2e7d32;
+    background: var(--skill-recent-bg);
+    border: 1px solid var(--skill-recent-border);
+    color: var(--skill-recent-text);
 }
 
 .skill-recent::before {
@@ -104,9 +91,9 @@
 
 /* Intermediate skills (yellow) */
 .skill-intermediate {
-    background: linear-gradient(135deg, #fff8e1, #fffde7);
-    border: 1px solid #ffecb3;
-    color: #f57c00;
+    background: var(--skill-intermediate-bg);
+    border: 1px solid var(--skill-intermediate-border);
+    color: var(--skill-intermediate-text);
 }
 
 .skill-intermediate::before {
@@ -120,9 +107,9 @@
 
 /* Basic skills (fallback) */
 .skill-basic {
-    background: linear-gradient(135deg, #f5f5f5, #fafafa);
-    border: 1px solid #e0e0e0;
-    color: #666;
+    background: var(--skill-basic-bg);
+    border: 1px solid var(--skill-basic-border);
+    color: var(--skill-basic-text);
 }
 
 .skill-basic::before {

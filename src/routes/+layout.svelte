@@ -1,6 +1,7 @@
 <script>
 	import Header from './Header.svelte';
 	import { base } from '$app/paths';
+	let { children } = $props();
 </script>
 
 <svelte:head>
@@ -15,16 +16,16 @@
 	</script>
 </svelte:head>
 
-<div id="page-container">
-	<Header /> 
+<Header />
 
+<div id="page-container">
 	<main id="content-wrap">
-		<slot />
+		{@render children()}
 	</main>
 
 	<footer id="footer">
 		<div>
-			<p>©2023 Akhil, Powered by SvelteKit. <a href="{base}/about">More about this site</a>  - 1.6</p>
+			<p>©2025 Akhil, Powered by SvelteKit and cleaned up using Claude. <a href="{base}/about">More about this site</a>  - 2.0</p>
 		</div>
 	</footer>
 </div>
@@ -53,7 +54,7 @@
 
 	#footer {
 		padding-top: 20px;
-		border-top: 2px solid  var(--secondaryColor);
+		border-top: 1px solid var(--border-ui);
 		position: absolute;
 		bottom: 0;
 		width: 100%;

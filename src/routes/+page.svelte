@@ -2,23 +2,24 @@
 	import BoxContainer from "$lib/BoxContainer.svelte";
 	import { projects, experience } from "$lib/data/projects";
 	import { base } from '$app/paths';
+	import { SvelteSet } from 'svelte/reactivity';
 
-	let selectedSkills = new Set<string>();
-	let filterExpanded = false;
-	let showPopup = false;
-	let showScrollTop = false;
+	let selectedSkills = new SvelteSet<string>();
+	let filterExpanded = $state(false);
+	let showPopup = $state(false);
+	let showScrollTop = $state(false);
 
 	function handleScroll() {
 		showScrollTop = window.scrollY > 20;
 	}
 
-	// Collect all unique skills from projects
-	$: allSkills = [...new Set(projects.flatMap(p => p.skills ?? []))];
+	const allSkills = $derived([...new Set(projects.flatMap(p => p.skills ?? []))]);
 
-	// Filter projects based on selected skills
-	$: filteredProjects = selectedSkills.size === 0
-		? projects
-		: projects.filter(p => p.skills?.some(skill => selectedSkills.has(skill)));
+	const filteredProjects = $derived(
+		selectedSkills.size === 0
+			? projects
+			: projects.filter(p => p.skills?.some(skill => selectedSkills.has(skill)))
+	);
 
 	function toggleSkill(skill: string) {
 		if (selectedSkills.has(skill)) {
@@ -26,11 +27,10 @@
 		} else {
 			selectedSkills.add(skill);
 		}
-		selectedSkills = selectedSkills; // trigger reactivity
 	}
 
 	function clearFilters() {
-		selectedSkills = new Set();
+		selectedSkills.clear();
 	}
 
 	function scrollToTop() {
@@ -39,7 +39,7 @@
 	}
 </script>
 
-<svelte:window on:scroll={handleScroll} />
+<svelte:window onscroll={handleScroll} />
 
 <svelte:head>
 	<title>AK | Home</title>
@@ -55,12 +55,12 @@
 			<div class="content" style="margin: auto;">
 				<p style="margin-bottom: 0px; text-align: center;">Hello I'm</p>
 				<h2 style="margin-top: 0px; text-align: center;">Akhil Kothapalli</h2>
-				<p style="text-align: center;">a third-year CS major from Georgia. I enjoy coding and have done all sorts of projects including <b>full-stack web apps, game development and working with embedded systems. Check out my projects below!</b></p>
+				<p style="text-align: center;">a <b> Software Developer </b> at <b> Amazon Web Services </b>. I graduated with a Bachelors from Georgia Tech. This website showcases all my many projects!</p>
 				<div style="text-align: center;">
-					<a class="nostyle" target="_blank" href="https://docs.google.com/document/d/11Y2gMt14k4bMbR54mX4R9Z9txu6dHT7F-S20IIrQ2F4/edit?usp=sharing">
+					<a class="nostyle" target="_blank" href="{base}/resume.pdf">
 						<button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Resume</h3></button>
 					</a>
-					<button style="border-radius: 15px; margin-bottom: 30px;" on:click={() => showPopup = true}>
+					<button style="border-radius: 15px; margin-bottom: 30px;" onclick={() => showPopup = true}>
 						<h3 style="margin: 0px;">Tutorial of Site</h3>
 					</button>
 
@@ -77,14 +77,14 @@
 	<!-- Invisible anchor for navigation -->
 	<div id="proj" style="position: relative; top: -80px; visibility: hidden;"></div>
 
-	<div style="background: #f5f5f5; width: 100vw; margin-left: calc(-50vw + 50%); padding: 40px 0;">
+	<div style="background: var(--bg-section); width: 100vw; margin-left: calc(-50vw + 50%); padding: 40px 0;">
 		<div class="page-container" style="max-width: 68%; margin: 0 auto;">
 			<h2 style="text-align: center;">Projects</h2>
-			<p style="text-align: center;">Hover over the boxes and click on the <mark style="background-color: lightgreen; color:white;">green</mark> ones!</p>
+			<p style="text-align: center;">Hover over the boxes and click on the <span style="color: #22c55e; font-weight: 700;">green</span> ones!</p>
 
 			<!-- Skill Filter Section -->
 			<div class="filter-section">
-				<div class="filter-toggle" on:click={() => filterExpanded = !filterExpanded} role="button" tabindex="0" on:keydown={e => e.key === 'Enter' && (filterExpanded = !filterExpanded)}>
+				<div class="filter-toggle" onclick={() => filterExpanded = !filterExpanded} role="button" tabindex="0" onkeydown={e => e.key === 'Enter' && (filterExpanded = !filterExpanded)}>
 					<div class="filter-toggle-content">
 						<h4>Filter by Skills</h4>
 						{#if selectedSkills.size > 0}
@@ -98,7 +98,7 @@
 					<div class="filter-content">
 						<div class="filter-header">
 							{#if selectedSkills.size > 0}
-								<button class="clear-filters-btn" on:click={clearFilters}>
+								<button class="clear-filters-btn" onclick={clearFilters}>
 									Clear Filters ({selectedSkills.size})
 								</button>
 							{/if}
@@ -108,7 +108,7 @@
 								<button
 									class="filter-skill-btn"
 									class:active={selectedSkills.has(skill)}
-									on:click={() => toggleSkill(skill)}
+									onclick={() => toggleSkill(skill)}
 								>
 									{skill}
 								</button>
@@ -122,19 +122,17 @@
 		</div>
 	</div>
 
-	<hr id="exp">
-	<hr>
+
 </section>
 
 {#if showScrollTop}
-	<button class="scroll-to-top-btn" on:click={scrollToTop}>Top</button>
+	<button class="scroll-to-top-btn" onclick={scrollToTop}>Top</button>
 {/if}
 
 {#if showPopup}
-	<!-- svelte-ignore a11y-click-events-have-key-events -->
-	<div class="popup" on:click|self={() => showPopup = false} role="dialog" aria-modal="true">
+	<div class="popup" onclick={(e) => { if (e.target === e.currentTarget) showPopup = false; }} onkeydown={e => e.key === 'Escape' && (showPopup = false)} role="dialog" aria-modal="true" tabindex="-1">
 		<div class="popup-content">
-			<span class="close" on:click={() => showPopup = false} role="button" tabindex="0" on:keydown={e => e.key === 'Enter' && (showPopup = false)}>&times;</span>
+			<span class="close" onclick={() => showPopup = false} role="button" tabindex="0" onkeydown={e => e.key === 'Enter' && (showPopup = false)}>&times;</span>
 			<h3>Boxes</h3>
 			<p>Below for each section you will see boxes. Hover over them! If it turns <span style="color:green">green</span> then you can click on it for a cool description of that item.
 				If it is <span style="color:lightblue">blue</span> then it has a link which leaves this page. If it doesn't light up, then my resume covers it enough OR I will add a page soon.
@@ -150,9 +148,9 @@
 <style>
 	.filter-section {
 		margin: 30px 0;
-		background: #f8f9fa;
+		background: var(--bg-filter);
 		border-radius: 12px;
-		border: 1px solid #e9ecef;
+		border: 1px solid var(--border-ui);
 		overflow: hidden;
 	}
 
@@ -162,13 +160,13 @@
 		align-items: center;
 		padding: 15px 20px;
 		cursor: pointer;
-		background: #ffffff;
-		border-bottom: 1px solid #e9ecef;
+		background: var(--bg-card);
+		border-bottom: 1px solid var(--border-ui);
 		transition: background-color 0.2s ease;
 	}
 
 	.filter-toggle:hover {
-		background: #f8f9fa;
+		background: var(--bg-filter);
 	}
 
 	.filter-toggle-content {
@@ -179,20 +177,20 @@
 
 	.filter-toggle h4 {
 		margin: 0;
-		color: #495057;
+		color: var(--text-filter-label);
 		font-size: 1.1em;
 		font-weight: 600;
 	}
 
 	.filter-count {
-		color: #4A90E2;
+		color: var(--accent-blue);
 		font-size: 0.9em;
 		font-weight: 500;
 	}
 
 	.filter-arrow {
 		font-size: 0.8em;
-		color: #6c757d;
+		color: var(--text-muted);
 		transition: transform 0.3s ease;
 	}
 
@@ -244,9 +242,9 @@
 	}
 
 	.filter-skill-btn {
-		background: white;
-		border: 2px solid #dee2e6;
-		color: #6c757d;
+		background: var(--bg-card);
+		border: 2px solid var(--border-ui);
+		color: var(--text-muted);
 		padding: 6px 12px;
 		border-radius: 20px;
 		font-size: 0.9em;
@@ -256,14 +254,14 @@
 	}
 
 	.filter-skill-btn:hover {
-		border-color: #4A90E2;
-		color: #4A90E2;
+		border-color: var(--accent-blue);
+		color: var(--accent-blue);
 		transform: translateY(-1px);
 	}
 
 	.filter-skill-btn.active {
-		background: #4A90E2;
-		border-color: #4A90E2;
+		background: var(--accent-blue);
+		border-color: var(--accent-blue);
 		color: white;
 		box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
 	}

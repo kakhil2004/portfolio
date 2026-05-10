@@ -4,8 +4,8 @@
 
 
 <svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
+	<title>AK | OSCAR Bot</title>
+	<meta name="description" content="OSCAR notification bot that alerts you when a class seat opens on Georgia Tech's registration system." />
 </svelte:head>
 
 <div class="text-column">

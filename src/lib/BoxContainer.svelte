@@ -1,39 +1,34 @@
 <script lang="ts">
-    export let data: any[] = [];
-    let link = ""
-    let hoveredIndex = -1;
-    
+    let { data = [] }: { data: any[] } = $props();
+    let hoveredIndex = $state(-1);
+
     function handleClick(redirect: string) {
         if (redirect) {
             window.location.href = redirect;
         }
-    }
-    
-    function handleMouseEnter(index: number) {
-        hoveredIndex = index;
-    }
-    
-    function handleMouseLeave() {
-        hoveredIndex = -1;
     }
 </script>
 
 <div class="box-container" style="margin-bottom:40px;">
     {#each data as item, index}
         {#if ("redirect" in item)}
-            <div 
-                on:click={() => handleClick(item["redirect"])}
-                on:mouseenter={() => handleMouseEnter(index)}
-                on:mouseleave={handleMouseLeave}
+            <div
+                onclick={() => handleClick(item["redirect"])}
+                onkeydown={e => (e.key === 'Enter' || e.key === ' ') && handleClick(item["redirect"])}
+                onmouseenter={() => hoveredIndex = index}
+                onmouseleave={() => hoveredIndex = -1}
                 class="box"
-                style="background-color: {hoveredIndex === index && item['color'] ? item['color'] : ''}"
+                class:hovered-green={hoveredIndex === index && item['color'] === 'lightgreen'}
+                class:hovered-blue={hoveredIndex === index && item['color'] === 'lightblue'}
+                role="button"
+                tabindex="0"
             >
-                {#if ("onlyH2" in item)} 
+                {#if ("onlyH2" in item)}
                 <h4 style="margin:0px;">{item["header"]}</h4>
                 {:else}
                 <h2>{item["header"]}</h2>
                 {/if}
-                <img src={item["sImgSrc"]} alt="small image desc" class="smallimagedesc">
+                <img src={item["sImgSrc"]} alt={item["header"]} class="smallimagedesc">
                 {#if ("smallHead" in item)}
                     <p style="margin:0px;"><b>{item["smallHead"]}</b></p>
                 {/if}
@@ -42,11 +37,13 @@
                 {/if}
             </div>
         {:else}
-        <div 
-            on:mouseenter={() => handleMouseEnter(index)}
-            on:mouseleave={handleMouseLeave}
+        <div
+            onmouseenter={() => hoveredIndex = index}
+            onmouseleave={() => hoveredIndex = -1}
             class="box"
-            style="background-color: {hoveredIndex === index && item['color'] ? item['color'] : ''}"
+            class:hovered-green={hoveredIndex === index && item['color'] === 'lightgreen'}
+            class:hovered-blue={hoveredIndex === index && item['color'] === 'lightblue'}
+            role="region"
         >
             {#if ("onlyH2" in item)} 
             <h4 style="margin:0px;">{item["header"]}</h4>
@@ -81,8 +78,8 @@
 .box {
     flex: 0 0 calc(27% - 14px);
     min-height: 280px;
-    background: #ffffff;
-    border: 2px solid #e0e0e0;
+    background: var(--bg-card);
+    border: 2px solid var(--border-card);
     border-radius: 16px;
     padding: 20px;
     font-size: 1.3vh;
@@ -116,11 +113,19 @@
     border-color: #4A90E2;
 }
 
+.box.hovered-green {
+    background-color: var(--hover-green);
+}
+
+.box.hovered-blue {
+    background-color: var(--hover-blue);
+}
+
 .box h2 {
     margin: 0 0 12px 0;
     font-size: 1.5em;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--text-heading);
     line-height: 1.3;
 }
 
@@ -128,19 +133,19 @@
     margin: 0 0 12px 0;
     font-size: 1.3em;
     font-weight: 600;
-    color: #2c3e50;
+    color: var(--text-heading);
     line-height: 1.3;
 }
 
 .box p {
     margin: 6px 0;
     line-height: 1.5;
-    color: #555;
+    color: var(--text-secondary);
 }
 
 .box p:first-of-type {
     font-weight: 500;
-    color: #666;
+    color: var(--text-muted);
     font-size: 0.9em;
     margin-bottom: 10px;
 }

@@ -1,6 +1,6 @@
 <svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
+	<title>AK | Remote PC</title>
+	<meta name="description" content="Wake-on-LAN setup to remotely power on and access a home PC from anywhere." />
 </svelte:head>
 
 <div class="text-column">

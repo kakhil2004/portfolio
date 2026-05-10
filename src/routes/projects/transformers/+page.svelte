@@ -2,8 +2,8 @@
 	import Carousel from "$lib/Carousel.svelte";
 </script>
 <svelte:head>
-	<title>About</title>
-	<meta name="description" content="About this app" />
+	<title>AK | Transforming Bots Tycoon</title>
+	<meta name="description" content="A Roblox game with a full in-game economy, raycasting physics, and user data storage." />
 </svelte:head>
 
 <div class="text-column">

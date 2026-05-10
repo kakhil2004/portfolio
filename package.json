@@ -7,20 +7,24 @@
 		"preview": "vite preview --host",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"deploy": "npm run build && node clean.js && gh-pages -d build -t true"
+		"deploy": "npm run build && node clean.js && gh-pages -d build -t"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.1.1",
-		"@sveltejs/adapter-static": "^3.0.1",
-		"@sveltejs/kit": "^2.5.1",
+		"@sveltejs/adapter-auto": "latest",
+		"@sveltejs/adapter-static": "latest",
+		"@sveltejs/kit": "^2.59.1",
 		"@types/cookie": "^0.5.1",
 		"gh-pages": "^6.3.0",
-		"mdsvex": "^0.11.2",
-		"svelte": "^4.2.12",
-		"svelte-check": "^3.0.1",
+		"mdsvex": "^0.12.7",
+		"sharp": "^0.34.5",
+		"svelte": "^5.0.0",
+		"svelte-check": "^4.4.8",
 		"tslib": "^2.4.1",
 		"typescript": "^5.9.3",
-		"vite": "^5.1.4"
+		"vite": "latest"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"@sveltejs/vite-plugin-svelte": "^7.1.2"
+	}
 }

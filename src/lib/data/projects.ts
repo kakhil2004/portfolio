@@ -12,7 +12,16 @@ export interface Project {
 
 export const projects: Project[] = [
 	{
-		header: 'Rainbox Six Siege Drone',
+		header: 'PicSearch (NEW)',
+		smallHead: 'Python, FastAPI, Semantic Search, AI',
+		para: 'Upload photos and search them with plain English sentences. Uses GPT-5-nano for image descriptions and Sentence Transformers for semantic similarity — no exact keywords needed.',
+		redirect: base + '/projects/picsearch',
+		color: 'lightgreen',
+		sImgSrc: base + '/images/aigallery/aigallery.JPG',
+		skills: ['Python', 'FastAPI', 'AI', 'Semantic Search', 'OpenAI', 'Machine Learning']
+	},
+	{
+		header: 'Rainbow Six Siege Drone',
 		smallHead: 'Python, WebSockets, HTML',
 		para: 'Cool prototype of the drone from Rainbow Six Siege',
 		redirect: base + '/projects/r6drone',
@@ -30,7 +39,7 @@ export const projects: Project[] = [
 		skills: ['Javascript', 'RESTful APIs', 'Backend', 'Machine Learning']
 	},
 	{
-		header: 'Home Automation System (NEW)',
+		header: 'Home Automation System',
 		smallHead: 'Embedded System, Networking, C',
 		para: 'Using the LoRa protocol to transmit data over extreme distances to automate tasks around the house',
 		redirect: base + '/projects/esp32has',
@@ -41,7 +50,7 @@ export const projects: Project[] = [
 	{
 		header: 'Autonomous Vehicles Research',
 		smallHead: 'ROS, Python, C, Git, Linux',
-		para: 'I spend several hours every week working on a cool car that has LIDAR, vision, an NVidia Jetson Nano etc. and I need to make it fully autonmous so it can race in F1Tenth.',
+		para: 'I spend several hours every week working on a cool car that has LIDAR, vision, an NVidia Jetson Nano etc. and I need to make it fully autonomous so it can race in F1Tenth.',
 		redirect: base + '/exp/aevip',
 		color: 'lightgreen',
 		sImgSrc: base + '/images/aevip/aeCar.jpg',
@@ -88,7 +97,7 @@ export const projects: Project[] = [
 export const experience: Project[] = [
 	{
 		header: 'Teaching Assistant',
-		smallHead: 'Georiga Institute of Technology',
+		smallHead: 'Georgia Institute of Technology',
 		para: 'I teach lectures every week to 30+ students, make weekly check-up quizzes for them on Canvas and spend 3 hours of 1-on-1 time every week. This led to me mastering this course',
 		redirect: 'https://csvistool.com/',
 		color: 'lightblue'
