@@ -1,0 +1,1 @@
+import{$ as e,I as t,d as n,g as r,v as i}from"../chunks/CkNpfGLV.js";import"../chunks/BVEOzTpX.js";var a=i(`<div class="prose svelte-1mb5hvo"><!></div>`);function o(i,o){var s=a();n(t(s),()=>o.children),e(s),r(i,s)}export{o as component};

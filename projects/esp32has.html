@@ -13,15 +13,16 @@
 			} catch(e) {}
 		})();
 	</script>
-	<link href="../_app/immutable/entry/start.BjcC4_5B.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/Q3QNUSRs.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/CAt3Me7R.js" rel="modulepreload">
-		<link href="../_app/immutable/entry/app.2eP-lc0i.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/C-OaypFN.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/t62M88qj.js" rel="modulepreload">
-		<link href="../_app/immutable/nodes/0.Den9KOHC.js" rel="modulepreload">
-		<link href="../_app/immutable/nodes/8.DwW_YcIZ.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/ViJdONpo.js" rel="modulepreload">
+	<link href="../_app/immutable/entry/start.CHUL22xA.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CGZ4lhfx.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CkNpfGLV.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.l1Vabu2E.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B64WrFVF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BVEOzTpX.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.B9hnc-bK.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/3.DbnWuU4B.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/10.DvMLbEc_.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6l_CDBz.js" rel="modulepreload">
 		<!--12qhfyh--><link rel="stylesheet" href="../style.css" type="text/css"/> <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RQ1FLCMN0B"></script> <script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
@@ -29,6 +30,7 @@
 		gtag('config', 'G-RQ1FLCMN0B');
 	</script><!---->
 		<link href="../_app/immutable/assets/0.DGWEQtz2.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/3.BWQvCzXP.css" rel="stylesheet">
 	<style>
 :root {
   --bg-primary: #f9f9f9;
@@ -47,6 +49,7 @@
   --border-box: #4A4A4A;
   --accent-blue: #4A90E2;
   --accent-teal: #1d7484;
+  --link-color: #1d7484;
   --secondaryColor: #1d7484;
   --header-bg: rgba(255, 255, 255, 0.9);
   --header-border: rgba(0, 0, 0, 0.1);
@@ -79,6 +82,7 @@ html[data-theme="dark"] {
     --border-ui: #333333;
     --border-box: #606060;
     --accent-teal: #1d9baf;
+    --link-color: #4dd0e1;
     --secondaryColor: #333333;
     --header-bg: rgba(18, 18, 18, 0.95);
     --header-border: rgba(255, 255, 255, 0.08);
@@ -270,7 +274,7 @@ label, legend, fieldset {
 	</style>
 </head>
 <body data-sveltekit-preload-data="hover">
-	<div style="display: contents"><!--[--><!--[0--><!--[--><header class="svelte-vny38x"><div class="topnav svelte-vny38x"><a href="../" class="brand-link svelte-vny38x"><h2 class="brand svelte-vny38x">Akhil Kothapalli</h2></a> <div class="topnav-right svelte-vny38x"><a href="../#proj" class="svelte-vny38x">Projects</a> <a href="../attributions" class="svelte-vny38x">Attributions</a> <button class="theme-toggle svelte-vny38x" aria-label="Toggle theme"><!--[-1--><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><!--]--></button></div></div></header><!----> <div id="page-container" class="svelte-12qhfyh"><main id="content-wrap" class="svelte-12qhfyh"><!--[--><h1>Self-Gardener</h1> <p><a href="https://github.com/kakhil2004/esp32-testing" rel="nofollow">Click me for GitHub Link</a></p> <h5>Still in progress (Will add updates as I go)</h5> <h2>Why?</h2> <p>I bought a google home assistant and some lights and could control them using my voice. Why not try to use the same thing to water my garden and get some stats about it?</p> <h2>High Level Process (changed over time)</h2> <ol><li>Decide which communication system to use (WiFi, Bluetooth, NRF24L01 etc.)</li> <li>Wire up the electronics</li> <li>Connect it to <a href="https://sinric.pro/" rel="nofollow">Sinric Pro</a></li> <li>Complete!</li></ol> <h2>Step 1</h2> <h4>The device</h4> <p>Immediately I knew that an ESP32 is the way to go since it is tiny, uses much less power than a Raspberry PI but comes with in-built WiFi unlike a regular Arduino. There is also one more advantage that I discovered later.</p> <h4>Using the standard WiFi protocol 802.11 b/g/n</h4> <p>These protocols were super simple to use and after I connected it to my network. I could easily transmit data. The problem was the range was absolutely terrible. If I went more than 5 meters away while having a direct line from the ESP32 to the router, it would lose connection. This was extremely frustrating because it had already taken me so long to figure out everything to this point due to the lack of documentation.</p> <details><summary><b>Look here for the code for WiFi protocols 802.11 b/g/n</b></summary> <br/> <pre class="language-'''"><code class="language-'''">#include &lt;WiFi.h>;
+	<div style="display: contents"><!--[--><!--[0--><!--[--><header class="svelte-vny38x"><div class="topnav svelte-vny38x"><a href="../" class="brand-link svelte-vny38x"><h2 class="brand svelte-vny38x">Akhil Kothapalli</h2></a> <div class="topnav-right svelte-vny38x"><a href="../#proj" class="svelte-vny38x">Projects</a> <a href="../attributions" class="svelte-vny38x">Attributions</a> <button class="theme-toggle svelte-vny38x" aria-label="Toggle theme"><!--[-1--><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><!--]--></button></div></div></header><!----> <div id="page-container" class="svelte-12qhfyh"><main id="content-wrap" class="svelte-12qhfyh"><!--[0--><!--[--><div class="prose svelte-1mb5hvo"><!--[--><h1>Self-Gardener</h1> <p><a href="https://github.com/kakhil2004/esp32-testing" rel="nofollow">Click me for GitHub Link</a></p> <h5>Still in progress (Will add updates as I go)</h5> <h2>Why?</h2> <p>I bought a google home assistant and some lights and could control them using my voice. Why not try to use the same thing to water my garden and get some stats about it?</p> <h2>High Level Process (changed over time)</h2> <ol><li>Decide which communication system to use (WiFi, Bluetooth, NRF24L01 etc.)</li> <li>Wire up the electronics</li> <li>Connect it to <a href="https://sinric.pro/" rel="nofollow">Sinric Pro</a></li> <li>Complete!</li></ol> <h2>Step 1</h2> <h4>The device</h4> <p>Immediately I knew that an ESP32 is the way to go since it is tiny, uses much less power than a Raspberry PI but comes with in-built WiFi unlike a regular Arduino. There is also one more advantage that I discovered later.</p> <h4>Using the standard WiFi protocol 802.11 b/g/n</h4> <p>These protocols were super simple to use and after I connected it to my network. I could easily transmit data. The problem was the range was absolutely terrible. If I went more than 5 meters away while having a direct line from the ESP32 to the router, it would lose connection. This was extremely frustrating because it had already taken me so long to figure out everything to this point due to the lack of documentation.</p> <details><summary><b>Look here for the code for WiFi protocols 802.11 b/g/n</b></summary> <br/> <pre class="language-'''"><code class="language-'''">#include &lt;WiFi.h>;
 #include &lt;HTTPClient.h>;
 #include &lt;ArduinoJson.h>;
 #include &lt;esp_wifi.h>;
@@ -324,23 +328,23 @@ void loop() {
   }   
   delay(5000);
 }</code>
-</pre></details><!----> <h4>Research the LoRa protocol</h4> <p>After some research and realizing that the ESP’s antenna was just too small, I found the LoRa protocol. Apparently ESP32s without an external antenna could communicate with one another over huge ranges (500 meters). I could not believe it since the regular protocols performed so terribly.</p> <h4></h4> <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/oz0a7Ur7nko?si=TRT9Fx0RM0AYx2Ty" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></div> <h4>Using the LR protocol</h4> <p>There isn’t proper code documentation on this protocol so it took me some time to find it and I was able to get it to work. After a few old forums I managed to create the following testing code:</p> <a href="https://github.com/kakhil2004/esp32-testing" target="_blank"><button>Click me to see code</button></a> <p>The problem was I couldn’t have LR running on the ESP32 and use normal Wi-Fi since they were two seperate protocols. To solve this I needed to combine two ESP32s, one that uses Wi-Fi and the other that talks to the devies in the house. Using the TX and RX pins, I could make the two communicate using the Serial monitor.</p> <h4>Creating a test server</h4> <p>Using Glitch I was able to test if it worked and it did, I will add pictures soon!</p><!--]--><!----></main> <footer id="footer" class="svelte-12qhfyh"><div><p>©2025 Akhil, Powered by SvelteKit and cleaned up using Claude. <a href="../about">More about this site</a> - 2.0</p></div></footer></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+</pre></details><!----> <h4>Research the LoRa protocol</h4> <p>After some research and realizing that the ESP’s antenna was just too small, I found the LoRa protocol. Apparently ESP32s without an external antenna could communicate with one another over huge ranges (500 meters). I could not believe it since the regular protocols performed so terribly.</p> <h4></h4> <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/oz0a7Ur7nko?si=TRT9Fx0RM0AYx2Ty" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe></div> <h4>Using the LR protocol</h4> <p>There isn’t proper code documentation on this protocol so it took me some time to find it and I was able to get it to work. After a few old forums I managed to create the following testing code:</p> <a href="https://github.com/kakhil2004/esp32-testing" target="_blank"><button>Click me to see code</button></a> <p>The problem was I couldn’t have LR running on the ESP32 and use normal Wi-Fi since they were two seperate protocols. To solve this I needed to combine two ESP32s, one that uses Wi-Fi and the other that talks to the devies in the house. Using the TX and RX pins, I could make the two communicate using the Serial monitor.</p> <h4>Creating a test server</h4> <p>Using Glitch I was able to test if it worked and it did, I will add pictures soon!</p><!--]--><!----></div><!--]--><!--]--><!----></main> <footer id="footer" class="svelte-12qhfyh"><div><p>©2025 Akhil, Powered by SvelteKit and cleaned up using Claude. <a href="../about">More about this site</a> - 2.0</p></div></footer></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_1lw3md4 = {
+					__sveltekit_1o5qmet = {
 						base: new URL("..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../_app/immutable/entry/start.BjcC4_5B.js"),
-						import("../_app/immutable/entry/app.2eP-lc0i.js")
+						import("../_app/immutable/entry/start.CHUL22xA.js"),
+						import("../_app/immutable/entry/app.l1Vabu2E.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
-							node_ids: [0, 8],
-							data: [null,null],
+							node_ids: [0, 3, 10],
+							data: [null,null,null],
 							form: null,
 							error: null
 						});

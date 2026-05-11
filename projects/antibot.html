@@ -13,15 +13,16 @@
 			} catch(e) {}
 		})();
 	</script>
-	<link href="../_app/immutable/entry/start.BjcC4_5B.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/Q3QNUSRs.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/CAt3Me7R.js" rel="modulepreload">
-		<link href="../_app/immutable/entry/app.2eP-lc0i.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/C-OaypFN.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/t62M88qj.js" rel="modulepreload">
-		<link href="../_app/immutable/nodes/0.Den9KOHC.js" rel="modulepreload">
-		<link href="../_app/immutable/nodes/6.wTGMRaY3.js" rel="modulepreload">
-		<link href="../_app/immutable/chunks/ViJdONpo.js" rel="modulepreload">
+	<link href="../_app/immutable/entry/start.CHUL22xA.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CGZ4lhfx.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CkNpfGLV.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.l1Vabu2E.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/B64WrFVF.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/BVEOzTpX.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.B9hnc-bK.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/3.DbnWuU4B.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/8.C4sh4Y_c.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C6l_CDBz.js" rel="modulepreload">
 		<!--12qhfyh--><link rel="stylesheet" href="../style.css" type="text/css"/> <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RQ1FLCMN0B"></script> <script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
@@ -29,6 +30,7 @@
 		gtag('config', 'G-RQ1FLCMN0B');
 	</script><!---->
 		<link href="../_app/immutable/assets/0.DGWEQtz2.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/3.BWQvCzXP.css" rel="stylesheet">
 	<style>
 :root {
   --bg-primary: #f9f9f9;
@@ -47,6 +49,7 @@
   --border-box: #4A4A4A;
   --accent-blue: #4A90E2;
   --accent-teal: #1d7484;
+  --link-color: #1d7484;
   --secondaryColor: #1d7484;
   --header-bg: rgba(255, 255, 255, 0.9);
   --header-border: rgba(0, 0, 0, 0.1);
@@ -79,6 +82,7 @@ html[data-theme="dark"] {
     --border-ui: #333333;
     --border-box: #606060;
     --accent-teal: #1d9baf;
+    --link-color: #4dd0e1;
     --secondaryColor: #333333;
     --header-bg: rgba(18, 18, 18, 0.95);
     --header-border: rgba(255, 255, 255, 0.08);
@@ -270,23 +274,23 @@ label, legend, fieldset {
 	</style>
 </head>
 <body data-sveltekit-preload-data="hover">
-	<div style="display: contents"><!--[--><!--[0--><!--[--><header class="svelte-vny38x"><div class="topnav svelte-vny38x"><a href="../" class="brand-link svelte-vny38x"><h2 class="brand svelte-vny38x">Akhil Kothapalli</h2></a> <div class="topnav-right svelte-vny38x"><a href="../#proj" class="svelte-vny38x">Projects</a> <a href="../attributions" class="svelte-vny38x">Attributions</a> <button class="theme-toggle svelte-vny38x" aria-label="Toggle theme"><!--[-1--><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><!--]--></button></div></div></header><!----> <div id="page-container" class="svelte-12qhfyh"><main id="content-wrap" class="svelte-12qhfyh"><!--[--><h1>Anti-bot</h1> <a href="https://antibot.akhilkothapalli.com/"><button>Check out the Demo!</button></a> <h3>Overview</h3> <p>Akhil’s Anti-bot is a lightweight solution designed to detect and block malicious bots by issuing sensor-based and puzzle-based challenges. These challenges help ensure that only legitimate users can access your website, while blocking automated bot attacks like DDoS.</p> <h3>What is it?</h3> <p>When you access websites, your browser sends <strong>requests</strong> to the server to retrieve data. This is similar to a REST API, where a project might fetch weather information or other data. However, bots can abuse this system for malicious purposes, such as launching Distributed Denial of Service (DDoS) attacks.</p> <p>To combat this, anti-bot systems were developed. Companies like Akamai, PerimeterX, Cloudflare, and others implement challenges that only a real browser can solve, effectively blocking bots.</p> <h3>Akhil’s Anti-bot</h3> <p>Akhil’s Anti-bot uses two key challenges to determine if the request is coming from a real user:</p> <ol><li><strong>Sensor Data</strong>: Collects detailed information about the device (e.g., screen size, user activity) to verify if it is legitimate or automated. It also tracks your mouse for a little while to see if it is bot like.</li> <li><strong>Math Puzzle</strong>: Issues a puzzle to the user’s device, which must be solved and returned as part of the validation process.</li></ol> <h3>Obfuscation</h3> <p>If you open your browser’s developer tools (F12), you’ll find two scripts: <code>sD.js</code> (for Sensor Data) and <code>puz.js</code> (for the Math Puzzle). Both of these scripts are <strong>obfuscated</strong>, meaning their code has been deliberately made difficult to read, making it harder for bots or malicious users to understand and bypass the challenges.</p> <h3>Want to beat it? Here are some hints:</h3> <ol><li>The obfuscation can be deobfuscated using some online tools &amp; manual work since I didn’t want to make it too tough</li> <li>Sensor Data has been obfuscated using base64 and replacements of some parts of the string</li> <li>I added a rate limit so that <strong>YOU ACTUALLY</strong> try to deobfuscate it rather than brute forcing. You will get a 429 page error</li> <li>If you want to check how many challenges you passed (there are 2), make a request to the “/api/didimakeit” endpoint <strong>WITH</strong> the cookie</li></ol><!--]--><!----></main> <footer id="footer" class="svelte-12qhfyh"><div><p>©2025 Akhil, Powered by SvelteKit and cleaned up using Claude. <a href="../about">More about this site</a> - 2.0</p></div></footer></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+	<div style="display: contents"><!--[--><!--[0--><!--[--><header class="svelte-vny38x"><div class="topnav svelte-vny38x"><a href="../" class="brand-link svelte-vny38x"><h2 class="brand svelte-vny38x">Akhil Kothapalli</h2></a> <div class="topnav-right svelte-vny38x"><a href="../#proj" class="svelte-vny38x">Projects</a> <a href="../attributions" class="svelte-vny38x">Attributions</a> <button class="theme-toggle svelte-vny38x" aria-label="Toggle theme"><!--[-1--><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><!--]--></button></div></div></header><!----> <div id="page-container" class="svelte-12qhfyh"><main id="content-wrap" class="svelte-12qhfyh"><!--[0--><!--[--><div class="prose svelte-1mb5hvo"><!--[--><h1>Anti-bot</h1> <a href="https://antibot.akhilkothapalli.com/"><button>Check out the Demo!</button></a> <h3>Overview</h3> <p>Akhil’s Anti-bot is a lightweight solution designed to detect and block malicious bots by issuing sensor-based and puzzle-based challenges. These challenges help ensure that only legitimate users can access your website, while blocking automated bot attacks like DDoS.</p> <h3>What is it?</h3> <p>When you access websites, your browser sends <strong>requests</strong> to the server to retrieve data. This is similar to a REST API, where a project might fetch weather information or other data. However, bots can abuse this system for malicious purposes, such as launching Distributed Denial of Service (DDoS) attacks.</p> <p>To combat this, anti-bot systems were developed. Companies like Akamai, PerimeterX, Cloudflare, and others implement challenges that only a real browser can solve, effectively blocking bots.</p> <h3>Akhil’s Anti-bot</h3> <p>Akhil’s Anti-bot uses two key challenges to determine if the request is coming from a real user:</p> <ol><li><strong>Sensor Data</strong>: Collects detailed information about the device (e.g., screen size, user activity) to verify if it is legitimate or automated. It also tracks your mouse for a little while to see if it is bot like.</li> <li><strong>Math Puzzle</strong>: Issues a puzzle to the user’s device, which must be solved and returned as part of the validation process.</li></ol> <h3>Obfuscation</h3> <p>If you open your browser’s developer tools (F12), you’ll find two scripts: <code>sD.js</code> (for Sensor Data) and <code>puz.js</code> (for the Math Puzzle). Both of these scripts are <strong>obfuscated</strong>, meaning their code has been deliberately made difficult to read, making it harder for bots or malicious users to understand and bypass the challenges.</p> <h3>Want to beat it? Here are some hints:</h3> <ol><li>The obfuscation can be deobfuscated using some online tools &amp; manual work since I didn’t want to make it too tough</li> <li>Sensor Data has been obfuscated using base64 and replacements of some parts of the string</li> <li>I added a rate limit so that <strong>YOU ACTUALLY</strong> try to deobfuscate it rather than brute forcing. You will get a 429 page error</li> <li>If you want to check how many challenges you passed (there are 2), make a request to the “/api/didimakeit” endpoint <strong>WITH</strong> the cookie</li></ol><!--]--><!----></div><!--]--><!--]--><!----></main> <footer id="footer" class="svelte-12qhfyh"><div><p>©2025 Akhil, Powered by SvelteKit and cleaned up using Claude. <a href="../about">More about this site</a> - 2.0</p></div></footer></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
 			
 			<script>
 				{
-					__sveltekit_1lw3md4 = {
+					__sveltekit_1o5qmet = {
 						base: new URL("..", location).pathname.slice(0, -1)
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../_app/immutable/entry/start.BjcC4_5B.js"),
-						import("../_app/immutable/entry/app.2eP-lc0i.js")
+						import("../_app/immutable/entry/start.CHUL22xA.js"),
+						import("../_app/immutable/entry/app.l1Vabu2E.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
-							node_ids: [0, 6],
-							data: [null,null],
+							node_ids: [0, 3, 8],
+							data: [null,null,null],
 							form: null,
 							error: null
 						});

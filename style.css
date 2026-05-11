@@ -16,19 +16,16 @@ main, .content-container, .box-container {
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
+    width: 100%;
+    margin: 12px 0;
     background: #000;
   }
 
   .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: block;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
   }
 
 /* Add a black background color to the top navigation */
@@ -51,11 +48,33 @@ main, .content-container, .box-container {
   display: flex;
 }
 
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--link-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 /* Style the links on the right */
 .topnav-right a {
   text-decoration: none;
   font-size: 17px;
   padding: 14px 16px;
+  color: var(--text-nav);
+}
+
+.topnav-right a:visited {
+  color: var(--text-nav);
+}
+
+.topnav-right a:hover {
+  text-decoration: none;
 }
 
 /*Deals with the bio part */

@@ -1,4 +1,4 @@
-import{Q as e,et as t,g as n,v as r}from"../chunks/CAt3Me7R.js";import"../chunks/t62M88qj.js";import"../chunks/ViJdONpo.js";var i=t({prerender:()=>!0}),a=r(`<h1>PicSearch</h1> <a class="github-button" href="https://github.com/kakhil2004/ai-gallery" target="_blank" rel="noopener"><svg class="github-icon" viewBox="0 0 16 16" fill="currentColor" width="20" height="20"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 
+import{Q as e,et as t,g as n,v as r}from"../chunks/CkNpfGLV.js";import"../chunks/BVEOzTpX.js";import"../chunks/C6l_CDBz.js";var i=t({prerender:()=>!0}),a=r(`<h1>PicSearch</h1> <a class="github-button" href="https://github.com/kakhil2004/ai-gallery" target="_blank" rel="noopener"><svg class="github-icon" viewBox="0 0 16 16" fill="currentColor" width="20" height="20"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 
     0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
     -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 
     2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
