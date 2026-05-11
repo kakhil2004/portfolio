@@ -12,6 +12,15 @@ export interface Project {
 
 export const projects: Project[] = [
 	{
+		header: 'Autonomous Vehicles Research',
+		smallHead: 'ROS, Python, C, Git, Linux',
+		para: 'I spent several hours every week working on a cool car that has LIDAR, vision, an nVidia Jetson Nano. The goal was to make a competitve F1TENTH Car.',
+		redirect: base + '/exp/aevip',
+		color: 'lightgreen',
+		sImgSrc: base + '/images/aevip/aeCar.jpg',
+		skills: ['Python', 'C/C++', 'ROS', 'Git', 'Linux', 'Computer Vision', 'LIDAR']
+	},
+	{
 		header: 'PicSearch (NEW)',
 		smallHead: 'Python, FastAPI, Semantic Search, AI',
 		para: 'Upload photos and search them with plain English sentences. Uses GPT-5-nano for image descriptions and Sentence Transformers for semantic similarity — no exact keywords needed.',
@@ -46,15 +55,6 @@ export const projects: Project[] = [
 		color: 'lightgreen',
 		sImgSrc: base + '/images/sig/image.jpg',
 		skills: ['C/C++', 'Embedded Systems', 'Networking', 'LoRa']
-	},
-	{
-		header: 'Autonomous Vehicles Research',
-		smallHead: 'ROS, Python, C, Git, Linux',
-		para: 'I spend several hours every week working on a cool car that has LIDAR, vision, an NVidia Jetson Nano etc. and I need to make it fully autonomous so it can race in F1Tenth.',
-		redirect: base + '/exp/aevip',
-		color: 'lightgreen',
-		sImgSrc: base + '/images/aevip/aeCar.jpg',
-		skills: ['Python', 'C/C++', 'ROS', 'Git', 'Linux', 'Computer Vision', 'LIDAR']
 	},
 	{
 		header: 'Transforming Bots Tycoon',

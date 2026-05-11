@@ -55,7 +55,7 @@
 			<div class="content" style="margin: auto;">
 				<p style="margin-bottom: 0px; text-align: center;">Hello I'm</p>
 				<h2 style="margin-top: 0px; text-align: center;">Akhil Kothapalli</h2>
-				<p style="text-align: center;">a <b> Software Developer </b> at <b> Amazon Web Services </b>. I graduated with a Bachelors from Georgia Tech. This website showcases all my many projects!</p>
+				<p style="text-align: center;">a <b> Software Developer </b> at <b> Amazon Web Services </b>. I graduated with a Bachelors from Georgia Tech. This website showcases and keeps track of my many projects!</p>
 				<div style="text-align: center;">
 					<a class="nostyle" target="_blank" href="{base}/resume.pdf">
 						<button style="border-radius: 15px; margin-bottom: 30px;"><h3 style="margin: 0px;">Resume</h3></button>
